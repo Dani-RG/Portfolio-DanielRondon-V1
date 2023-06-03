@@ -13,37 +13,3 @@ code {
     monospace;
 }
 
-.App {
-  font-family: 'Gruppo', sans-serif;
-}
-
-.page_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.line_text_container {
-  position: absolute;
-  left: 55vw;
-  top: 0;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-}
-
-.dan_vert_line_container {
-  position: relative;
-  left: 49.9%;
-}
-
-.ron_vert_line_container {
-  position: relative;
-  left: 8%;
-}
-
-.name_text {
-  font-weight: normal;
-}
-

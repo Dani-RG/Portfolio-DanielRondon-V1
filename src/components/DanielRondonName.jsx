@@ -3,7 +3,7 @@ import React from 'react'
 export default function DanielRondonName() {
 
   return (
-    <div className='font_gruppo'>
+    <div>
       <p>danieL Rondon</p>
     </div>
   )

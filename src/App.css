@@ -1,0 +1,35 @@
+.App {
+  font-family: 'Gruppo', sans-serif;
+}
+
+.page_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.lines_name_container {
+  position: relative;
+  left: 27vw;
+  top: 0;
+  height: 100vh;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.l_vert_line_container {
+  position: absolute;
+  left: 7%;
+}
+
+.r_vert_line_container {
+  position: absolute;
+  left: 48%;
+}
+
+.name_text {
+  font-weight: normal;
+}
