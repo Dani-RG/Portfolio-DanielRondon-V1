@@ -7,6 +7,8 @@ export default function Home() {
   <div className="section_container">
     <DanielRondonText />
     <FullStackWebDevText />
+
+    <p>PRUEBA</p>
   </div>
   )
 }
