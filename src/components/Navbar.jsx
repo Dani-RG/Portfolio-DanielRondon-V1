@@ -4,18 +4,15 @@ import { FiMenu } from 'react-icons/fi'
 import { RxCross2 } from 'react-icons/rx'
 import { CgDarkMode } from 'react-icons/cg'
 
-export default function Navbar() {
+export default function Navbar( props ) {
 
   const [burger, setBurger] = useState(false);
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState('');
 
   const toggleTheme = () => {
-    setTheme((curr) => (curr === 'dark' ? 'light' : 'dark'));
+    setTheme((curr) => (curr === "dark" ? "light" : "dark"));
+    props.handleTheme(theme);
   };
-
-/*   useEffect(() => {
-    toggleTheme()
-  }, [theme]) */
 
   return (
       <nav className='navbar'>
@@ -34,7 +31,6 @@ export default function Navbar() {
         {burger ? <RxCross2 /> : <FiMenu />}
         </button>
 
-        {console.log(theme)}
       </nav>
   )
 }

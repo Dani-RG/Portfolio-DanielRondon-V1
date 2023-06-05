@@ -7,19 +7,17 @@ import Contact from "./views/Contact";
 import Home from "./views/Home";
 import Projects from "./views/Projects";
 import Skills from "./views/Skills";
-import { createContext } from "react";
+import { createContext, useState } from "react";
 
 export const ThemeContext = createContext(null);
 
-function App( props ) {
-
-  const { theme } = props;
-  /* const theme = 'light' */
+function App() {
+  const [theme, setTheme] = useState('dark');
 
   return (
     <ThemeContext.Provider value={{ theme }}>
       <div className="App" id={theme}>
-        <Navbar />
+        <Navbar handleTheme={(theme) => setTheme(theme)} />
         <SocialMedia />
         <Routes>
           <Route path="/about" element={<About />} />
@@ -28,7 +26,6 @@ function App( props ) {
           <Route path="/projects" element={<Projects />} />
           <Route path="/skills" element={<Skills />} />
         </Routes>
-        {console.log(theme)}
       </div>
     </ThemeContext.Provider>
   );
