@@ -6,8 +6,25 @@ font-family: 'Josefin Slab', serif;
 font-family: 'Montserrat', sans-serif;
 */
 
+/* MEDIA QUERIES FORMATS */
+/* Extra small devices (phones, 600px and down) */
+/* @media only screen and (max-width: 600px) {...} */
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {...} */
+
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 768px) {...} */
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {...} */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {...} */
+
 .App {
   color: grey;
+  height: 100vh;
 }
 
 :root {
@@ -35,7 +52,14 @@ li {
 
 body {
   height: max-content;
-  background-color: var(--black-color);
+}
+
+#light {
+  background-color: var(--white-color);
+}
+
+#dark {
+ background-color: var(--black-color);
 }
 
 /* ----- NAVBAR ----- */
@@ -76,7 +100,7 @@ body {
   font-size: 1.5rem;
 }
 
-/* ----- NAVBAR MEDIA QUERY ----- */
+/* ----- NAVBAR MEDIA QUERIES ----- */
 
 @media (max-width: 768px) {
   .nav_links {
@@ -89,8 +113,15 @@ body {
     left: 0;
     top: 5vh;
     width: 100%;
-    background-color: var(--black-color);
     z-index: 10;
+  }
+
+  #light .nav_links_mobile {
+    background-color: var(--white-color);
+  }
+
+  #dark .nav_links_mobile {
+    background-color: var(--black-color);
   }
 
   .nav_links_mobile li {
@@ -109,14 +140,21 @@ body {
 
 .danielrondon_text {
   font-family: 'Montserrat', sans-serif;
-  color: var(--white-color);
-  font-size: 2.6rem;
+  font-size: 2.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: fixed;
   top: 12rem;
+}
+
+#light .danielrondon_text {
+  color: var(--black-color)
+}
+
+#dark .danielrondon_text {
+  color: var(--white-color)
 }
 
 .danielrondon_text > p {
@@ -129,6 +167,20 @@ margin: 1.2rem;
   font-size: 1.5rem;
   position: fixed;
   top: 16.2rem;
+}
+
+/* ----- DANIEL FULL WEB MEDIA QUERIES ----- */
+
+@media (min-width: 768px) {
+  .danielrondon_text {
+    font-size: 4rem;
+    top: 20rem;
+  }
+
+  .fullstack_webdev_text {
+    font-size: 2rem;
+    top: 25.5rem;
+  }
 }
 
 /* ----- OTHER COMPONENTS ----- */

@@ -6,11 +6,22 @@ import { CgDarkMode } from 'react-icons/cg'
 
 export default function Navbar() {
 
-  const [burger, setBurger] = useState(false)
+  const [burger, setBurger] = useState(false);
+  const [theme, setTheme] = useState('dark');
+
+  const toggleTheme = () => {
+    setTheme((curr) => (curr === 'dark' ? 'light' : 'dark'));
+  };
+
+/*   useEffect(() => {
+    toggleTheme()
+  }, [theme]) */
 
   return (
       <nav className='navbar'>
-        <button className='theme_icon'> <CgDarkMode /> </button>
+
+        <button className='theme_icon' onClick={() => toggleTheme()}> <CgDarkMode /> </button>
+
         <ul className={burger ? 'nav_links_mobile' : 'nav_links'} onClick={() => setBurger(false)}>
           <li><NavLink to='/'>Home</NavLink></li>
           <li><NavLink to='/about'>About</NavLink></li>
@@ -18,9 +29,12 @@ export default function Navbar() {
           <li><NavLink to='/skills'>Skills</NavLink></li>
           <li><NavLink to='/contact'>Contact</NavLink></li>
         </ul>
+
         <button className='menu_burger_icon' onClick={() => setBurger(!burger)}>
         {burger ? <RxCross2 /> : <FiMenu />}
         </button>
+
+        {console.log(theme)}
       </nav>
   )
 }
