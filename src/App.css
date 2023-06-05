@@ -21,8 +21,16 @@ font-family: 'Montserrat', sans-serif;
   --bluedark-color: #053C5E;
   --greenmedium-color: #1F7A8C;
   --redligth-color: #DB222A;
-
   --box-shadow: 0 1px 10px 5px #2F4550;
+}
+
+a {
+  text-decoration: none;
+  color: var(--greymedium_color);
+}
+
+li {
+  list-style: none;
 }
 
 body {
@@ -37,11 +45,7 @@ body {
   align-items: center;
   height: 5vh;
   box-shadow: var(--box-shadow);
-  padding: 0 1rem;
-}
-
-.nav_logo {
-  font-size: 1rem;
+  padding: 0 1.1rem;
 }
 
 .nav_links {
@@ -52,23 +56,25 @@ body {
 
 .nav_links li a {
   color: var(--greymedium-color);
-  text-decoration: none;
   font-size: 0.8rem;
-  margin: 0 0.2rem;
+  margin: 0 1rem;
   cursor: pointer;
   text-transform: capitalize;
 }
 
-button {
-  border: none;
-  background: none;
-  padding: 0;
+.theme_icon {
+  color: #586F7C;
+  font-size: 1.5rem;
+  display: contents;
 }
 
 .menu_burger_icon {
   display: none;
   color: var(--greymedium-color);
+  font-size: 1.5rem;
 }
+
+/* -----NAVBAR MEDIA QUERY----- */
 
 @media (max-width: 768px) {
   .nav_links {
@@ -78,35 +84,29 @@ button {
   .nav_links_mobile {
     position: absolute;
     display: block;
-    list-style: none;
-    text-decoration: none;
     left: 0;
     top: 5vh;
-    transition: all 0.5s ease-in-out;
     width: 100%;
-    background-color: red;
+    background-color: var(--black-color);
+    z-index: 10;
   }
 
-  /* EDIT THIS SELECTOR TO BE MORE SPECIFIC */
-  ul li {
+  .nav_links_mobile li {
     padding: 2rem 0;
     width: 100vw;
-    transition: all 0.5s ease-in-out;
     text-align: center;
   }
 
   .menu_burger_icon {
     position: absolute;
-    display: block;
-    right: 2rem;
+    display: contents;
   }
 }
 
-.section_container {
+.centered_div {
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
 .danielrondon_text {

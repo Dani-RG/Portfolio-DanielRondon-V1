@@ -4,11 +4,9 @@ import FullStackWebDevText from '../components/FullStackWebDevText';
 
 export default function Home() {
   return (
-  <div className="section_container">
+  <div className="centered_div">
     <DanielRondonText />
     <FullStackWebDevText />
-
-    <p>PRUEBA</p>
   </div>
   )
 }
