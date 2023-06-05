@@ -1,6 +1,7 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import SocialMedia from './components/SocialMedia';
 import About from './views/About';
 import Contact from './views/Contact';
 import Home from './views/Home';
@@ -11,6 +12,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+      <SocialMedia />
       <Routes>
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />

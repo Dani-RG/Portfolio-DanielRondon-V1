@@ -38,13 +38,15 @@ body {
   background-color: var(--black-color);
 }
 
+/* ----- NAVBAR ----- */
+
 .navbar {
   color: var(--greymedium-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 5vh;
-  box-shadow: var(--box-shadow);
+  border-bottom: 0.1rem solid var(--greydark-color);
   padding: 0 1.1rem;
 }
 
@@ -74,7 +76,7 @@ body {
   font-size: 1.5rem;
 }
 
-/* -----NAVBAR MEDIA QUERY----- */
+/* ----- NAVBAR MEDIA QUERY ----- */
 
 @media (max-width: 768px) {
   .nav_links {
@@ -103,22 +105,18 @@ body {
   }
 }
 
-.centered_div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+/* ----- HOME PAGE ----- */
 
 .danielrondon_text {
   font-family: 'Montserrat', sans-serif;
   color: var(--white-color);
-  font-size: 2.5rem;
+  font-size: 2.6rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: fixed;
-  top: 10rem;
+  top: 12rem;
 }
 
 .danielrondon_text > p {
@@ -128,7 +126,30 @@ margin: 1.2rem;
 .fullstack_webdev_text {
   color: var(--greenmedium-color);
   font-family: 'Convergence', sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   position: fixed;
-  top: 14.2rem;
+  top: 16.2rem;
+}
+
+/* ----- OTHER COMPONENTS ----- */
+
+.social_media_bar {
+  font-size: 1.3rem;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: 1.5rem;
+  bottom: 2rem;
+  color: var(--greydark-color);
+  stroke: var(--greydark-color);
+  gap: 1rem;
+}
+
+/* ----- DIVS POSITIONING ----- */
+
+.centered_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
