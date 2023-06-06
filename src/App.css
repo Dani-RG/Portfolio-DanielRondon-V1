@@ -24,20 +24,19 @@ font-family: 'Montserrat', sans-serif;
 
 .App {
   color: grey;
-  height: 100vh;
 }
 
 :root {
   --black-color: #000000;
   --greydark-color: #2F4550;
   --greymedium-color: #586F7C;
-  --greyligth-color: #B8DBD9;
+  --greylight-color: #B8DBD9;
   --white-color: #F4F4F9;
   --reddark-color: #A31621;
   --bluelight-color: #BFDBF7;
   --bluedark-color: #053C5E;
   --greenmedium-color: #1F7A8C;
-  --redligth-color: #DB222A;
+  --redlight-color: #DB222A;
   --box-shadow: 0 1px 10px 5px #2F4550;
 }
 
@@ -138,15 +137,23 @@ body {
 
 /* ----- HOME PAGE ----- */
 
+.home_view {
+  height: 100vh;
+}
+
+.home_text {
+  top: 20vh;
+  position: relative;
+}
+
 .danielrondon_text {
   font-family: 'Montserrat', sans-serif;
   font-size: 2.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  position: fixed;
-  top: 12rem;
+  position: relative;
+  margin: 1.5rem;
 }
 
 #light .danielrondon_text {
@@ -157,29 +164,91 @@ body {
   color: var(--white-color)
 }
 
-.danielrondon_text > p {
-margin: 1.2rem;
-}
-
 .fullstack_webdev_text {
   color: var(--greenmedium-color);
   font-family: 'Convergence', sans-serif;
   font-size: 1.5rem;
-  position: fixed;
-  top: 16.2rem;
+  position: relative;
 }
 
-/* ----- DANIEL FULL WEB MEDIA QUERIES ----- */
+/* ----- HOME PAGE MEDIA QUERIES ----- */
 
 @media (min-width: 768px) {
+  
   .danielrondon_text {
     font-size: 4rem;
-    top: 20rem;
   }
 
   .fullstack_webdev_text {
     font-size: 2rem;
-    top: 25.5rem;
+  }
+}
+
+/* ----- ABOUT PAGE ----- */
+
+.about_view {
+  height: 100vh;
+  width: 50vw;
+  line-height: 1.5;
+}
+
+.about_text {
+  top: 10vh;
+  position: relative;
+  text-align: center;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(60vw, auto));
+  gap: 0 5rem;
+}
+
+
+.about_fromA {
+  font-family: 'Hind Madurai', sans-serif;
+  font-size: 1rem;
+  margin: 5vh 0;
+}
+
+#light .about_fromA {
+  color: var(--greydark-color)
+}
+
+#dark .about_fromA {
+  color: var(--greylight-color);
+}
+
+.about_IPoss {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  font-weight:800;
+  font-style: italic;
+  margin: 5vh 0;
+  border: 2px solid var(--redlight-color);
+  padding: 1.2rem;
+}
+
+#light .about_IPoss {
+  color: var(--black-color)
+}
+
+#dark .about_IPoss {
+  color: var(--white-color);
+}
+
+/* ----- ABOUT PAGE MEDIA QUERIES ----- */
+
+@media (min-width: 768px) {
+  
+  .about_fromA {
+    font-size: 1.5rem;
+  }
+
+  .about_IPoss {
+    font-size: 2rem;
+  }
+
+  .about_text {
+    display: flex;
   }
 }
 
@@ -200,8 +269,16 @@ margin: 1.2rem;
 
 /* ----- DIVS POSITIONING ----- */
 
-.centered_div {
+.main_view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* .centered_div {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */

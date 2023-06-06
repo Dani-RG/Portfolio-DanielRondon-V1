@@ -1,5 +1,6 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
+import Main from "./views/Main";
 import Navbar from "./components/Navbar";
 import SocialMedia from "./components/SocialMedia";
 import About from "./views/About";
@@ -12,7 +13,7 @@ import { createContext, useState } from "react";
 export const ThemeContext = createContext(null);
 
 function App() {
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState("dark");
 
   return (
     <ThemeContext.Provider value={{ theme }}>
@@ -20,9 +21,10 @@ function App() {
         <Navbar handleTheme={(theme) => setTheme(theme)} />
         <SocialMedia />
         <Routes>
+          <Route path="/" element={<Main />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/skills" element={<Skills />} />
         </Routes>
