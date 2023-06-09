@@ -1,6 +1,5 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import Main from "./views/Main";
 import Navbar from "./components/Navbar";
 import SocialMedia from "./components/SocialMedia";
 import About from "./views/About";
@@ -21,7 +20,7 @@ function App() {
         <Navbar handleTheme={(theme) => setTheme(theme)} />
         <SocialMedia />
         <Routes>
-          <Route path="/" element={<Main />} />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/home" element={<Home />} />

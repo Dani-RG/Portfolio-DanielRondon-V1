@@ -24,6 +24,11 @@ font-family: 'Montserrat', sans-serif;
 
 .App {
   color: grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 :root {
@@ -69,8 +74,8 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 5vh;
+  width: 90vw;
   border-bottom: 0.1rem solid var(--greydark-color);
-  padding: 0 1.1rem;
 }
 
 .nav_links {
@@ -91,6 +96,7 @@ body {
   color: #586F7C;
   font-size: 1.5rem;
   display: contents;
+  cursor: pointer;
 }
 
 .menu_burger_icon {
@@ -268,14 +274,6 @@ body {
 }
 
 /* ----- DIVS POSITIONING ----- */
-
-.main_view {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
 
 /* .centered_div {
   display: flex;
