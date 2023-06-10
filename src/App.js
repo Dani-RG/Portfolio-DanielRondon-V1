@@ -6,6 +6,7 @@ import Main from "./views/Main";
 import ErrorPage from "./views/ErrorPage";
 import NotFound from "./views/NotFound";
 import { createContext, useState } from "react";
+import ParticlesBG from "./components/ParticlesBG";
 
 export const ThemeContext = createContext(null);
 
@@ -17,11 +18,14 @@ function App() {
       <div className="App" id={theme}>
         <Navbar handleTheme={(theme) => setTheme(theme)} />
         <SocialMedia />
+        
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/error" element={<ErrorPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <ParticlesBG />
+        
       </div>
     </ThemeContext.Provider>
   );

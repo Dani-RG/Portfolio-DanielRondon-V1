@@ -197,6 +197,7 @@ body {
   height: 150vh;
   width: 50vw;
   line-height: 1.5;
+  margin: 0 auto;
 }
 
 .about_text {
@@ -270,11 +271,12 @@ body {
 }
 
 .about_cleanDes {
-  /* position: absolute; */
   color: var(--greylight-color);
   font-family: 'Josefin Slab', serif;
   font-size: 1rem;
   margin-top: 2rem;
+  width: 100%;
+  text-align: center;
 }
 
 /* ----- ABOUT MEDIA QUERIES ----- */
@@ -300,6 +302,7 @@ body {
 
   .about_cleanDes {
     font-size: 1.5rem;
+    width: 100%;
   }
 }
 
