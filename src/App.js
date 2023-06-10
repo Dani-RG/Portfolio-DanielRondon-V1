@@ -18,14 +18,12 @@ function App() {
       <div className="App" id={theme}>
         <Navbar handleTheme={(theme) => setTheme(theme)} />
         <SocialMedia />
-        
+        <ParticlesBG />
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/error" element={<ErrorPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-        <ParticlesBG />
-        
       </div>
     </ThemeContext.Provider>
   );

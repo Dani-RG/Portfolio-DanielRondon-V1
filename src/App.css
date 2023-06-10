@@ -69,13 +69,13 @@ body {
 /* ----- NAVBAR ----- */
 
 .navbar {
-  color: var(--greymedium-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 5vh;
   width: 90vw;
   border-bottom: 0.1rem solid var(--greydark-color);
+  z-index: 2;
 }
 
 .nav_links {
@@ -85,7 +85,6 @@ body {
 }
 
 .nav_links li a {
-  color: var(--greymedium-color);
   font-size: 0.8rem;
   margin: 0 1rem;
   cursor: pointer;
@@ -105,6 +104,14 @@ body {
   font-size: 1.5rem;
 }
 
+#light .nav_links_mobile {
+  background-color: var(--white-color);
+}
+
+#dark .nav_links_mobile {
+  background-color: var(--black-color);
+}
+
 /* ----- NAVBAR MEDIA QUERIES ----- */
 
 @media (max-width: 768px) {
@@ -121,13 +128,6 @@ body {
     z-index: 10;
   }
 
-  #light .nav_links_mobile {
-    background-color: var(--white-color);
-  }
-
-  #dark .nav_links_mobile {
-    background-color: var(--black-color);
-  }
 
   .nav_links_mobile li {
     padding: 2rem 0;
@@ -316,6 +316,72 @@ body {
   .about_cleanDes {
     font-size: 1.5rem;
     width: 100%;
+  }
+}
+
+/* ----- PROJECTS ----- */
+
+.projects_view {
+  width: 90vw;
+  position: relative;
+  text-align: center;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(60vw, auto));
+  gap: 0 5rem;
+}
+
+.projects_title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bolder;
+  font-size: 2rem;
+}
+
+#light .projects_title {
+  color: var(--black-color);
+}
+
+#dark .projects_title {
+  color: var(--white-color);
+}
+
+.nature_heroes_mockup {
+  width: 70vw;
+}
+
+.nature_heroes_header {
+  display: flex;
+}
+
+.nature_heroes_title {
+  font-family: 'Convergence', sans-serif;
+  font-size: 1.5rem;
+  color: var(--greenmedium-color);
+}
+
+.nature_heroes_info {
+  font-family: 'Hind Madurai', sans-serif;
+  font-size: 1.1rem;
+  color: var(--greymedium-color);;
+}
+/* ----- PROJECTS MEDIA QUERIES ----- */
+
+@media (min-width: 768px) {
+
+  .projects_title{
+    font-size: 3rem;
+  }
+
+  .projects_view {
+    display: flex;
+  }
+
+  .nature_heroes_title {
+    font-size: 2rem;
+  }
+
+  .nature_heroes_text {
+    font-size: 1.3rem;
   }
 }
 

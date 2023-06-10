@@ -1,4 +1,7 @@
 import React from "react";
+import danielPhoto from "../images/danielRG_photo_noBG.png";
+import { ReactComponent as NatureHeroesMockUp } from "../images/natureHeroesSVG.svg";
+import { MdOutlineLaunch } from "react-icons/md";
 
 export default function Main() {
   return (
@@ -25,11 +28,26 @@ export default function Main() {
         </div>
         <div className="about_photoText">
           <div className="circle_container">
-            <img src={"../images/danielRG_photo_noBG.png"} alt="danielRG pic" />
+            <img src={danielPhoto} alt="danielPhoto" />
           </div>
           <p className="about_cleanDes">
             “Clean design and functionality are the driving forces behind my
             creative mind.”
+          </p>
+        </div>
+      </div>
+      <div className="projects_view" id="projects">
+        <p className="projects_title">PROJECTS</p>
+        <NatureHeroesMockUp className="nature_heroes_mockup" />
+        <div>
+          <div className="nature_heroes_header">
+            <p className="nature_heroes_title">Nature Heroes</p>
+            <a href="https://nature-heroes.netlify.app/">
+            <MdOutlineLaunch /></a>
+          </div>
+          <p className="nature_heroes_info">
+            A React.js Full Stack Web App that promotes animal conservation
+            awareness.
           </p>
         </div>
       </div>
