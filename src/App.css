@@ -193,7 +193,7 @@ body {
 /* ----- ABOUT PAGE ----- */
 
 .about_view {
-  height: 100vh;
+  height: 150vh;
   width: 50vw;
   line-height: 1.5;
 }
@@ -229,7 +229,7 @@ body {
   font-weight:800;
   font-style: italic;
   margin: 5vh 0;
-  border: 2px solid var(--redlight-color);
+  border: 1px solid var(--redlight-color);
   padding: 1.2rem;
 }
 
@@ -239,6 +239,41 @@ body {
 
 #dark .about_IPoss {
   color: var(--white-color);
+}
+
+.about_photoText {
+  position: relative;
+  top: 15%;
+  display: flex;
+  flex-direction: column;
+}
+
+.circle_container {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  border: 2px solid var(--greenmedium-color);
+  margin: 0 auto;
+}
+
+.circle_container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.about_cleanDes {
+  /* position: absolute; */
+  color: var(--greylight-color);
+  font-family: 'Josefin Slab', serif;
+  font-size: 1rem;
+  margin-top: 2rem;
 }
 
 /* ----- ABOUT PAGE MEDIA QUERIES ----- */
@@ -255,6 +290,15 @@ body {
 
   .about_text {
     display: flex;
+  }
+
+  .circle_container {
+    width: 300px;
+    height: 300px;
+  }
+
+  .about_cleanDes {
+    font-size: 1.5rem;
   }
 }
 

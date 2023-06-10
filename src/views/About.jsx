@@ -8,7 +8,18 @@ export default function About() {
           From a professional background in architecture and 3D visualization, I
           have now become a web developer.
         </p>
-        <p className="about_IPoss">I possess valuable skills that can benefit your company.</p>
+        <p className="about_IPoss">
+          I possess valuable skills that can benefit your company.
+        </p>
+      </div>
+      <div className="about_photoText">
+        <div className="circle_container">
+          <img src={"../images/danielRG_photo_noBG.png"} alt="danielRG pic" />
+        </div>
+        <p className="about_cleanDes">
+          “Clean design and functionality are the driving forces behind my
+          creative mind.”
+        </p>
       </div>
     </div>
   );
