@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { NavLink } from "react-router-dom"
+import { Link } from "react-scroll"
 import { FiMenu } from "react-icons/fi"
 import { RxCross2 } from "react-icons/rx"
 import { CgDarkMode } from "react-icons/cg"
@@ -20,11 +20,11 @@ export default function Navbar( props ) {
         <button className="theme_icon" onClick={() => toggleTheme()}> <CgDarkMode /> </button>
 
         <ul className={burger ? "nav_links_mobile" : "nav_links"} onClick={() => setBurger(false)}>
-          <li><NavLink to="/">Home</NavLink></li>
-          <li><NavLink to="/about">About</NavLink></li>
-          <li><NavLink to="/projects">Projects</NavLink></li>
-          <li><NavLink to="/skills">Skills</NavLink></li>
-          <li><NavLink to="/contact">Contact</NavLink></li>
+          <li><Link to="home">Home</Link></li>
+          <li><Link to="about">About</Link></li>
+          <li><Link to="projects">Projects</Link></li>
+          <li><Link to="skills">Skills</Link></li>
+          <li><Link to="contact">Contact</Link></li>
         </ul>
 
         <button className="menu_burger_icon" onClick={() => setBurger(!burger)}>
