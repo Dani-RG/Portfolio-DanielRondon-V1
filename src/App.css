@@ -141,6 +141,12 @@ body {
   }
 }
 
+/* ----- MAIN ----- */
+
+.main {
+  z-index: 1;
+}
+
 /* ----- HOME ----- */
 
 .home_view {
@@ -271,12 +277,19 @@ body {
 }
 
 .about_cleanDes {
-  color: var(--greylight-color);
   font-family: 'Josefin Slab', serif;
   font-size: 1rem;
   margin-top: 2rem;
   width: 100%;
   text-align: center;
+}
+
+#light .about_cleanDes {
+  color: var(--greymedium-color);
+}
+
+#dark .about_cleanDes {
+  color: var(--greylight-color);
 }
 
 /* ----- ABOUT MEDIA QUERIES ----- */

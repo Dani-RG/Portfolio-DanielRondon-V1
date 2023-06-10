@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Main() {
   return (
-    <div>
+    <div className="main">
       <div className="home_view" id="home">
         <div className="home_text">
           <div className="danielrondon_text">
