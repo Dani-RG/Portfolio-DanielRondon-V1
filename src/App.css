@@ -306,6 +306,7 @@ body {
 
   .about_text {
     display: flex;
+    align-items: center;
   }
 
   .circle_container {
@@ -322,7 +323,8 @@ body {
 /* ----- PROJECTS ----- */
 
 .projects_view {
-  width: 90vw;
+  height: 150vh;
+  width: 70vw;
   position: relative;
   text-align: center;
   justify-content: center;
@@ -331,44 +333,69 @@ body {
   gap: 0 5rem;
 }
 
-.projects_title {
+.projects_letters {
   font-family: 'Montserrat', sans-serif;
   font-weight: bolder;
   font-size: 2rem;
 }
 
-#light .projects_title {
+#light .projects_letters {
   color: var(--black-color);
 }
 
-#dark .projects_title {
+#dark .projects_letters {
   color: var(--white-color);
 }
 
-.nature_heroes_mockup {
+.iphone_mockup {
   width: 70vw;
+  background-color: red;
 }
 
-.nature_heroes_header {
+.ipad_mockup {
+  width: 70vw;
+  background-color: blue;
+}
+
+.project_header {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
 }
 
-.nature_heroes_title {
+.project_title {
   font-family: 'Convergence', sans-serif;
   font-size: 1.5rem;
   color: var(--greenmedium-color);
 }
 
-.nature_heroes_info {
+.project_info {
   font-family: 'Hind Madurai', sans-serif;
   font-size: 1.1rem;
-  color: var(--greymedium-color);;
+  line-height: 1.7rem;
+  margin-top: 2rem;
+  width: 100%;
 }
+
+#light .project_info {
+  color: var(--greydark-color);
+}
+
+#dark .project_info {
+  color: var(--greylight-color);
+}
+
+.launch_btn {
+  color: var(--greenmedium-color);
+  font-size: 1.5rem;
+}
+
 /* ----- PROJECTS MEDIA QUERIES ----- */
 
 @media (min-width: 768px) {
 
-  .projects_title{
+  .projects_letters{
     font-size: 3rem;
   }
 
@@ -376,11 +403,11 @@ body {
     display: flex;
   }
 
-  .nature_heroes_title {
+  .project_title {
     font-size: 2rem;
   }
 
-  .nature_heroes_text {
+  .project_info {
     font-size: 1.3rem;
   }
 }

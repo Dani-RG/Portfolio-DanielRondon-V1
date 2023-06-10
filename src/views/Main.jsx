@@ -37,17 +37,54 @@ export default function Main() {
         </div>
       </div>
       <div className="projects_view" id="projects">
-        <p className="projects_title">PROJECTS</p>
-        <NatureHeroesMockUp className="nature_heroes_mockup" />
+        <p className="projects_letters">PROJECTS</p>
+
+        <div className="iphone_mockup">
+          <p>NH</p>
+          {/* <NatureHeroesMockUp className="nature_heroes_mockup" /> */}
+        </div>
         <div>
-          <div className="nature_heroes_header">
-            <p className="nature_heroes_title">Nature Heroes</p>
-            <a href="https://nature-heroes.netlify.app/">
-            <MdOutlineLaunch /></a>
+          <div className="project_header">
+            <p className="project_title">Nature Heroes</p>
+            <a href="https://nature-heroes.netlify.app/" className="launch_btn">
+              <MdOutlineLaunch />
+            </a>
           </div>
-          <p className="nature_heroes_info">
+          <p className="project_info">
             A React.js Full Stack Web App that promotes animal conservation
             awareness.
+          </p>
+        </div>
+
+        <div className="iphone_mockup">
+          <p>MG</p>
+          {/* <NatureHeroesMockUp className="nature_heroes_mockup" /> */}
+        </div>
+        <div>
+          <div className="project_header">
+            <p className="project_title">MarkGet</p>
+            <a href="https://markget.fly.dev/" className="launch_btn">
+              <MdOutlineLaunch />
+            </a>
+          </div>
+          <p className="project_info">
+            An Express.js Full Stack Web App that compares the prices of supermarket products.
+          </p>
+        </div>
+
+        <div className="ipad_mockup">
+          <p>At18:36</p>
+          {/* <NatureHeroesMockUp className="nature_heroes_mockup" /> */}
+        </div>
+        <div>
+          <div className="project_header">
+            <p className="project_title">At 18:36!</p>
+            <a href="https://dani-rg.github.io/Project-1_Game_At-18.34/" className="launch_btn">
+              <MdOutlineLaunch />
+            </a>
+          </div>
+          <p className="project_info">
+            A Javascript videogame with HTML Canvas.
           </p>
         </div>
       </div>
