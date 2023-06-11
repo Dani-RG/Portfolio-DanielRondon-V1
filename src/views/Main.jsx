@@ -24,6 +24,7 @@ export default function Main() {
       </div>
 
       <div className="about_view" id="about">
+        <p className="section_title">ABOUT</p>
         <div className="about_text">
           <p className="about_fromA">
             From a professional background in architecture and 3D visualization,
@@ -44,7 +45,7 @@ export default function Main() {
         </div>
       </div>
       <div className="projects_view" id="projects">
-        <p className="projects_letters">PROJECTS</p>
+        <p className="section_title">PROJECTS</p>
 
         <div className="one_project">
           <div className="project_header">
@@ -97,6 +98,10 @@ export default function Main() {
             <img src={atPic01} alt="atPic01" className="ipad_mockup" />
           </div>
         </div>
+
+      </div>
+      <div className="techStack_view" id="techStack">
+        <p className="section_title">TECH STACK</p>
       </div>
     </div>
   );

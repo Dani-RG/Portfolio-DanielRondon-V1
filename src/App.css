@@ -76,6 +76,8 @@ body {
   width: 90vw;
   border-bottom: 0.1rem solid var(--greydark-color);
   z-index: 2;
+  position: fixed;
+  top: 5px;
 }
 
 .nav_links {
@@ -85,7 +87,6 @@ body {
 }
 
 .nav_links li a {
-  font-size: 0.8rem;
   margin: 0 1rem;
   cursor: pointer;
   text-transform: capitalize;
@@ -115,6 +116,11 @@ body {
 /* ----- NAVBAR MEDIA QUERIES ----- */
 
 @media (max-width: 768px) {
+
+  .navbar {
+    font-size: 1.3rem;
+  }
+
   .nav_links {
     display: none;
   }
@@ -200,27 +206,40 @@ body {
 /* ----- ABOUT ----- */
 
 .about_view {
-  height: 150vh;
+  height: 100vh;
+  width: 50vw;
+  margin: 0 auto;
+}
+
+.about_text {
+  position: relative;
+  line-height: 1.5;
+  justify-content: center;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(60vw, auto));
+  gap: 0 5rem;
+}
+
+/* .about_view {
+  height: 100vh;
   width: 50vw;
   line-height: 1.5;
   margin: 0 auto;
 }
 
 .about_text {
-  top: 10vh;
   position: relative;
   text-align: center;
   justify-content: center;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(60vw, auto));
   gap: 0 5rem;
-}
-
+} */
 
 .about_fromA {
   font-family: 'Hind Madurai', sans-serif;
   font-size: 1rem;
-  margin: 5vh 0;
 }
 
 #light .about_fromA {
@@ -236,7 +255,7 @@ body {
   font-size: 1.5rem;
   font-weight:800;
   font-style: italic;
-  margin: 5vh 0;
+  margin: 3vh 0;
   border: 1px solid var(--redlight-color);
   padding: 1.2rem;
 }
@@ -251,7 +270,6 @@ body {
 
 .about_photoText {
   position: relative;
-  top: 15%;
   display: flex;
   flex-direction: column;
 }
@@ -340,22 +358,6 @@ body {
   justify-items: center;
 }
 
-.projects_letters {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bolder;
-  font-size: 2rem;
-  margin-right: 2rem;
-  margin-bottom: 3rem;
-}
-
-#light .projects_letters {
-  color: var(--black-color);
-}
-
-#dark .projects_letters {
-  color: var(--white-color);
-}
-
 .iphone_mockup {
   width: 50vw;
 }
@@ -401,10 +403,6 @@ body {
 
 @media (min-width: 768px) {
 
-  .projects_letters{
-    font-size: 3rem;
-  }
-
   .projects_view {
     display: flex;
   }
@@ -434,6 +432,24 @@ body {
   }
 }
 
+/* ----- TECH STACK ----- */
+
+.techStack_view {
+  height: 100vh;
+  position: relative;
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ----- TECH STACK MEDIA QUERIES ----- */
+
+@media (min-width: 768px) {
+
+
+
+}
+
 /* ----- OTHER COMPONENTS ----- */
 
 .social_media_bar {
@@ -447,6 +463,34 @@ body {
   color: var(--greydark-color);
   stroke: var(--greydark-color);
   gap: 1rem;
+}
+
+/* ----- SECTION TITLES ----- */
+
+.section_title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bolder;
+  font-size: 2rem;
+  margin-right: 2rem;
+  margin-bottom: 4rem;
+}
+
+#light .section_title {
+  color: var(--black-color);
+}
+
+#dark .section_title {
+  color: var(--white-color);
+}
+
+/* ----- SECTION TITLES MEDIA QUERIES ----- */
+
+@media (min-width: 768px) {
+
+  .section_title {
+    font-size: 3rem;
+  }
+
 }
 
 /* ----- DIVS POSITIONING ----- */

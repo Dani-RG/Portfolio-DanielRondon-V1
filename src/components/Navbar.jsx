@@ -20,10 +20,10 @@ export default function Navbar( props ) {
         <button className="theme_icon" onClick={() => toggleTheme()}> <CgDarkMode /> </button>
 
         <ul className={burger ? "nav_links_mobile" : "nav_links"} onClick={() => setBurger(false)}>
-          <li><Link to="home">Home</Link></li>
+          <li><Link to="home" className="desk_link">Home</Link></li>
           <li><Link to="about">About</Link></li>
           <li><Link to="projects">Projects</Link></li>
-          <li><Link to="skills">Skills</Link></li>
+          <li><Link to="techStack">Tech Stack</Link></li>
           <li><Link to="contact">Contact</Link></li>
         </ul>
 
