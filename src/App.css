@@ -323,20 +323,29 @@ body {
 /* ----- PROJECTS ----- */
 
 .projects_view {
-  height: 150vh;
-  width: 70vw;
   position: relative;
-  text-align: center;
-  justify-content: center;
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.one_project {
+  margin-bottom: 10rem;
+}
+
+.mockups_set {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(60vw, auto));
-  gap: 0 5rem;
+  gap: 2rem;
+  justify-items: center;
 }
 
 .projects_letters {
   font-family: 'Montserrat', sans-serif;
   font-weight: bolder;
   font-size: 2rem;
+  margin-right: 2rem;
+  margin-bottom: 3rem;
 }
 
 #light .projects_letters {
@@ -348,20 +357,17 @@ body {
 }
 
 .iphone_mockup {
-  width: 70vw;
-  background-color: red;
+  width: 50vw;
 }
 
 .ipad_mockup {
-  width: 70vw;
-  background-color: blue;
+  width: 60vw;
 }
 
 .project_header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-top: 2rem;
+  gap: 2rem;
 }
 
 .project_title {
@@ -374,7 +380,7 @@ body {
   font-family: 'Hind Madurai', sans-serif;
   font-size: 1.1rem;
   line-height: 1.7rem;
-  margin-top: 2rem;
+  margin: 2rem 0;
   width: 100%;
 }
 
@@ -409,6 +415,22 @@ body {
 
   .project_info {
     font-size: 1.3rem;
+  }
+
+  .mockups_set {
+    position: relative;
+    display: flex;
+    max-width: 100%;
+  }
+
+  .iphone_mockup {
+    width: 23%;
+    height: auto;
+  }
+
+  .ipad_mockup {
+    width: 48%;
+    height: auto;
   }
 }
 
