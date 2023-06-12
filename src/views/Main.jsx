@@ -9,6 +9,14 @@ import mgPic02 from "../images/mockups/MG_iphone_mockup_02.png";
 import atPic00 from "../images/mockups/AT_ipad_mockup_00.png";
 import atPic01 from "../images/mockups/AT_ipad_mockup_01.png";
 import { MdOutlineLaunch } from "react-icons/md";
+import { FaReact } from "react-icons/fa";
+import { IoLogoJavascript } from "react-icons/io";
+import { FaHtml5 } from "react-icons/fa";
+import { FaCss3Alt } from "react-icons/fa";
+import { FaNodeJs } from "react-icons/fa";
+import { SiExpress } from "react-icons/si";
+import { SiMongodb } from "react-icons/si";
+import { SiPostman } from "react-icons/si";
 
 export default function Main() {
   return (
@@ -24,7 +32,7 @@ export default function Main() {
       </div>
 
       <div className="about_view" id="about">
-        <p className="section_title">ABOUT</p>
+        <p className="big_title to_center">ABOUT</p>
         <div className="about_text">
           <p className="about_fromA">
             From a professional background in architecture and 3D visualization,
@@ -45,11 +53,11 @@ export default function Main() {
         </div>
       </div>
       <div className="projects_view" id="projects">
-        <p className="section_title">PROJECTS</p>
+        <p className="big_title">PROJECTS</p>
 
         <div className="one_project">
           <div className="project_header">
-            <p className="project_title">Nature Heroes</p>
+            <p className="medium_title">Nature Heroes</p>
             <a href="https://nature-heroes.netlify.app/" className="launch_btn">
               <MdOutlineLaunch />
             </a>
@@ -68,13 +76,13 @@ export default function Main() {
 
         <div className="one_project">
           <div className="project_header">
-            <p className="project_title">MarkGet</p>
+            <p className="medium_title">MarkGet</p>
             <a href="https://markget.fly.dev/" className="launch_btn">
               <MdOutlineLaunch />
             </a>
           </div>
           <p className="project_info">
-          An Express.js Full Stack Web App that compares the prices of
+            An Express.js Full Stack Web App that compares the prices of
             supermarket products.
           </p>
           <div className="mockups_set">
@@ -85,23 +93,84 @@ export default function Main() {
 
         <div className="one_project">
           <div className="project_header">
-            <p className="project_title">At 18:36!</p>
-            <a href="https://dani-rg.github.io/Project-1_Game_At-18.34/" className="launch_btn">
+            <p className="medium_title">At 18:36!</p>
+            <a
+              href="https://dani-rg.github.io/Project-1_Game_At-18.34/"
+              className="launch_btn"
+            >
               <MdOutlineLaunch />
             </a>
           </div>
           <p className="project_info">
-          A Javascript videogame with HTML Canvas.
+            A Javascript videogame with HTML Canvas.
           </p>
           <div className="mockups_set">
             <img src={atPic00} alt="atPic00" className="ipad_mockup" />
             <img src={atPic01} alt="atPic01" className="ipad_mockup" />
           </div>
         </div>
-
       </div>
       <div className="techStack_view" id="techStack">
-        <p className="section_title">TECH STACK</p>
+        <p className="big_title to_right">TECH STACK</p>
+        <div className="tech_cards">
+          <div>
+            <p
+              className="medium_title
+          "
+            >
+              Frontend
+            </p>
+            <div className="frontend_card">
+              <div>
+                <FaReact className="tools_letters" />
+                <p className="tools_letters">React</p>
+              </div>
+              <div>
+                <IoLogoJavascript className="tools_letters" />
+                <p className="tools_letters">Javascript (ES6)</p>
+              </div>
+              <div>
+                <FaHtml5 className="tools_letters" />
+                <p className="tools_letters">HTML 5</p>
+              </div>
+              <div>
+                <FaCss3Alt className="tools_letters" />
+                <p className="tools_letters">CSS 3</p>
+              </div>
+              <div>
+                <FaNodeJs className="tools_letters" />
+                <p className="tools_letters">Node.js</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <p
+              className="medium_title to_right
+          "
+            >
+              Backend
+            </p>
+            <div className="backend_card">
+              <div>
+                <p className="tools_letters">Express.js</p>
+                <SiExpress className="tools_letters" />
+              </div>
+              <div>
+                <p className="tools_letters">MongoDB</p>
+                <SiMongodb className="tools_letters" />
+              </div>
+              <div>
+                <p className="tools_letters">Postman</p>
+                <SiPostman className="tools_letters" />
+              </div>
+              <div>
+                <p className="tools_letters">Node.js</p>
+                <FaNodeJs className="tools_letters" />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
