@@ -78,6 +78,7 @@ body {
   z-index: 2;
   position: fixed;
   top: 5px;
+  color: var(--greymedium-color);
 }
 
 .nav_links {
@@ -105,14 +106,6 @@ body {
   font-size: 1.5rem;
 }
 
-#light .nav_links_mobile {
-  background-color: var(--white-color);
-}
-
-#dark .nav_links_mobile {
-  background-color: var(--black-color);
-}
-
 /* ----- NAVBAR MEDIA QUERIES ----- */
 
 @media (max-width: 768px) {
@@ -128,17 +121,22 @@ body {
   .nav_links_mobile {
     position: absolute;
     display: block;
-    left: 0;
     top: 5vh;
     width: 100%;
     z-index: 10;
+    text-align: center;
   }
 
+  #light .nav_links_mobile {
+    background-color: var(--white-color);
+  }
+  
+  #dark .nav_links_mobile {
+    background-color: var(--black-color);
+  }
 
   .nav_links_mobile li {
-    padding: 2rem 0;
-    width: 100vw;
-    text-align: center;
+   line-height: 4rem;
   }
 
   .menu_burger_icon {
@@ -221,19 +219,6 @@ body {
   gap: 0 5rem;
 }
 
-.about_fromA {
-  font-family: 'Hind Madurai', sans-serif;
-  font-size: 1rem;
-}
-
-#light .about_fromA {
-  color: var(--greydark-color)
-}
-
-#dark .about_fromA {
-  color: var(--greylight-color);
-}
-
 .about_IPoss {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.5rem;
@@ -250,12 +235,6 @@ body {
 
 #dark .about_IPoss {
   color: var(--white-color);
-}
-
-.about_photoText {
-  position: relative;
-  display: flex;
-  flex-direction: column;
 }
 
 .circle_container {
@@ -297,10 +276,6 @@ body {
 /* ----- ABOUT MEDIA QUERIES ----- */
 
 @media (min-width: 768px) {
-  
-  .about_fromA {
-    font-size: 1.5rem;
-  }
 
   .about_IPoss {
     font-size: 2rem;
@@ -356,22 +331,6 @@ body {
   gap: 2rem;
 }
 
-.project_info {
-  font-family: 'Hind Madurai', sans-serif;
-  font-size: 1.1rem;
-  line-height: 1.7rem;
-  margin: 2rem 0;
-  width: 100%;
-}
-
-#light .project_info {
-  color: var(--greydark-color);
-}
-
-#dark .project_info {
-  color: var(--greylight-color);
-}
-
 .launch_btn {
   color: var(--greenmedium-color);
   font-size: 1.5rem;
@@ -383,10 +342,6 @@ body {
 
   .projects_view {
     display: flex;
-  }
-
-  .project_info {
-    font-size: 1.3rem;
   }
 
   .mockups_set {
@@ -409,7 +364,7 @@ body {
 /* ----- TECH STACK ----- */
 
 .techStack_view {
-  height: 100vh;
+  /* height: 100vh; */
   position: relative;
   width: 70vw;
 }
@@ -435,10 +390,17 @@ body {
   margin-bottom: 3rem;
   width: 200px;
   height: 200px;
-  border: 0.1rem solid var(--white-color);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
+
+#light .frontend_card {
+  border: 0.1rem solid var(--black-color);
+}
+
+#dark .frontend_card {
+  border: 0.1rem solid var(--white-color);
 }
 
 .backend_card {
@@ -447,10 +409,38 @@ body {
   margin-bottom: 3rem;
   width: 200px;
   height: 200px;
-  border: 0.1rem solid var(--white-color);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
+
+#light .backend_card {
+  border: 0.1rem solid var(--black-color);
+}
+
+#dark .backend_card {
+  border: 0.1rem solid var(--white-color);
+}
+
+.degree_line {
+  position: relative;
+  width: 100%;
+  height: 1rem;
+  stroke: var(--reddark-color);
+  stroke-width: 5px;
+  top: -3rem;
+}
+
+.degree_logo {
+  width: 4rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.laSalle_logo {
+  width: 8rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
 }
 
 /* ----- TECH STACK MEDIA QUERIES ----- */
@@ -482,6 +472,14 @@ body {
     justify-content: space-evenly;
   }
 
+  .degree_logo {
+    width: 6rem;
+  }
+
+  .laSalle_logo {
+    width: 10rem;
+  }
+
 }
 
 /* ----- OTHER COMPONENTS ----- */
@@ -505,7 +503,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-weight: bolder;
   font-size: 2rem;
-  margin-bottom: 4rem;
+  margin: 4rem 0;
 }
 
 #light .big_title {
@@ -520,6 +518,31 @@ body {
   font-family: 'Convergence', sans-serif;
   font-size: 1.5rem;
   color: var(--greenmedium-color);
+}
+
+.texts_letters {
+  font-family: 'Hind Madurai', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.7rem;
+  margin: 1.5rem 0;
+  width: 100%;
+}
+
+#light .texts_letters {
+  color: var(--greydark-color);
+}
+
+#dark .texts_letters {
+  color: var(--greylight-color);
+}
+
+.frontend_horiz_align {
+  display: flex;
+}
+
+.backend_horiz_align {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .to_center {
@@ -542,12 +565,8 @@ body {
     font-size: 2rem;
   }
 
+  .texts_letters {
+    font-size: 1.5rem;
+  }
+
 }
-
-/* ----- DIVS POSITIONING ----- */
-
-/* .centered_div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */

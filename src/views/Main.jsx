@@ -17,6 +17,10 @@ import { FaNodeJs } from "react-icons/fa";
 import { SiExpress } from "react-icons/si";
 import { SiMongodb } from "react-icons/si";
 import { SiPostman } from "react-icons/si";
+import ihLogo from "../images/ironhack.png";
+import EvolisLogo from "../images/evolis3d.png";
+import lasalleLogo from "../images/LaSalleBCN222.png";
+import ucvLogo from "../images/Logo_Universidad_Central_de_Venezuela.svg.png";
 
 export default function Main() {
   return (
@@ -34,7 +38,7 @@ export default function Main() {
       <div className="about_view" id="about">
         <p className="big_title to_center">ABOUT</p>
         <div className="about_text">
-          <p className="about_fromA">
+          <p className="texts_letters">
             From a professional background in architecture and 3D visualization,
             I have now become a web developer.
           </p>
@@ -42,7 +46,7 @@ export default function Main() {
             I possess valuable skills that can benefit your company.
           </p>
         </div>
-        <div className="about_photoText">
+        <div>
           <div className="circle_container">
             <img src={danielPhoto} alt="danielPhoto" />
           </div>
@@ -62,7 +66,7 @@ export default function Main() {
               <MdOutlineLaunch />
             </a>
           </div>
-          <p className="project_info">
+          <p className="texts_letters">
             A React.js Full Stack Web App that promotes animal conservation
             awareness.
           </p>
@@ -81,7 +85,7 @@ export default function Main() {
               <MdOutlineLaunch />
             </a>
           </div>
-          <p className="project_info">
+          <p className="texts_letters">
             An Express.js Full Stack Web App that compares the prices of
             supermarket products.
           </p>
@@ -101,7 +105,7 @@ export default function Main() {
               <MdOutlineLaunch />
             </a>
           </div>
-          <p className="project_info">
+          <p className="texts_letters">
             A Javascript videogame with HTML Canvas.
           </p>
           <div className="mockups_set">
@@ -121,23 +125,23 @@ export default function Main() {
               Frontend
             </p>
             <div className="frontend_card">
-              <div>
+              <div className="frontend_horiz_align">
                 <FaReact className="tools_letters" />
                 <p className="tools_letters">React</p>
               </div>
-              <div>
+              <div className="frontend_horiz_align">
                 <IoLogoJavascript className="tools_letters" />
                 <p className="tools_letters">Javascript (ES6)</p>
               </div>
-              <div>
+              <div className="frontend_horiz_align">
                 <FaHtml5 className="tools_letters" />
                 <p className="tools_letters">HTML 5</p>
               </div>
-              <div>
+              <div className="frontend_horiz_align">
                 <FaCss3Alt className="tools_letters" />
                 <p className="tools_letters">CSS 3</p>
               </div>
-              <div>
+              <div className="frontend_horiz_align">
                 <FaNodeJs className="tools_letters" />
                 <p className="tools_letters">Node.js</p>
               </div>
@@ -145,30 +149,53 @@ export default function Main() {
           </div>
 
           <div>
-            <p
-              className="medium_title to_right
-          "
-            >
-              Backend
-            </p>
-            <div className="backend_card">
-              <div>
+            <p className="medium_title to_right">Backend</p>
+            <div className="backend_card ">
+              <div className="backend_horiz_align">
                 <p className="tools_letters">Express.js</p>
                 <SiExpress className="tools_letters" />
               </div>
-              <div>
+              <div className="backend_horiz_align">
                 <p className="tools_letters">MongoDB</p>
                 <SiMongodb className="tools_letters" />
               </div>
-              <div>
+              <div className="backend_horiz_align">
                 <p className="tools_letters">Postman</p>
                 <SiPostman className="tools_letters" />
               </div>
-              <div>
+              <div className="backend_horiz_align">
                 <p className="tools_letters">Node.js</p>
                 <FaNodeJs className="tools_letters" />
               </div>
             </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <p className="big_title">Degrees</p>
+            <svg className="degree_line">
+              <line x1="0" y1="1" x2="100%" y2="1" />
+            </svg>
+          </div>
+          <div className="to_center">
+            <img src={ihLogo} alt="ihLogo" className="degree_logo"/>
+            <p className="medium_title">Full Stack Web Developer</p>
+            <p className="texts_letters">Ironhack - BCN</p>
+          </div>
+          <div className="to_center">
+            <img src={EvolisLogo} alt="EvolisLogo" className="degree_logo"/>
+            <p className="medium_title">3D ArchViz</p>
+            <p className="texts_letters">Evolis3D - BCN</p>
+          </div>
+          <div className="to_center">
+            <img src={lasalleLogo} alt="lasalleLogo" className="laSalle_logo"/>
+            <p className="medium_title">Int. Architecture Construction Manager</p>
+            <p className="texts_letters">La Salle - BCN</p>
+          </div>
+          <div className="to_center">
+            <img src={ucvLogo} alt="ucvLogo" className="degree_logo"/>
+            <p className="medium_title">Architect</p>
+            <p className="texts_letters">Universidad Central de Vzla. - CCS</p>
           </div>
         </div>
       </div>
