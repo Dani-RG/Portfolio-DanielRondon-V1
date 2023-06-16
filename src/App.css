@@ -66,6 +66,21 @@ body {
  background-color: var(--black-color);
 }
 
+/* ----- COMPONENTS ----- */
+
+.social_media_bar {
+  font-size: 1.3rem;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: 1.5rem;
+  bottom: 2rem;
+  color: var(--greydark-color);
+  stroke: var(--greydark-color);
+  gap: 1rem;
+}
+
 /* ----- NAVBAR ----- */
 
 .navbar {
@@ -143,6 +158,84 @@ body {
     position: absolute;
     display: contents;
   }
+}
+
+/* ----- TITLES ----- */
+
+.big_title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bolder;
+  font-size: 2rem;
+  margin: 4rem 0;
+}
+
+#light .big_title {
+  color: var(--black-color);
+}
+
+#dark .big_title {
+  color: var(--white-color);
+}
+
+.medium_title {
+  font-family: 'Convergence', sans-serif;
+  font-size: 1.5rem;
+  color: var(--greenmedium-color);
+}
+
+.texts_letters {
+  font-family: 'Hind Madurai', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.7rem;
+  margin: 1.5rem 0;
+  width: 100%;
+}
+
+#light .texts_letters {
+  color: var(--greydark-color);
+}
+
+#dark .texts_letters {
+  color: var(--greylight-color);
+}
+
+.frontend_horiz_align {
+  display: flex;
+}
+
+.backend_horiz_align {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.to_center {
+  text-align: center;
+}
+
+.to_right {
+  text-align: end;
+}
+
+.left {
+  text-align: start;
+}
+
+/* ----- TITLES MEDIA QUERIES ----- */
+
+@media (min-width: 768px) {
+
+  .big_title {
+    font-size: 3rem;
+  }
+
+  .medium_title {
+    font-size: 2rem;
+  }
+
+  .texts_letters {
+    font-size: 1.5rem;
+  }
+
 }
 
 /* ----- MAIN ----- */
@@ -364,7 +457,6 @@ body {
 /* ----- TECH STACK ----- */
 
 .techStack_view {
-  /* height: 100vh; */
   position: relative;
   width: 70vw;
 }
@@ -482,91 +574,50 @@ body {
 
 }
 
-/* ----- OTHER COMPONENTS ----- */
+/* ----- CONTACT ----- */
 
-.social_media_bar {
-  font-size: 1.3rem;
-  position: fixed;
+.contact_view {
+  height: 100vh;
+  width: 70vw;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  left: 1.5rem;
-  bottom: 2rem;
-  color: var(--greydark-color);
-  stroke: var(--greydark-color);
-  gap: 1rem;
-}
-
-/* ----- SECTION TITLES ----- */
-
-.big_title {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bolder;
-  font-size: 2rem;
-  margin: 4rem 0;
-}
-
-#light .big_title {
-  color: var(--black-color);
-}
-
-#dark .big_title {
-  color: var(--white-color);
-}
-
-.medium_title {
-  font-family: 'Convergence', sans-serif;
-  font-size: 1.5rem;
-  color: var(--greenmedium-color);
-}
-
-.texts_letters {
-  font-family: 'Hind Madurai', sans-serif;
-  font-size: 1.1rem;
-  line-height: 1.7rem;
-  margin: 1.5rem 0;
-  width: 100%;
-}
-
-#light .texts_letters {
-  color: var(--greydark-color);
-}
-
-#dark .texts_letters {
-  color: var(--greylight-color);
-}
-
-.frontend_horiz_align {
-  display: flex;
-}
-
-.backend_horiz_align {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.to_center {
+  justify-items: center;
   text-align: center;
+  align-items: center;
 }
 
-.to_right {
-  text-align: end;
+.contact_logos {
+  color: var(--reddark-color);
+  width: 60vw;
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* ----- SECTION TITLES MEDIA QUERIES ----- */
+#lets_get {
+  width: 40vw;
+}
+
+#in_logo {
+ font-size: 2.5rem;
+}
+
+.contact_form {
+  border: 2px solid var(--greenmedium-color);
+  border-radius: 20px;
+}
+
+/* ----- CONTACT MEDIA QUERIES ----- */
 
 @media (min-width: 768px) {
 
-  .big_title {
+  .contact_logos {
     font-size: 3rem;
   }
 
-  .medium_title {
-    font-size: 2rem;
-  }
-
-  .texts_letters {
-    font-size: 1.5rem;
-  }
+  #in_logo {
+    font-size: 3.5rem;
+   }
 
 }

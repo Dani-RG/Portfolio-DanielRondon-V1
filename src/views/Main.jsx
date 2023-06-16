@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import danielPhoto from "../images/danielRG_photo_noBG.png";
 import nhPic00 from "../images/mockups/NH_iphone_mockup_00.png";
 import nhPic01 from "../images/mockups/NH_iphone_mockup_01.png";
@@ -21,6 +22,10 @@ import ihLogo from "../images/ironhack.png";
 import EvolisLogo from "../images/evolis3d.png";
 import lasalleLogo from "../images/LaSalleBCN222.png";
 import ucvLogo from "../images/Logo_Universidad_Central_de_Venezuela.svg.png";
+import { TiSocialLinkedinCircular } from 'react-icons/ti';
+import { VscGithub } from 'react-icons/vsc';
+import { LuAtSign } from 'react-icons/lu';
+import { ContactForm } from "../components/ContactForm";
 
 export default function Main() {
   return (
@@ -178,26 +183,47 @@ export default function Main() {
             </svg>
           </div>
           <div className="to_center">
-            <img src={ihLogo} alt="ihLogo" className="degree_logo"/>
+            <img src={ihLogo} alt="ihLogo" className="degree_logo" />
             <p className="medium_title">Full Stack Web Developer</p>
             <p className="texts_letters">Ironhack - BCN</p>
           </div>
           <div className="to_center">
-            <img src={EvolisLogo} alt="EvolisLogo" className="degree_logo"/>
+            <img src={EvolisLogo} alt="EvolisLogo" className="degree_logo" />
             <p className="medium_title">3D ArchViz</p>
             <p className="texts_letters">Evolis3D - BCN</p>
           </div>
           <div className="to_center">
-            <img src={lasalleLogo} alt="lasalleLogo" className="laSalle_logo"/>
-            <p className="medium_title">Int. Architecture Construction Manager</p>
+            <img src={lasalleLogo} alt="lasalleLogo" className="laSalle_logo" />
+            <p className="medium_title">
+              Int. Architecture Construction Manager
+            </p>
             <p className="texts_letters">La Salle - BCN</p>
           </div>
           <div className="to_center">
-            <img src={ucvLogo} alt="ucvLogo" className="degree_logo"/>
+            <img src={ucvLogo} alt="ucvLogo" className="degree_logo" />
             <p className="medium_title">Architect</p>
             <p className="texts_letters">Universidad Central de Vzla. - CCS</p>
           </div>
         </div>
+      </div>
+
+      <div className="contact_view" id="contact">
+        <p className="big_title left" id="lets_get">Let’s get in touch!</p>
+        <div className="contact_logos">
+          <Link
+            to="https://www.linkedin.com/in/daniel-rondon-garcia-"
+            target="_blank"
+          >
+            <TiSocialLinkedinCircular id="in_logo"/>
+          </Link>
+          <Link to="https://github.com/Dani-RG" target="_blank">
+            <VscGithub />
+          </Link>
+          <Link to="mailto:daniel.deweb@gmail.com">
+            <LuAtSign />
+          </Link>
+        </div>
+        <ContactForm />
       </div>
     </div>
   );
