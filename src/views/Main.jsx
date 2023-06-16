@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import danielPhoto from "../images/danielRG_photo_noBG.png";
 import nhPic00 from "../images/mockups/NH_iphone_mockup_00.png";
 import nhPic01 from "../images/mockups/NH_iphone_mockup_01.png";
@@ -22,9 +22,9 @@ import ihLogo from "../images/ironhack.png";
 import EvolisLogo from "../images/evolis3d.png";
 import lasalleLogo from "../images/LaSalleBCN222.png";
 import ucvLogo from "../images/Logo_Universidad_Central_de_Venezuela.svg.png";
-import { TiSocialLinkedinCircular } from 'react-icons/ti';
-import { VscGithub } from 'react-icons/vsc';
-import { LuAtSign } from 'react-icons/lu';
+import { TiSocialLinkedinCircular } from "react-icons/ti";
+import { VscGithub } from "react-icons/vsc";
+import { LuAtSign } from "react-icons/lu";
 import { ContactForm } from "../components/ContactForm";
 
 export default function Main() {
@@ -208,22 +208,27 @@ export default function Main() {
       </div>
 
       <div className="contact_view" id="contact">
-        <p className="big_title left" id="lets_get">Let’s get in touch!</p>
-        <div className="contact_logos">
-          <Link
-            to="https://www.linkedin.com/in/daniel-rondon-garcia-"
-            target="_blank"
-          >
-            <TiSocialLinkedinCircular id="in_logo"/>
-          </Link>
-          <Link to="https://github.com/Dani-RG" target="_blank">
-            <VscGithub />
-          </Link>
-          <Link to="mailto:daniel.deweb@gmail.com">
-            <LuAtSign />
-          </Link>
+        <p className="big_title left" id="lets_get">
+          Let’s get in touch!
+        </p>
+        <div className="contact_set">
+          <div className="contact_logos">
+            <Link
+              to="https://www.linkedin.com/in/daniel-rondon-garcia-"
+              target="_blank"
+            >
+              <TiSocialLinkedinCircular id="in_logo" />
+            </Link>
+            <Link to="https://github.com/Dani-RG" target="_blank">
+              <VscGithub />
+            </Link>
+            <Link to="mailto:daniel.deweb@gmail.com">
+              <LuAtSign />
+            </Link>
+          </div>
+          <ContactForm />
+          <p>CV.PDF</p>
         </div>
-        <ContactForm />
       </div>
     </div>
   );

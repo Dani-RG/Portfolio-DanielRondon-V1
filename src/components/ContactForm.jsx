@@ -1,5 +1,5 @@
-import React, { useRef } from 'react';
-import emailjs from '@emailjs/browser';
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 export const ContactForm = () => {
   const form = useRef();
@@ -7,25 +7,34 @@ export const ContactForm = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_utm6eli', 'template_jctjax9', form.current, 'fgdth6vCovIsNLznW')
-      .then((result) => {
+    emailjs
+      .sendForm(
+        "service_utm6eli",
+        "template_jctjax9",
+        form.current,
+        "fgdth6vCovIsNLznW"
+      )
+      .then(
+        (result) => {
           console.log(result.text);
-          console.log("message sent")
+          console.log("message sent");
           e.target.reset();
-      }, (error) => {
+        },
+        (error) => {
           console.log(error.text);
-      });
+        }
+      );
   };
 
   return (
-    <form ref={form} onSubmit={sendEmail}>
+    <form ref={form} onSubmit={sendEmail} className="contact_form">
       <label>Name:</label>
       <input type="text" name="user_name" />
       <label>Email:</label>
       <input type="email" name="user_email" />
       <label>Message:</label>
       <textarea name="message" />
-      <input type="submit" value="Send" />
+      <input type="submit" value="SEND" id="send_btn"/>
     </form>
   );
 };

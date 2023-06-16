@@ -578,6 +578,9 @@ body {
 
 .contact_view {
   height: 100vh;
+}
+
+.contact_set {
   width: 70vw;
   display: flex;
   flex-direction: column;
@@ -588,11 +591,12 @@ body {
 
 .contact_logos {
   color: var(--reddark-color);
-  width: 60vw;
+  width: 100%;
   font-size: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0 0 2rem;
 }
 
 #lets_get {
@@ -605,7 +609,85 @@ body {
 
 .contact_form {
   border: 2px solid var(--greenmedium-color);
-  border-radius: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  padding: 1rem;
+  width: calc(100% - 2rem);
+}
+
+form input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--greydark-color);
+  outline: none;
+  font-family: 'Hind Madurai', sans-serif;
+  font-size: 1.1rem;
+}
+
+#light form input {
+  color: var(--greydark-color);
+}
+
+#dark form input {
+  color: var(--greylight-color);
+}
+
+form input:focus {
+  border-bottom: 2px solid var(--reddark-color);
+}
+
+form textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--greydark-color);
+  outline: none;
+  resize: none;
+  font-family: 'Hind Madurai', sans-serif;
+  font-size: 1.1rem;
+  resize: none;
+  overflow: auto;
+}
+
+#light form textarea {
+  color: var(--greydark-color);
+}
+
+#dark form textarea {
+  color: var(--greylight-color);
+}
+
+form textarea:focus {
+  border-bottom: 2px solid var(--reddark-color);
+}
+
+form label {
+  font-family: 'Hind Madurai', sans-serif;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  margin: 1rem 0;
+  width: 100%;
+}
+
+#light form label {
+  color: var(--greydark-color);
+}
+
+#dark form label {
+  color: var(--greylight-color);
+}
+
+#send_btn {
+  border: 1px solid var(--redlight-color);
+  border-radius: 25px;
+  width: min-content;
+  padding: 0.5rem 2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bolder;
+  font-size: 1.3rem;
+  align-self: center;
+  margin: 2rem 0 1.2rem;
 }
 
 /* ----- CONTACT MEDIA QUERIES ----- */
@@ -619,5 +701,13 @@ body {
   #in_logo {
     font-size: 3.5rem;
    }
+
+   #lets_get {
+    width: 20vw;
+  }
+
+  #send_btn {
+    font-size: 1.5rem;
+  }
 
 }
