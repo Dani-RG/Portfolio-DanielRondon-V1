@@ -227,7 +227,12 @@ export default function Main() {
             </Link>
           </div>
           <ContactForm />
-          <p>CV.PDF</p>
+          <a
+            href="CV WebDev Daniel Rondon Garcia.pdf"
+            download="CV WebDev Daniel Rondon Garcia.pdf"
+          id="resume_btn">
+            Resume
+          </a>
         </div>
       </div>
     </div>

@@ -44,10 +44,10 @@ export default function ParticlesBG() {
         },
         particles: {
           color: {
-            value: "#1F7A8C",
+            value: "#DB222A",
           },
           links: {
-            color: "#053C5E",
+            color: "#A31621",
             distance: 150,
             enable: true,
             opacity: 0.5,
