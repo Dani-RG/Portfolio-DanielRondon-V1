@@ -52,22 +52,22 @@ export default function Main() {
           <line x1="0" y1="1" x2="100%" y2="1" />
         </svg>
         <div className="about_set">
-          <RiDoubleQuotesL className="quotes" />
           <div className="about_text">
-            <p className="texts_letters_01">
+            <p className="texts_letters_02">
               From a professional background in architecture and 3D visualization,
               I have now become a web developer.
             </p>
-            <p className="texts_letters_01">
-              Clean design and functionality are the driving forces behind my creative mind.
+            <p className="texts_letters_02">
+              I possess valuable skills that can benefit your company.
             </p>
           </div>
           <div className="about_photo_phrase">
             <div className="circle_container">
               <img src={danielPhoto} alt="danielPhoto" />
             </div>
-            <p className="texts_letters_02">
-              Possess valuable skills that can benefit your company.
+            <RiDoubleQuotesL className="quotes" />
+            <p className="texts_letters_01">
+            Clean design and functionality are the driving forces behind my creative mind.
             </p>
           </div>
         </div>
@@ -251,9 +251,9 @@ export default function Main() {
           <a
             href="CV WebDev Daniel Rondon Garcia.pdf"
             download="CV WebDev Daniel Rondon Garcia.pdf"
-            id="resume_btn"
+            className="resume_btn"
           >
-            Resume
+            Get Resume
           </a>
         </div>
       </div>

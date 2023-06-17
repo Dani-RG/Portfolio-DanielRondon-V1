@@ -44,7 +44,7 @@ export default function ParticlesBG() {
         },
         particles: {
           color: {
-            value: "#DB222A",
+            value: "#a31621",
           },
           links: {
             color: "#A31621",
