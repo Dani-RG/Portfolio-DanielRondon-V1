@@ -1,11 +1,3 @@
-/*
-FONTS FAMILIES:
-font-family: 'Convergence', sans-serif;
-font-family: 'Hind Madurai', sans-serif;
-font-family: 'Josefin Slab', serif;
-font-family: 'Montserrat', sans-serif;
-*/
-
 /* MEDIA QUERIES FORMATS */
 /* Extra small devices (phones, 600px and down) */
 /* @media only screen and (max-width: 600px) {...} */
@@ -22,6 +14,11 @@ font-family: 'Montserrat', sans-serif;
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 /* @media only screen and (min-width: 1200px) {...} */
 
+/* font-family: 'Big Shoulders Display', cursive;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Jost', sans-serif;
+font-family: 'Montserrat', sans-serif; */
+
 .App {
   color: grey;
   display: flex;
@@ -33,16 +30,21 @@ font-family: 'Montserrat', sans-serif;
 
 :root {
   --black-color: #000000;
-  --greydark-color: #2F4550;
-  --greymedium-color: #586F7C;
-  --greylight-color: #B8DBD9;
-  --white-color: #F4F4F9;
-  --reddark-color: #A31621;
-  --redlight-color: #DB222A;
-  --bluelight-color: #BFDBF7;
-  --bluedark-color: #053C5E;
-  --greenmedium-color: #1F7A8C;
-  --box-shadow: 0 1px 10px 5px #2F4550;
+  --greydark-color: #2f4550;
+  --greymedium-color: #586f7c;
+  --greylight-color: #b8dbd9;
+  --white-color: #f4f4f9;
+  --reddark-color: #a31621;
+  --redlight-color: #db222a;
+  --bluelight-color: #bfdbf7;
+  --bluedark-color: #053c5e;
+  --greenmedium-color: #1f7a8c;
+  --box-shadow: 0 1px 10px 5px #2f4550;
+
+  --bigShoulders-font-family: "Big Shoulders Display", cursive;
+  --josefin-font-family: "Josefin Sans", sans-serif;
+  --jost-font-family: "Jost", sans-serif;
+  --montserrat-font-family: "Montserrat", sans-serif;
 }
 
 a {
@@ -63,7 +65,104 @@ body {
 }
 
 #dark {
- background-color: var(--black-color);
+  background-color: var(--black-color);
+}
+
+/* ----- TITLES ----- */
+
+.big_title {
+  font-family: var(--jost-font-family);
+  font-weight: bolder;
+  font-size: 2rem;
+  margin: 4rem 0;
+}
+
+#light .big_title {
+  color: var(--black-color);
+}
+
+#dark .big_title {
+  color: var(--white-color);
+}
+
+.medium_title {
+  font-family: var(--montserrat-font-family);
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--greenmedium-color);
+}
+
+.texts_letters_01 {
+  font-family: var(--josefin-font-family);
+  font-size: 1.1rem;
+  line-height: 1.7rem;
+  margin: 1.5rem 0;
+  width: 100%;
+}
+
+.texts_letters_02 {
+  font-family: var(--montserrat-font-family);
+  font-size: 1.1rem;
+  line-height: 1.7rem;
+  margin: 1.5rem 0;
+  width: 100%;
+}
+
+#light .texts_letters_01 {
+  color: var(--greydark-color);
+}
+
+#dark .texts_letters_01 {
+  color: var(--greylight-color);
+}
+
+#light .texts_letters_02 {
+  color: var(--greydark-color);
+}
+
+#dark .texts_letters_02 {
+  color: var(--greylight-color);
+}
+
+.to_center {
+  text-align: center;
+}
+
+.to_right {
+  text-align: end;
+}
+
+.left {
+  text-align: start;
+}
+
+.underline {
+  position: relative;
+  width: 100%;
+  height: 1rem;
+  stroke: var(--reddark-color);
+  stroke-width: 5px;
+  top: -3rem;
+}
+
+/* ----- TITLES MEDIA QUERIES ----- */
+
+@media (min-width: 768px) {
+  .big_title {
+    font-size: 3rem;
+  }
+
+  .medium_title {
+    font-size: 2rem;
+  }
+
+  .texts_letters_01 {
+    font-size: 1.5rem;
+  }
+
+  .texts_letters_02 {
+    font-size: 1.5rem;
+  }
 }
 
 /* ----- COMPONENTS ----- */
@@ -74,7 +173,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  left: 1.5rem;
+  left: 1.3rem;
   bottom: 2rem;
   color: var(--greydark-color);
   stroke: var(--greydark-color);
@@ -109,7 +208,7 @@ body {
 }
 
 .theme_icon {
-  color: #586F7C;
+  color: #586f7c;
   font-size: 1.5rem;
   display: contents;
   cursor: pointer;
@@ -124,7 +223,6 @@ body {
 /* ----- NAVBAR MEDIA QUERIES ----- */
 
 @media (max-width: 768px) {
-
   .navbar {
     font-size: 1.3rem;
   }
@@ -145,13 +243,13 @@ body {
   #light .nav_links_mobile {
     background-color: var(--white-color);
   }
-  
+
   #dark .nav_links_mobile {
     background-color: var(--black-color);
   }
 
   .nav_links_mobile li {
-   line-height: 4rem;
+    line-height: 4rem;
   }
 
   .menu_burger_icon {
@@ -160,88 +258,13 @@ body {
   }
 }
 
-/* ----- TITLES ----- */
-
-.big_title {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bolder;
-  font-size: 2rem;
-  margin: 4rem 0;
-}
-
-#light .big_title {
-  color: var(--black-color);
-}
-
-#dark .big_title {
-  color: var(--white-color);
-}
-
-.medium_title {
-  font-family: 'Convergence', sans-serif;
-  font-size: 1.5rem;
-  color: var(--greenmedium-color);
-}
-
-.texts_letters {
-  font-family: 'Hind Madurai', sans-serif;
-  font-size: 1.1rem;
-  line-height: 1.7rem;
-  margin: 1.5rem 0;
-  width: 100%;
-}
-
-#light .texts_letters {
-  color: var(--greydark-color);
-}
-
-#dark .texts_letters {
-  color: var(--greylight-color);
-}
-
-.frontend_horiz_align {
-  display: flex;
-}
-
-.backend_horiz_align {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.to_center {
-  text-align: center;
-}
-
-.to_right {
-  text-align: end;
-}
-
-.left {
-  text-align: start;
-}
-
-/* ----- TITLES MEDIA QUERIES ----- */
-
-@media (min-width: 768px) {
-
-  .big_title {
-    font-size: 3rem;
-  }
-
-  .medium_title {
-    font-size: 2rem;
-  }
-
-  .texts_letters {
-    font-size: 1.5rem;
-  }
-
-}
-
 /* ----- MAIN ----- */
 
 .main {
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* ----- HOME ----- */
@@ -251,7 +274,7 @@ body {
 }
 
 .home_text {
-  top: 20vh;
+  top: 25vh;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -260,33 +283,31 @@ body {
 }
 
 .danielrondon_text {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2.5rem;
-  margin: 1.5rem;
+  font-family: var(--bigShoulders-font-family);
+  font-size: 4rem;
   text-align: center;
 }
 
 #light .danielrondon_text {
-  color: var(--black-color)
+  color: var(--black-color);
 }
 
 #dark .danielrondon_text {
-  color: var(--white-color)
+  color: var(--white-color);
 }
 
 .fullstack_webdev_text {
-  color: var(--greenmedium-color);
-  font-family: 'Convergence', sans-serif;
+  font-weight: lighter;
   font-size: 1.5rem;
   position: relative;
+  color: var(--greenmedium-color);
 }
 
 /* ----- HOME MEDIA QUERIES ----- */
 
 @media (min-width: 768px) {
-  
   .danielrondon_text {
-    font-size: 4rem;
+    font-size: 6rem;
   }
 
   .fullstack_webdev_text {
@@ -298,36 +319,15 @@ body {
 
 .about_view {
   height: 100vh;
-  width: 50vw;
-  margin: 0 auto;
+  width: 70vw;
 }
 
-.about_text {
-  position: relative;
-  line-height: 1.5;
-  justify-content: center;
-  text-align: center;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(60vw, auto));
-  gap: 0 5rem;
-}
-
-.about_IPoss {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.5rem;
-  font-weight:800;
-  font-style: italic;
-  margin: 3vh 0;
-  border: 1px solid var(--redlight-color);
-  padding: 1.2rem;
-}
-
-#light .about_IPoss {
-  color: var(--black-color)
-}
-
-#dark .about_IPoss {
-  color: var(--white-color);
+.quotes {
+  color: var(--redlight-color);
+  font-size: 5rem;
+  position: absolute;
+  transform: translateY(-2.5rem) translateX(-1.5rem);
+  z-index: -1;
 }
 
 .circle_container {
@@ -350,33 +350,18 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.about_cleanDes {
-  font-family: 'Josefin Slab', serif;
-  font-size: 1rem;
-  margin-top: 2rem;
-  width: 100%;
+.about_photo_phrase {
+  border: 2px solid var(--reddark-color);
+  padding: 1rem;
+  margin-top: 3rem;
   text-align: center;
-}
-
-#light .about_cleanDes {
-  color: var(--greymedium-color);
-}
-
-#dark .about_cleanDes {
-  color: var(--greylight-color);
 }
 
 /* ----- ABOUT MEDIA QUERIES ----- */
 
 @media (min-width: 768px) {
-
   .about_IPoss {
     font-size: 2rem;
-  }
-
-  .about_text {
-    display: flex;
-    align-items: center;
   }
 
   .circle_container {
@@ -384,16 +369,24 @@ body {
     height: 300px;
   }
 
-  .about_cleanDes {
-    font-size: 1.5rem;
-    width: 100%;
+  .about_set {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .about_text {
+    width: 30vw;
+  }
+
+  .about_photo_phrase {
+    width: 30vw;
   }
 }
 
 /* ----- PROJECTS ----- */
 
 .projects_view {
-  position: relative;
   width: 70vw;
   display: flex;
   flex-direction: column;
@@ -432,7 +425,6 @@ body {
 /* ----- PROJECTS MEDIA QUERIES ----- */
 
 @media (min-width: 768px) {
-
   .projects_view {
     display: flex;
   }
@@ -457,7 +449,6 @@ body {
 /* ----- TECH STACK ----- */
 
 .techStack_view {
-  position: relative;
   width: 70vw;
 }
 
@@ -469,7 +460,7 @@ body {
 }
 
 .tools_letters {
-  font-family: 'Hind Madurai', sans-serif;
+  font-family: var(--josefin-font-family);
   font-size: 1.1rem;
   color: var(--redlight-color);
   display: inline;
@@ -514,19 +505,19 @@ body {
   border: 0.1rem solid var(--white-color);
 }
 
-.degree_line {
-  position: relative;
-  width: 100%;
-  height: 1rem;
-  stroke: var(--reddark-color);
-  stroke-width: 5px;
-  top: -3rem;
-}
-
 .degree_logo {
   width: 4rem;
   margin-top: 3rem;
   margin-bottom: 2rem;
+}
+
+.frontend_horiz_align {
+  display: flex;
+}
+
+.backend_horiz_align {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .laSalle_logo {
@@ -538,14 +529,13 @@ body {
 /* ----- TECH STACK MEDIA QUERIES ----- */
 
 @media (min-width: 768px) {
-
   .tools_letters {
     font-size: 1.5rem;
   }
 
   .tech_cards {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
 
   .frontend_card {
@@ -571,22 +561,20 @@ body {
   .laSalle_logo {
     width: 10rem;
   }
-
 }
 
 /* ----- CONTACT ----- */
 
 .contact_view {
+  width: 70vw;
   height: 100vh;
 }
 
 .contact_set {
-  width: 70vw;
   display: flex;
   flex-direction: column;
-  justify-items: center;
-  text-align: center;
   align-items: center;
+  margin: 0 auto;
 }
 
 .contact_logos {
@@ -604,7 +592,7 @@ body {
 }
 
 #in_logo {
- font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 
 .contact_form {
@@ -622,7 +610,7 @@ form input {
   border: none;
   border-bottom: 1px solid var(--greydark-color);
   outline: none;
-  font-family: 'Hind Madurai', sans-serif;
+  font-family: var(--montserrat-font-family);
   font-size: 1.1rem;
 }
 
@@ -644,7 +632,7 @@ form textarea {
   border-bottom: 1px solid var(--greydark-color);
   outline: none;
   resize: none;
-  font-family: 'Hind Madurai', sans-serif;
+  font-family: var(--montserrat-font-family);
   font-size: 1.1rem;
   resize: none;
   overflow: auto;
@@ -663,7 +651,7 @@ form textarea:focus {
 }
 
 form label {
-  font-family: 'Hind Madurai', sans-serif;
+  font-family: var(--montserrat-font-family);
   font-size: 1rem;
   line-height: 1.2rem;
   margin: 1rem 0;
@@ -683,7 +671,7 @@ form label {
   border-radius: 25px;
   width: min-content;
   padding: 0.3rem 1.5rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--jost-font-family);
   font-weight: bolder;
   font-size: 1.3rem;
   align-self: center;
@@ -695,7 +683,7 @@ form label {
   border-radius: 5px;
   width: min-content;
   padding: 0.5rem 0.5rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--jost-font-family);
   font-weight: bolder;
   font-size: 1.3rem;
   align-self: center;
@@ -706,21 +694,27 @@ form label {
 /* ----- CONTACT MEDIA QUERIES ----- */
 
 @media (min-width: 768px) {
-
   .contact_logos {
     font-size: 3rem;
   }
 
+  .contact_set {
+    width: 40vw;
+  }
+
   #in_logo {
     font-size: 3.5rem;
-   }
+  }
 
-   #lets_get {
+  #lets_get {
     width: 20vw;
+  }
+
+  form label {
+    font-size: 1.2rem;
   }
 
   #send_btn {
     font-size: 1.4rem;
   }
-
 }

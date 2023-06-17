@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { RiDoubleQuotesL } from "react-icons/ri";
 import danielPhoto from "../images/danielRG_photo_noBG.png";
 import nhPic00 from "../images/mockups/NH_iphone_mockup_00.png";
 import nhPic01 from "../images/mockups/NH_iphone_mockup_01.png";
@@ -36,34 +37,46 @@ export default function Main() {
             <p>DANIEL</p>
             <p>RONDON</p>
           </div>
-          <div className="fullstack_webdev_text">FullStackWebDeveloper</div>
+          <div className="fullstack_webdev_text big_title">
+            Full Stack Web Developer
+          </div>
+          <svg className="underline">
+            <line x1="0" y1="1" x2="100%" y2="1" />
+          </svg>
         </div>
       </div>
 
       <div className="about_view" id="about">
-        <p className="big_title to_center">ABOUT</p>
-        <div className="about_text">
-          <p className="texts_letters">
-            From a professional background in architecture and 3D visualization,
-            I have now become a web developer.
-          </p>
-          <p className="about_IPoss">
-            I possess valuable skills that can benefit your company.
-          </p>
-        </div>
-        <div>
-          <div className="circle_container">
-            <img src={danielPhoto} alt="danielPhoto" />
+        <p className="big_title">ABOUT</p>
+        <svg className="underline">
+          <line x1="0" y1="1" x2="100%" y2="1" />
+        </svg>
+        <div className="about_set">
+          <RiDoubleQuotesL className="quotes" />
+          <div className="about_text">
+            <p className="texts_letters_01">
+              From a professional background in architecture and 3D visualization,
+              I have now become a web developer.
+            </p>
+            <p className="texts_letters_01">
+              Clean design and functionality are the driving forces behind my creative mind.
+            </p>
           </div>
-          <p className="about_cleanDes">
-            “Clean design and functionality are the driving forces behind my
-            creative mind.”
-          </p>
+          <div className="about_photo_phrase">
+            <div className="circle_container">
+              <img src={danielPhoto} alt="danielPhoto" />
+            </div>
+            <p className="texts_letters_02">
+              Possess valuable skills that can benefit your company.
+            </p>
+          </div>
         </div>
       </div>
       <div className="projects_view" id="projects">
         <p className="big_title">PROJECTS</p>
-
+        <svg className="underline">
+          <line x1="0" y1="1" x2="100%" y2="1" />
+        </svg>
         <div className="one_project">
           <div className="project_header">
             <p className="medium_title">Nature Heroes</p>
@@ -71,7 +84,7 @@ export default function Main() {
               <MdOutlineLaunch />
             </a>
           </div>
-          <p className="texts_letters">
+          <p className="texts_letters_01">
             A React.js Full Stack Web App that promotes animal conservation
             awareness.
           </p>
@@ -90,7 +103,7 @@ export default function Main() {
               <MdOutlineLaunch />
             </a>
           </div>
-          <p className="texts_letters">
+          <p className="texts_letters_01">
             An Express.js Full Stack Web App that compares the prices of
             supermarket products.
           </p>
@@ -110,7 +123,7 @@ export default function Main() {
               <MdOutlineLaunch />
             </a>
           </div>
-          <p className="texts_letters">
+          <p className="texts_letters_01">
             A Javascript videogame with HTML Canvas.
           </p>
           <div className="mockups_set">
@@ -120,7 +133,10 @@ export default function Main() {
         </div>
       </div>
       <div className="techStack_view" id="techStack">
-        <p className="big_title to_right">TECH STACK</p>
+        <p className="big_title">TECH STACK</p>
+        <svg className="underline">
+          <line x1="0" y1="1" x2="100%" y2="1" />
+        </svg>
         <div className="tech_cards">
           <div>
             <p
@@ -177,32 +193,34 @@ export default function Main() {
         </div>
         <div>
           <div>
-            <p className="big_title">Degrees</p>
-            <svg className="degree_line">
+            <p className="big_title">DEGREES</p>
+            <svg className="underline">
               <line x1="0" y1="1" x2="100%" y2="1" />
             </svg>
           </div>
           <div className="to_center">
             <img src={ihLogo} alt="ihLogo" className="degree_logo" />
             <p className="medium_title">Full Stack Web Developer</p>
-            <p className="texts_letters">Ironhack - BCN</p>
+            <p className="texts_letters_01">Ironhack - BCN</p>
           </div>
           <div className="to_center">
             <img src={EvolisLogo} alt="EvolisLogo" className="degree_logo" />
             <p className="medium_title">3D ArchViz</p>
-            <p className="texts_letters">Evolis3D - BCN</p>
+            <p className="texts_letters_01">Evolis3D - BCN</p>
           </div>
           <div className="to_center">
             <img src={lasalleLogo} alt="lasalleLogo" className="laSalle_logo" />
             <p className="medium_title">
               Int. Architecture Construction Manager
             </p>
-            <p className="texts_letters">La Salle - BCN</p>
+            <p className="texts_letters_01">La Salle - BCN</p>
           </div>
           <div className="to_center">
             <img src={ucvLogo} alt="ucvLogo" className="degree_logo" />
             <p className="medium_title">Architect</p>
-            <p className="texts_letters">Universidad Central de Vzla. - CCS</p>
+            <p className="texts_letters_01">
+              Universidad Central de Vzla. - CCS
+            </p>
           </div>
         </div>
       </div>
@@ -211,6 +229,9 @@ export default function Main() {
         <p className="big_title left" id="lets_get">
           Let’s get in touch!
         </p>
+        <svg className="underline">
+          <line x1="0" y1="1" x2="100%" y2="1" />
+        </svg>
         <div className="contact_set">
           <div className="contact_logos">
             <Link
@@ -230,7 +251,8 @@ export default function Main() {
           <a
             href="CV WebDev Daniel Rondon Garcia.pdf"
             download="CV WebDev Daniel Rondon Garcia.pdf"
-          id="resume_btn">
+            id="resume_btn"
+          >
             Resume
           </a>
         </div>
