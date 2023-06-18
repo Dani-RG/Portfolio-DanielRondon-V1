@@ -21,6 +21,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  background-color: var(--light-color);
 }
 
 :root {
@@ -234,6 +235,7 @@ body {
     width: 100%;
     z-index: 10;
     text-align: center;
+    background-color: var(--light-color);
   }
 
   .nav_links_mobile li {
@@ -292,11 +294,11 @@ body {
 
 @media (min-width: 768px) {
   .danielrondon_text {
-    font-size: 8rem;
+    font-size: 10rem;
   }
 
   .fullstack_webdev_text {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 }
 
