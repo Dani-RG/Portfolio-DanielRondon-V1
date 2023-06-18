@@ -24,7 +24,7 @@
 }
 
 :root {
-  --black-color: #12001d;
+/*   --black-color: #12001d;
   --greydark-color: #2f4550;
   --greymedium-color: #586f7c;
   --greylight-color: #b8dbd9;
@@ -34,8 +34,14 @@
   --bluelight-color: #bfdbf7;
   --bluedark-color: #053c5e;
   --greenlight-color: #e7fbff;
-  --greenmedium-color: #1f7a8c;
-  --box-shadow: 0 1px 10px 5px #2f4550;
+  --greenmedium-color: #1f7a8c; */
+
+  --dark-color: #0D203F;
+  --mid-color: #05AA8C;
+  --bright-color: #D9A712;
+  --light-color: #F6F6F6;
+  --alt-color: #B22476;
+  --box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
 
   --bigShoulders-font-family: "Big Shoulders Display", cursive;
   --josefin-font-family: "Josefin Sans", sans-serif;
@@ -45,11 +51,16 @@
 
 a {
   text-decoration: none;
-  color: var(--greymedium_color);
+  color: var(--bright-color);
 }
 
 li {
   list-style: none;
+}
+
+button {
+  all: unset;
+  cursor: pointer
 }
 
 body {
@@ -68,11 +79,12 @@ body {
 .medium_title {
   font-family: var(--montserrat-font-family);
   font-weight: bold;
-  font-size: 1.5rem;
-  color: var(--greenmedium-color);
+  font-size: 1.4rem;
+  color: var(--mid-color);
 }
 
 .texts_letters_01 {
+  color: var(--mid-color);
   font-family: var(--josefin-font-family);
   font-size: 1.1rem;
   line-height: 1.7rem;
@@ -80,10 +92,29 @@ body {
 }
 
 .texts_letters_02 {
+  color: var(--mid-color);
   font-family: var(--montserrat-font-family);
   font-size: 1.1rem;
   line-height: 1.7rem;
   margin: 1.5rem 0;
+}
+
+.underline {
+  position: relative;
+  width: 100%;
+  height: 1rem;
+  stroke: var(--bright-color);
+  stroke-width: 3px;
+  top: -3.7rem;
+}
+
+.underline_alt_color {
+  position: relative;
+  width: 100%;
+  height: 1rem;
+  stroke: var(--alt-color);
+  stroke-width: 3px;
+  top: -3.7rem;
 }
 
 .to_center {
@@ -94,17 +125,24 @@ body {
   text-align: end;
 }
 
-.left {
+.to_left {
   text-align: start;
 }
 
-.underline {
-  position: relative;
-  width: 100%;
-  height: 1rem;
-  stroke: var(--redlight-color);
-  stroke-width: 3px;
-  top: -3.7rem;
+.to_light {
+  color: var(--light-color);
+}
+
+.to_dark {
+  color: var(--dark-color);
+}
+
+.to_alt {
+  color: var(--alt-color);
+}
+
+.to_italic {
+  font-style: italic;
 }
 
 /* ----- TITLES MEDIA QUERIES ----- */
@@ -115,7 +153,7 @@ body {
   }
 
   .medium_title {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .texts_letters_01 {
@@ -137,9 +175,9 @@ body {
   align-items: center;
   left: 1.3rem;
   bottom: 2rem;
-  color: var(--reddark-color);
-  stroke: var(--reddark-color);
+  stroke: var(--bright-color);
   gap: 1rem;
+  z-index: 5;
 }
 
 .navbar {
@@ -148,11 +186,11 @@ body {
   align-items: center;
   height: 5vh;
   width: 90vw;
-  border-bottom: 0.1rem solid var(--redlight-color);
-  z-index: 2;
+  border-bottom: 0.1rem solid var(--bright-color);
+  z-index: 5;
   position: fixed;
   top: 5px;
-  color: var(--redlight-color);
+  color: var(--bright-color);
   font-family: var(--montserrat-font-family);
 }
 
@@ -168,14 +206,13 @@ body {
 }
 
 .upArrow_icon {
-  color: var(--redlight-color);
   font-size: 1.4rem;
   cursor: pointer;
 }
 
 .menu_burger_icon {
   display: none;
-  color: var(--redlight-color);
+  color: var(--bright-color);
   font-size: 1.5rem;
 }
 
@@ -218,6 +255,11 @@ body {
   align-items: center;
 }
 
+.section_container {
+  width: 70vw;
+  margin: 0 auto;
+}
+
 /* ----- HOME ----- */
 
 .home_view {
@@ -234,16 +276,16 @@ body {
 }
 
 .danielrondon_text {
+  color: var(--dark-color);
   font-family: var(--bigShoulders-font-family);
   font-size: 4rem;
   text-align: center;
 }
 
 .fullstack_webdev_text {
-  font-weight: lighter;
   font-size: 1.5rem;
   position: relative;
-  color: var(--greenmedium-color);
+  color: var(--mid-color);
 }
 
 /* ----- HOME MEDIA QUERIES ----- */
@@ -262,27 +304,28 @@ body {
 
 .about_view {
   height: 100vh;
-  width: 70vw;
+  width: 100vw;
+  background-color: var(--dark-color);
 }
 
 .quotes {
-  color: var(--redlight-color);
+  color: var(--alt-color);
   opacity: 0.5;
   font-size: 5rem;
   position: absolute;
   transform: translateY(-15px) translateX(-150px);
-  z-index: -1;
 }
 
 .circle_container {
   width: 200px;
   height: 200px;
   border-radius: 50%;
+  box-shadow: 0 0 15px var(--bright-color);
   overflow: hidden;
   position: relative;
-  border: 2px solid var(--greenmedium-color);
+  border: 2px solid var(--bright-color);
   margin: 0 auto;
-  background-color: #ffff;
+  background-color: var(--light-color);
 }
 
 .circle_container img {
@@ -352,6 +395,8 @@ body {
 
 .iphone_mockup {
   width: 50vw;
+  box-shadow: var(--box-shadow);
+  border-radius: 30px;
 }
 
 .ipad_mockup {
@@ -365,7 +410,7 @@ body {
 }
 
 .launch_btn {
-  color: var(--greenmedium-color);
+  color: var(--alt-color);
   font-size: 1.5rem;
 }
 
@@ -396,7 +441,8 @@ body {
 /* ----- TECH STACK ----- */
 
 .techStack_view {
-  width: 70vw;
+  width: 100vw;
+  background-color: var(--dark-color);
 }
 
 .tech_cards {
@@ -409,7 +455,7 @@ body {
 .tools_letters {
   font-family: var(--josefin-font-family);
   font-size: 1.1rem;
-  color: var(--redlight-color);
+  color: var(--mid-color);
   display: inline;
   margin: 0 1rem;
 }
@@ -423,6 +469,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  border: 1px solid var(--mid-color);
+  box-shadow: 0 0 10px var(--mid-color);
 }
 
 .backend_card {
@@ -434,12 +482,27 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  border: 1px solid var(--mid-color);
+  box-shadow: 0 0 10px var(--mid-color);
 }
 
 .degree_logo {
   width: 4rem;
-  margin-top: 3rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.degree_titles {
+  font-family: var(--montserrat-font-family);
+  color: var(--light-color);
+  font-size: 1.2rem;
+}
+
+.degree_place {
+  font-family: var(--josefin-font-family);
+  color: var(--mid-color);
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 3rem;
 }
 
 .frontend_horiz_align {
@@ -452,9 +515,8 @@ body {
 }
 
 .laSalle_logo {
-  width: 8rem;
-  margin-top: 3rem;
-  margin-bottom: 2rem;
+  width: 10rem;
+  margin-bottom: 0.5rem;
 }
 
 /* ----- TECH STACK MEDIA QUERIES ----- */
@@ -489,8 +551,17 @@ body {
     width: 6rem;
   }
 
+  .degree_titles {
+    font-size: 1.5rem;
+  }
+
+  .degree_place {
+    font-size: 1.4rem;
+    margin-top: 1rem;
+  }
+
   .laSalle_logo {
-    width: 10rem;
+    width: 12rem;
   }
 }
 
@@ -509,7 +580,6 @@ body {
 }
 
 .contact_logos {
-  color: var(--redlight-color);
   width: 100%;
   font-size: 2rem;
   display: flex;
@@ -519,8 +589,9 @@ body {
 }
 
 .contact_form {
-  border: 2px solid var(--greenmedium-color);
+  background-color: var(--dark-color);
   border-radius: 10px;
+  box-shadow: var(--box-shadow);
   display: flex;
   flex-direction: column;
   text-align: start;
@@ -529,35 +600,38 @@ body {
 }
 
 form input {
+  color: var(--light-color);
   background: transparent;
   border: none;
-  border-bottom: 1px solid var(--greydark-color);
+  border-bottom: 1px solid var(--mid-color);
   outline: none;
-  font-family: var(--montserrat-font-family);
+  font-family: var(--josefin-font-family);
   font-size: 1.1rem;
 }
 
 form input:focus {
-  border-bottom: 2px solid var(--reddark-color);
+  border-bottom: 2px solid var(--alt-color);
 }
 
 form textarea {
+  color: var(--light-color);
   background: transparent;
   border: none;
-  border-bottom: 1px solid var(--greydark-color);
+  border-bottom: 1px solid var(--mid-color);
   outline: none;
   resize: none;
-  font-family: var(--montserrat-font-family);
+  font-family: var(--josefin-font-family);
   font-size: 1.1rem;
   resize: none;
   overflow: auto;
 }
 
 form textarea:focus {
-  border-bottom: 2px solid var(--reddark-color);
+  border-bottom: 2px solid var(--alt-color);
 }
 
 form label {
+  color: var(--light-color);
   font-family: var(--montserrat-font-family);
   font-size: 1rem;
   line-height: 1.2rem;
@@ -566,10 +640,12 @@ form label {
 }
 
 .send_btn {
-  border: 2px solid var(--redlight-color);
+  color: var(--light-color);
+  background-color: var(--alt-color);
   border-radius: 25px;
+  box-shadow: 0 0 20px var(--alt-color);
   width: min-content;
-  padding: 0.3rem 1.5rem;
+  padding: 0.4rem 0.7rem;
   font-family: var(--jost-font-family);
   font-weight: bolder;
   font-size: 1.1rem;
@@ -579,8 +655,10 @@ form label {
 }
 
 .resume_btn {
-  border: 2px solid var(--greenmedium-color);
+  color: var(--light-color);
+  background-color: var(--mid-color);
   border-radius: 5px;
+  box-shadow: var(--box-shadow);
   width: max-content;
   padding: 0.5rem 0.5rem;
   font-family: var(--jost-font-family);
