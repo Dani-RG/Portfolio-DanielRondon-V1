@@ -292,7 +292,7 @@ body {
 
 @media (min-width: 768px) {
   .danielrondon_text {
-    font-size: 6rem;
+    font-size: 8rem;
   }
 
   .fullstack_webdev_text {
@@ -306,14 +306,6 @@ body {
   height: 100vh;
   width: 100vw;
   background-color: var(--dark-color);
-}
-
-.quotes {
-  color: var(--alt-color);
-  opacity: 0.5;
-  font-size: 5rem;
-  position: absolute;
-  transform: translateY(-15px) translateX(-150px);
 }
 
 .circle_container {
@@ -330,7 +322,6 @@ body {
 
 .circle_container img {
   width: 100%;
-  height: auto;
   object-fit: cover;
   position: absolute;
   top: 50%;
@@ -341,6 +332,21 @@ body {
 .about_photo_phrase {
   margin-top: 3rem;
   text-align: center;
+  z-index: 1;
+}
+
+.quotes {
+  position: absolute;
+  color: var(--alt-color);
+  opacity: 0.5;
+  font-size: 4rem;
+  transform: translateY(-2rem) translateX(-9rem);
+  z-index: -1;;
+}
+
+.quote_phrase {
+  position: relative;
+  margin-top: 3rem;
 }
 
 .about_set {
@@ -366,11 +372,12 @@ body {
   }
 
   .about_photo_phrase {
-    width: 30vw;
+    width: 30%;
   }
 
   .quotes {
-    transform: translateY(-10px) translateX(-290px);
+    font-size: 5rem;
+    transform: translateY(-2.5rem) translateX(-15rem);
   }
 }
 
@@ -395,8 +402,6 @@ body {
 
 .iphone_mockup {
   width: 50vw;
-  box-shadow: var(--box-shadow);
-  border-radius: 30px;
 }
 
 .ipad_mockup {
@@ -469,7 +474,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  border: 1px solid var(--mid-color);
+  border: 2px solid var(--mid-color);
   box-shadow: 0 0 10px var(--mid-color);
 }
 
@@ -482,7 +487,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  border: 1px solid var(--mid-color);
+  border: 2px solid var(--mid-color);
   box-shadow: 0 0 10px var(--mid-color);
 }
 
@@ -569,7 +574,7 @@ body {
 
 .contact_view {
   height: 100vh;
-  width: 70vw;
+  width: 100vw;
 }
 
 .contact_set {
@@ -677,7 +682,7 @@ form label {
   }
 
   .contact_set {
-    width: 40vw;
+    width: 30vw;
   }
 
   #in_logo {

@@ -66,14 +66,21 @@ export default function Main() {
               <div className="circle_container">
                 <img src={danielPhoto} alt="danielPhoto" />
               </div>
-              <RiDoubleQuotesL className="quotes" />
-              <p className="texts_letters_01 to_light to_italic">
-                Clean design and functionality are the driving forces behind my
-                creative mind.
-              </p>
+              <div className="quote_phrase">
+                <RiDoubleQuotesL className="quotes" />
+                <p className="texts_letters_01 to_light to_italic">
+                  Clean design and functionality are the driving forces behind
+                  my creative mind.
+                </p>
+              </div>
             </div>
           </div>
         </div>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
       </div>
       <div className="projects_view" id="projects">
         <div className="section_container">
@@ -84,12 +91,13 @@ export default function Main() {
           <div className="one_project">
             <div className="project_header">
               <p className="medium_title">Nature Heroes</p>
-              <a
-                href="https://nature-heroes.netlify.app/"
+              <Link
+                to="https://nature-heroes.netlify.app/"
+                target="_blank"
                 className="launch_btn"
               >
                 <MdOutlineLaunch />
-              </a>
+              </Link>
             </div>
             <p className="texts_letters_01">
               A React.js Full Stack Web App that promotes animal conservation
@@ -106,9 +114,13 @@ export default function Main() {
           <div className="one_project">
             <div className="project_header">
               <p className="medium_title">MarkGet</p>
-              <a href="https://markget.fly.dev/" className="launch_btn">
+              <Link
+                to="https://markget.fly.dev/"
+                target="_blank"
+                className="launch_btn"
+              >
                 <MdOutlineLaunch />
-              </a>
+              </Link>
             </div>
             <p className="texts_letters_01">
               An Express.js Full Stack Web App that compares the prices of
@@ -123,12 +135,13 @@ export default function Main() {
           <div className="one_project">
             <div className="project_header">
               <p className="medium_title">At 18:36!</p>
-              <a
-                href="https://dani-rg.github.io/Project-1_Game_At-18.34/"
+              <Link
+                to="https://dani-rg.github.io/Project-1_Game_At-18.34/"
+                target="_blank"
                 className="launch_btn"
               >
                 <MdOutlineLaunch />
-              </a>
+              </Link>
             </div>
             <p className="texts_letters_01">
               A Javascript videogame with HTML Canvas.
@@ -139,6 +152,11 @@ export default function Main() {
             </div>
           </div>
         </div>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
       </div>
       <div className="techStack_view" id="techStack">
         <div className="section_container">
@@ -148,12 +166,7 @@ export default function Main() {
           </svg>
           <div className="tech_cards">
             <div>
-              <p
-                className="medium_title to_alt
-          "
-              >
-                Frontend
-              </p>
+              <p className="medium_title to_alt">Frontend</p>
               <div className="frontend_card">
                 <div className="frontend_horiz_align">
                   <FaReact className="tools_letters" />
@@ -200,6 +213,11 @@ export default function Main() {
               </div>
             </div>
           </div>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
           <div>
             <div>
               <p className="big_title to_light">Degrees</p>
@@ -232,11 +250,15 @@ export default function Main() {
               <img src={ucvLogo} alt="ucvLogo" className="degree_logo" />
               <p className="degree_titles">Architect</p>
               <p className="degree_place">Universidad Central de Vzla. - CCS</p>
-              <br></br>
-              <br></br>
+              <br className="separation"></br>
             </div>
           </div>
         </div>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
       </div>
 
       <div className="contact_view" id="contact">
