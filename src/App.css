@@ -56,14 +56,6 @@ body {
   height: max-content;
 }
 
-#light {
-  background-color: var(--greenlight-color);
-}
-
-#dark {
-  background-color: var(--black-color);
-}
-
 /* ----- TITLES ----- */
 
 .big_title {
@@ -71,14 +63,6 @@ body {
   font-weight: bolder;
   font-size: 2rem;
   margin: 4rem 0;
-}
-
-#light .big_title {
-  color: var(--black-color);
-}
-
-#dark .big_title {
-  color: var(--white-color);
 }
 
 .medium_title {
@@ -100,27 +84,6 @@ body {
   font-size: 1.1rem;
   line-height: 1.7rem;
   margin: 1.5rem 0;
-}
-
-#light .texts_letters_01 {
-  color: var(--greydark-color);
-  background-color: #ffff;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  padding: 1rem;
-  width: calc(100% - 2rem);
-}
-
-#dark .texts_letters_01 {
-  color: var(--greylight-color);
-}
-
-#light .texts_letters_02 {
-  color: var(--greydark-color);
-}
-
-#dark .texts_letters_02 {
-  color: var(--greylight-color);
 }
 
 .to_center {
@@ -179,8 +142,6 @@ body {
   gap: 1rem;
 }
 
-/* ----- NAVBAR ----- */
-
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -192,6 +153,7 @@ body {
   position: fixed;
   top: 5px;
   color: var(--redlight-color);
+  font-family: var(--montserrat-font-family);
 }
 
 .nav_links {
@@ -203,13 +165,11 @@ body {
 .nav_links li a {
   margin: 0 1rem;
   cursor: pointer;
-  text-transform: capitalize;
 }
 
-.theme_icon {
+.upArrow_icon {
   color: var(--redlight-color);
-  font-size: 1.5rem;
-  display: contents;
+  font-size: 1.4rem;
   cursor: pointer;
 }
 
@@ -237,14 +197,6 @@ body {
     width: 100%;
     z-index: 10;
     text-align: center;
-  }
-
-  #light .nav_links_mobile {
-    background-color: var(--white-color);
-  }
-
-  #dark .nav_links_mobile {
-    background-color: var(--black-color);
   }
 
   .nav_links_mobile li {
@@ -285,14 +237,6 @@ body {
   font-family: var(--bigShoulders-font-family);
   font-size: 4rem;
   text-align: center;
-}
-
-#light .danielrondon_text {
-  color: var(--black-color);
-}
-
-#dark .danielrondon_text {
-  color: var(--white-color);
 }
 
 .fullstack_webdev_text {
@@ -360,13 +304,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-#light .about_text {
-  background-color: #ffff;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
-  border-radius: 20px;
-  padding: 1rem
 }
 
 /* ----- ABOUT MEDIA QUERIES ----- */
@@ -488,15 +425,6 @@ body {
   justify-content: space-evenly;
 }
 
-#light .frontend_card {
-  border: 0.1rem solid var(--black-color);
-  background-color: #ffff;
-}
-
-#dark .frontend_card {
-  border: 0.1rem solid var(--white-color);
-}
-
 .backend_card {
   text-align: end;
   margin-top: 1.5rem;
@@ -506,15 +434,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-}
-
-#light .backend_card {
-  border: 0.1rem solid var(--black-color);
-  background-color: #ffff;
-}
-
-#dark .backend_card {
-  border: 0.1rem solid var(--white-color);
 }
 
 .degree_logo {
@@ -578,8 +497,8 @@ body {
 /* ----- CONTACT ----- */
 
 .contact_view {
-  width: 70vw;
   height: 100vh;
+  width: 70vw;
 }
 
 .contact_set {
@@ -599,14 +518,6 @@ body {
   margin: 0 0 2rem;
 }
 
-#lets_get {
-  width: 40vw;
-}
-
-#in_logo {
-  font-size: 2.5rem;
-}
-
 .contact_form {
   border: 2px solid var(--greenmedium-color);
   border-radius: 10px;
@@ -617,10 +528,6 @@ body {
   width: calc(100% - 3rem);
 }
 
-#light .contact_form {
-  background-color: #ffff;
-}
-
 form input {
   background: transparent;
   border: none;
@@ -628,14 +535,6 @@ form input {
   outline: none;
   font-family: var(--montserrat-font-family);
   font-size: 1.1rem;
-}
-
-#light form input {
-  color: var(--greydark-color);
-}
-
-#dark form input {
-  color: var(--greylight-color);
 }
 
 form input:focus {
@@ -654,14 +553,6 @@ form textarea {
   overflow: auto;
 }
 
-#light form textarea {
-  color: var(--greydark-color);
-}
-
-#dark form textarea {
-  color: var(--greylight-color);
-}
-
 form textarea:focus {
   border-bottom: 2px solid var(--reddark-color);
 }
@@ -674,15 +565,7 @@ form label {
   width: 100%;
 }
 
-#light form label {
-  color: var(--greydark-color);
-}
-
-#dark form label {
-  color: var(--greylight-color);
-}
-
-#send_btn {
+.send_btn {
   border: 2px solid var(--redlight-color);
   border-radius: 25px;
   width: min-content;
@@ -708,14 +591,6 @@ form label {
   text-align: center;
 }
 
-#light .resume_btn {
-  color: var(--greenmedium-color);
-}
-
-#dark .resume_btn {
-  color: var(--white-color);
-}
-
 /* ----- CONTACT MEDIA QUERIES ----- */
 
 @media (min-width: 768px) {
@@ -739,7 +614,7 @@ form label {
     font-size: 1.2rem;
   }
 
-  #send_btn {
+  .send_btn {
     font-size: 1.2rem;
   }
 

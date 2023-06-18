@@ -1,23 +1,19 @@
-import React, { useState } from "react"
-import { Link } from "react-scroll"
-import { FiMenu } from "react-icons/fi"
-import { RxCross2 } from "react-icons/rx"
-import { CgDarkMode } from "react-icons/cg"
+import React, { useState } from "react";
+import { Link } from "react-scroll";
+import { FiMenu } from "react-icons/fi";
+import { RxCross2 } from "react-icons/rx";
+import { SlArrowUp } from "react-icons/sl";
 
-export default function Navbar( props ) {
+export default function Navbar() {
 
   const [burger, setBurger] = useState(false);
-  const [theme, setTheme] = useState("");
-
-  const toggleTheme = () => {
-    setTheme((curr) => (curr === "dark" ? "light" : "dark"));
-    props.handleTheme(theme);
-  };
 
   return (
       <nav className="navbar">
 
-        <button className="theme_icon" onClick={() => toggleTheme()}> <CgDarkMode /> </button>
+        <Link to="home" className="upArrow_icon">
+          <SlArrowUp />
+        </Link>
 
         <ul className={burger ? "nav_links_mobile" : "nav_links"} onClick={() => setBurger(false)}>
           <li><Link to="home" className="desk_link">Home</Link></li>
