@@ -305,7 +305,6 @@ body {
 /* ----- ABOUT ----- */
 
 .about_view {
-  height: 100vh;
   width: 100vw;
   background-color: var(--dark-color);
 }
@@ -575,8 +574,8 @@ body {
 /* ----- CONTACT ----- */
 
 .contact_view {
-  height: 100vh;
   width: 100vw;
+  height: 105vh;
 }
 
 .contact_set {
@@ -646,6 +645,10 @@ form label {
   width: 100%;
 }
 
+#in_logo {
+  font-size: 125%;
+}
+
 .send_btn {
   color: var(--light-color);
   background-color: var(--alt-color);
@@ -685,10 +688,6 @@ form label {
 
   .contact_set {
     width: 30vw;
-  }
-
-  #in_logo {
-    font-size: 3.5rem;
   }
 
   #lets_get {
