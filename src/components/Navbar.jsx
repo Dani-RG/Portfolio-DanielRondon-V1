@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-scroll";
 import { SlArrowUp } from "react-icons/sl";
 import BurgerBtn from "./BurgerBtn";
 
 export default function Navbar() {
+
+  const [clicked, setClicked] = useState(false);
+  
+  const handleClick = () => {
+    setClicked(!clicked);
+  }
+
   return (
     <>
       <NavContainer>
@@ -13,7 +20,7 @@ export default function Navbar() {
             <SlArrowUp />
           </Link>
         </div>
-        <div className="links active">
+        <div className={`links ${clicked ? "active" : ""}`}>
           <Link to="home">Home</Link>
           <Link to="about">About</Link>
           <Link to="projects">Projects</Link>
@@ -21,20 +28,21 @@ export default function Navbar() {
           <Link to="contact">Contact</Link>
         </div>
         <div className="burger_icon">
-          <BurgerBtn />
+          <BurgerBtn clicked={clicked} handleClick={handleClick}/>
         </div>
+        <BgDiv className={`initial ${clicked ? "active" : ""}`}></BgDiv>
       </NavContainer>
     </>
   );
 }
 
 const NavContainer = styled.nav`
-  background-color: red;
+  position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 5vh;
-  width: 90vw;
+  width: 100vw;
   margin: 0 auto;
   border-bottom: 0.1rem solid var(--bright-color);
   z-index: 5;
@@ -47,6 +55,7 @@ const NavContainer = styled.nav`
 
   .upArrow_icon {
     cursor: pointer;
+    z-index: 10;
   }
 
   .burger_icon {
@@ -55,33 +64,57 @@ const NavContainer = styled.nav`
     }
   }
 
-  ${'' /* .links {
+  .links {
     position: absolute;
-    top: -700px;
+    z-index: 4;
+    top: -700px;  
     margin: 0 auto;
     text-align: center;
+    a {
+      font-size: 1.3rem;
+      display: block;
+    }
     @media (min-width: 768px) {
       position: initial;
       margin: 0;
       a {
-        font-size: 1rem;
-        ${"" /* display: inline; */}
+        font-size: 1.3rem;
+        display: inline;
       }
     }
-  } */}
+  }
 
-  ${'' /* .links.active {
+  .links.active {
     width: 100%;
-    ${"" /* display: block; */}
-    ${"" /* position: absolute; */}
+    display: block;
+    position: absolute;
     margin: 0 auto;
-    top: 30%;
+    top: 300%;
     left: 0;
     right: 0;
     text-align: center;
-    color: black;
-  } */}
+    transition: all .5s ease;
+    a {
+      margin-top: 2rem;
+    }
+  }
 `;
+
+const BgDiv = styled.div`
+background-color: #0D203F;
+position: absolute;
+top: -700px;
+${'' /* width: 100%; */}
+${'' /* height: 100%; */}
+z-index: 3;
+transition: all .5s ease;
+&.active {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+`
 
 // import React, { useState } from "react";
 // import { Link } from "react-scroll";

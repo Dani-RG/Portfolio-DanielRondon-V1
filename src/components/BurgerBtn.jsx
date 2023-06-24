@@ -1,95 +1,130 @@
 import React from "react";
 import styled from "styled-components";
 
-export default function BurgerBtn() {
+export default function BurgerBtn(props) {
   return (
     <Burger>
-      <div class="three col">
-        <div class="hamburger" id="hamburger-11">
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
-        </div>
+      <div
+        onClick={props.handleClick}
+        className={`icon nav-icon-8 ${props.clicked ? "open" : ""}`}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </Burger>
   );
 }
 
 const Burger = styled.div`
-  .row .three{
-  padding: 80px 30px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background-color: #2c3e50;
-  color: #ecf0f1;
-  text-align: center;
-}
-
-.hamburger .line{
-  width: 50px;
-  height: 5px;
-  background-color: #ecf0f1;
-  display: block;
-  margin: 8px auto;
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-.hamburger:hover{
+  .nav-icon-8{
+  width: 35px;
+  height: 30px;
+  margin: 10px 10px;
+  position: relative;
   cursor: pointer;
+  display: inline-block;
+  z-index: 5;
+}
+.nav-icon-8 span{
+  background-color: #D9A712;
+  position: absolute;
+  transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+  width:100%;
+  height: 4px;
+}
+.nav-icon-8 span:nth-child(1){
+  top:0px;
+  left: 0px;
+}
+.nav-icon-8 span:nth-child(2){
+  top:13px;
+  left: 0px;
+}
+.nav-icon-8 span:nth-child(3){
+  bottom:0px;
+  left: 0px;
+}
+.nav-icon-8:not(.open):hover span:nth-child(1){
+  transform: scaleX(.8);
+}
+.nav-icon-8:not(.open):hover span:nth-child(2){
+  transform: scaleX(.5);
+}
+.nav-icon-8:not(.open):hover span:nth-child(3){
+  transform: scaleX(.8);
+}
+.nav-icon-8.open span:nth-child(1){
+  top: 13px;
+}
+.nav-icon-8.open span:nth-child(2){
+  top:13px;
+}
+.nav-icon-8.open span:nth-child(3){
+  top: 13px;
+}
+`;
+
+/* export default function BurgerBtn(props) {
+  return (
+    <Burger>
+      <div onClick={props.handleClick} className={`icon nav-icon-5 ${props.clicked ? "open" : ""}`}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </Burger>
+  );
 }
 
-#hamburger-11{
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-#hamburger-11.is-active{
-  animation: smallbig 0.6s forwards;
-}
-
-@keyframes smallbig{
-  0%, 100%{
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-    transform: scale(1);
+const Burger = styled.div`
+  .nav-icon-5 {
+    width: 35px;
+    height: 30px;
+    margin: 10px 10px;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
   }
-
-  50%{
-    -webkit-transform: scale(0);
-    -ms-transform: scale(0);
-    -o-transform: scale(0);
-    transform: scale(0);
+  .nav-icon-5 span {
+    background-color: #D9A712;
+    position: absolute;
+    transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+    width: 100%;
+    height: 4px;
+    transition-duration: 500ms;
   }
-}
-
-#hamburger-11.is-active .line:nth-child(1),
-#hamburger-11.is-active .line:nth-child(2),
-#hamburger-11.is-active .line:nth-child(3){
-  -webkit-transition-delay: 0.2s;
-  -o-transition-delay: 0.2s;
-  transition-delay: 0.2s;
-}
-
-#hamburger-11.is-active .line:nth-child(2){
-  opacity: 0;
-}
-
-#hamburger-11.is-active .line:nth-child(1){
-  -webkit-transform: translateY(13px) rotate(45deg);
-  -ms-transform: translateY(13px) rotate(45deg);
-  -o-transform: translateY(13px) rotate(45deg);
-  transform: translateY(13px) rotate(45deg);
-}
-
-#hamburger-11.is-active .line:nth-child(3){
-  -webkit-transform: translateY(-13px) rotate(-45deg);
-  -ms-transform: translateY(-13px) rotate(-45deg);
-  -o-transform: translateY(-13px) rotate(-45deg);
-  transform: translateY(-13px) rotate(-45deg);
-}
-`
+  .nav-icon-5 span:nth-child(1) {
+    top: 0px;
+    left: 0px;
+  }
+  .nav-icon-5 span:nth-child(2) {
+    top: 13px;
+    left: 0px;
+    opacity: 1;
+  }
+  .nav-icon-5 span:nth-child(3) {
+    bottom: 0px;
+    left: 0px;
+  }
+  .nav-icon-5:not(.open):hover span:nth-child(1) {
+    transform: rotate(-3deg) scaleY(1.1);
+  }
+  .nav-icon-5:not(.open):hover span:nth-child(2) {
+    transform: rotate(3deg) scaleY(1.1);
+  }
+  .nav-icon-5:not(.open):hover span:nth-child(3) {
+    transform: rotate(-4deg) scaleY(1.1);
+  }
+  .nav-icon-5.open span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 13px;
+  }
+  .nav-icon-5.open span:nth-child(2) {
+    opacity: 0;
+  }
+  .nav-icon-5.open span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 13px;
+  }
+`; */
