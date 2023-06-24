@@ -15,6 +15,7 @@
     "react-scripts": "^5.0.1",
     "react-scroll": "^1.8.9",
     "reset-css": "^5.0.1",
+    "styled-components": "^6.0.0-rc.6",
     "tsparticles": "^2.10.1",
     "web-vitals": "^2.1.4"
   },

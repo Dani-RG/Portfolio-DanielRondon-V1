@@ -16,27 +16,15 @@
 
 .App {
   color: grey;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
+  position: relative; */
   background-color: var(--light-color);
 }
 
 :root {
-/*   --black-color: #12001d;
-  --greydark-color: #2f4550;
-  --greymedium-color: #586f7c;
-  --greylight-color: #b8dbd9;
-  --white-color: #f4f4f9;
-  --reddark-color: #a31621;
-  --redlight-color: #db222a;
-  --bluelight-color: #bfdbf7;
-  --bluedark-color: #053c5e;
-  --greenlight-color: #e7fbff;
-  --greenmedium-color: #1f7a8c; */
-
   --dark-color: #0D203F;
   --mid-color: #05AA8C;
   --bright-color: #D9A712;
@@ -206,10 +194,10 @@ body {
   cursor: pointer;
 }
 
-.upArrow_icon {
+/* .upArrow_icon {
   font-size: 1.4rem;
   cursor: pointer;
-}
+} */
 
 .menu_burger_icon {
   display: none;
