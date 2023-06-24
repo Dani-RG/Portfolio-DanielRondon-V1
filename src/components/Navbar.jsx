@@ -12,6 +12,10 @@ export default function Navbar() {
     setClicked(!clicked);
   }
 
+  const closeLinks = () => {
+    setClicked(false);
+  }
+
   return (
     <>
       <NavContainer>
@@ -21,11 +25,11 @@ export default function Navbar() {
           </Link>
         </div>
         <div className={`links ${clicked ? "active" : ""}`}>
-          <Link to="home">Home</Link>
-          <Link to="about">About</Link>
-          <Link to="projects">Projects</Link>
-          <Link to="techStack">Tech Stack</Link>
-          <Link to="contact">Contact</Link>
+          <Link to="home" onClick={closeLinks}>Home</Link>
+          <Link to="about" onClick={closeLinks}>About</Link>
+          <Link to="projects" onClick={closeLinks}>Projects</Link>
+          <Link to="techStack" onClick={closeLinks}>Tech Stack</Link>
+          <Link to="contact" onClick={closeLinks}>Contact</Link>
         </div>
         <div className="burger_icon">
           <BurgerBtn clicked={clicked} handleClick={handleClick}/>
@@ -42,8 +46,8 @@ const NavContainer = styled.nav`
   justify-content: space-between;
   align-items: center;
   height: 5vh;
-  width: 100vw;
-  margin: 0 auto;
+  width: 90vw;
+  right: 5%;
   border-bottom: 0.1rem solid var(--bright-color);
   z-index: 5;
   font-family: var(--montserrat-font-family);
@@ -56,6 +60,7 @@ const NavContainer = styled.nav`
   .upArrow_icon {
     cursor: pointer;
     z-index: 10;
+    font-size: 1.2rem;
   }
 
   .burger_icon {
@@ -110,41 +115,8 @@ z-index: 3;
 transition: all .5s ease;
 &.active {
   top: 0;
-  left: 0;
-  width: 100%;
+  left: -10%;
+  width: 120%;
   height: 100vh;
 }
 `
-
-// import React, { useState } from "react";
-// import { Link } from "react-scroll";
-// import { FiMenu } from "react-icons/fi";
-// import { RxCross2 } from "react-icons/rx";
-// import { SlArrowUp } from "react-icons/sl";
-
-// export default function Navbar() {
-
-//   const [burger, setBurger] = useState(false);
-
-//   return (
-//       <nav className="navbar">
-
-//         <Link to="home" className="upArrow_icon">
-//           <SlArrowUp />
-//         </Link>
-
-//         <ul className={burger ? "nav_links_mobile" : "nav_links"} onClick={() => setBurger(false)}>
-//           <li><Link to="home" className="desk_link">Home</Link></li>
-//           <li><Link to="about">About</Link></li>
-//           <li><Link to="projects">Projects</Link></li>
-//           <li><Link to="techStack">Tech Stack</Link></li>
-//           <li><Link to="contact">Contact</Link></li>
-//         </ul>
-
-//         <button className="menu_burger_icon" onClick={() => setBurger(!burger)}>
-//         {burger ? <RxCross2 /> : <FiMenu />}
-//         </button>
-
-//       </nav>
-//   )
-// }
