@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { motion } from "framer-motion";
 
 export const ContactForm = () => {
   const form = useRef();
@@ -48,9 +49,13 @@ export const ContactForm = () => {
         <input type="email" name="user_email" />
         <label>Message:</label>
         <textarea name="message" />
-        <button type="submit" className="send_btn">
+        <motion.button
+          type="submit"
+          className="send_btn"
+          whileHover={{ scale: 1.1 }}
+        >
           SEND
-        </button>
+        </motion.button>
       </form>
       <ToastContainer
         position="top-center"

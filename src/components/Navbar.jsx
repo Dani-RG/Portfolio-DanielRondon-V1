@@ -5,34 +5,83 @@ import { SlArrowUp } from "react-icons/sl";
 import BurgerBtn from "./BurgerBtn";
 
 export default function Navbar() {
-
   const [clicked, setClicked] = useState(false);
-  
+
   const handleClick = () => {
     setClicked(!clicked);
-  }
+  };
 
   const closeLinks = () => {
     setClicked(false);
-  }
+  };
 
   return (
     <>
       <NavContainer>
-        <div>
-          <Link to="home" spy={true} smooth={true} offset={0} duration={1500} className="upArrow_icon">
-            <SlArrowUp />
+        <Link
+          to="home"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={1500}
+          className="upArrow_icon"
+        >
+          <SlArrowUp />
+        </Link>
+        <div className={`links ${clicked ? "active" : ""}`}>
+          <Link
+            to="home"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={500}
+            onClick={closeLinks}
+          >
+            Home
+          </Link>
+          <Link
+            to="about"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={500}
+            onClick={closeLinks}
+          >
+            About
+          </Link>
+          <Link
+            to="projects"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={500}
+            onClick={closeLinks}
+          >
+            Projects
+          </Link>
+          <Link
+            to="techStack"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={500}
+            onClick={closeLinks}
+          >
+            Tech Stack
+          </Link>
+          <Link
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={500}
+            onClick={closeLinks}
+          >
+            Contact
           </Link>
         </div>
-        <div className={`links ${clicked ? "active" : ""}`}>
-          <Link to="home" spy={true} smooth={true} offset={0} duration={500} onClick={closeLinks}>Home</Link>
-          <Link to="about" spy={true} smooth={true} offset={0} duration={500} onClick={closeLinks}>About</Link>
-          <Link to="projects" spy={true} smooth={true} offset={0} duration={500} onClick={closeLinks}>Projects</Link>
-          <Link to="techStack" spy={true} smooth={true} offset={0} duration={500} onClick={closeLinks}>Tech Stack</Link>
-          <Link to="contact" spy={true} smooth={true} offset={0} duration={500} onClick={closeLinks}>Contact</Link>
-        </div>
         <div className="burger_icon">
-          <BurgerBtn clicked={clicked} handleClick={handleClick}/>
+          <BurgerBtn clicked={clicked} handleClick={handleClick} />
         </div>
         <BgDiv className={`initial ${clicked ? "active" : ""}`}></BgDiv>
       </NavContainer>
@@ -72,7 +121,7 @@ const NavContainer = styled.nav`
   .links {
     position: absolute;
     z-index: 4;
-    top: -700px;  
+    top: -700px;
     margin: 0 auto;
     text-align: center;
     a {
@@ -98,7 +147,7 @@ const NavContainer = styled.nav`
     left: 0;
     right: 0;
     text-align: center;
-    transition: all .5s ease;
+    transition: all 0.5s ease;
     a {
       margin-top: 2rem;
     }
@@ -106,17 +155,17 @@ const NavContainer = styled.nav`
 `;
 
 const BgDiv = styled.div`
-background-color: #0D203F;
-position: absolute;
-top: -700px;
-${'' /* width: 100%; */}
-${'' /* height: 100%; */}
+  background-color: #0d203f;
+  position: absolute;
+  top: -700px;
+  ${"" /* width: 100%; */}
+  ${"" /* height: 100%; */}
 z-index: 3;
-transition: all .5s ease;
-&.active {
-  top: 0;
-  left: -10%;
-  width: 120%;
-  height: 100vh;
-}
-`
+  transition: all 0.5s ease;
+  &.active {
+    top: 0;
+    left: -10%;
+    width: 120%;
+    height: 100vh;
+  }
+`;
