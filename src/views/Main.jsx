@@ -27,23 +27,41 @@ import { TiSocialLinkedinCircular } from "react-icons/ti";
 import { VscGithub } from "react-icons/vsc";
 import { LuAtSign } from "react-icons/lu";
 import { ContactForm } from "../components/ContactForm";
+import { motion } from "framer-motion";
 
 export default function Main() {
-
   return (
     <div className="main">
       <div className="home_view" id="home">
         <div className="home_text">
           <div className="danielrondon_text">
-            <p>DANIEL</p>
-            <p>RONDON</p>
+            <motion.p
+              initial={{ x: "-100vw", opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.9 }}
+            >
+              DANIEL
+            </motion.p>
+            <motion.p
+              initial={{ x: "100vw", opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.9 }}
+            >
+              RONDON
+            </motion.p>
           </div>
-          <div className="fullstack_webdev_text big_title">
-            Full Stack Web Developer
-          </div>
-          <svg className="underline_alt_color">
-            <line x1="0" y1="1" x2="100%" y2="1" />
-          </svg>
+          <motion.div
+            initial={{ scale: 0, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ delay: 1.2, duration: 0.5 }}
+          >
+            <div className="fullstack_webdev_text big_title">
+              Full Stack Web Developer
+            </div>
+            <svg className="underline_alt_color">
+              <line x1="0" y1="1" x2="100%" y2="1" />
+            </svg>
+          </motion.div>
         </div>
       </div>
 
@@ -92,13 +110,15 @@ export default function Main() {
           <div className="one_project">
             <div className="project_header">
               <p className="medium_title">Nature Heroes</p>
-              <Link
-                to="https://nature-heroes.netlify.app/"
-                target="_blank"
-                className="launch_btn"
-              >
-                <MdOutlineLaunch />
-              </Link>
+              <motion.div whileHover={{ scale: 1.3 }}>
+                <Link
+                  to="https://nature-heroes.netlify.app/"
+                  target="_blank"
+                  className="launch_btn"
+                >
+                  <MdOutlineLaunch />
+                </Link>
+              </motion.div>
             </div>
             <p className="texts_letters_01">
               A React.js Full Stack Web App that promotes animal conservation
@@ -115,13 +135,15 @@ export default function Main() {
           <div className="one_project">
             <div className="project_header">
               <p className="medium_title">MarkGet</p>
-              <Link
-                to="https://markget.fly.dev/"
-                target="_blank"
-                className="launch_btn"
-              >
-                <MdOutlineLaunch />
-              </Link>
+              <motion.div whileHover={{ scale: 1.3 }}>
+                <Link
+                  to="https://markget.fly.dev/"
+                  target="_blank"
+                  className="launch_btn"
+                >
+                  <MdOutlineLaunch />
+                </Link>
+              </motion.div>
             </div>
             <p className="texts_letters_01">
               An Express.js Full Stack Web App that compares the prices of
@@ -136,13 +158,15 @@ export default function Main() {
           <div className="one_project">
             <div className="project_header">
               <p className="medium_title">At 18:36!</p>
-              <Link
-                to="https://dani-rg.github.io/Project-1_Game_At-18.34/"
-                target="_blank"
-                className="launch_btn"
-              >
-                <MdOutlineLaunch />
-              </Link>
+              <motion.div whileHover={{ scale: 1.3 }}>
+                <Link
+                  to="https://dani-rg.github.io/Project-1_Game_At-18.34/"
+                  target="_blank"
+                  className="launch_btn"
+                >
+                  <MdOutlineLaunch />
+                </Link>
+              </motion.div>
             </div>
             <p className="texts_letters_01">
               A Javascript videogame with HTML Canvas.
@@ -166,7 +190,12 @@ export default function Main() {
             <line x1="0" y1="1" x2="100%" y2="1" />
           </svg>
           <div className="tech_cards">
-            <div>
+            <motion.div
+              initial={{ x: "-100%", opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ type: "spring", delay: 1, duration: 0.9 }}
+            >
               <p className="medium_title to_alt">Frontend</p>
               <div className="frontend_card">
                 <div className="frontend_horiz_align">
@@ -190,9 +219,14 @@ export default function Main() {
                   <p className="tools_letters">Node.js</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
-            <div>
+            <motion.div
+              initial={{ x: "100%", opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ type: "spring", delay: 1.5, duration: 0.9 }}
+            >
               <p className="medium_title to_right to_alt">Backend</p>
               <div className="backend_card ">
                 <div className="backend_horiz_align">
@@ -212,7 +246,7 @@ export default function Main() {
                   <FaNodeJs className="tools_letters" />
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
           <br></br>
           <br></br>
@@ -226,17 +260,35 @@ export default function Main() {
                 <line x1="0" y1="1" x2="100%" y2="1" />
               </svg>
             </div>
-            <div className="to_center">
+            <motion.div
+              className="to_center"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3, duration: 1 }}
+            >
               <img src={ihLogo} alt="ihLogo" className="degree_logo" />
               <p className="degree_titles">Full Stack Web Developer</p>
               <p className="degree_place">Ironhack - BCN</p>
-            </div>
-            <div className="to_center">
+            </motion.div>
+            <motion.div
+              className="to_center"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.6, duration: 1 }}
+            >
               <img src={EvolisLogo} alt="EvolisLogo" className="degree_logo" />
               <p className="degree_titles">3D ArchViz</p>
               <p className="degree_place">Evolis3D - BCN</p>
-            </div>
-            <div className="to_center">
+            </motion.div>
+            <motion.div
+              className="to_center"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.9, duration: 1 }}
+            >
               <img
                 src={lasalleLogo}
                 alt="lasalleLogo"
@@ -246,13 +298,19 @@ export default function Main() {
                 Int. Architecture Construction Manager
               </p>
               <p className="degree_place">La Salle - BCN</p>
-            </div>
-            <div className="to_center">
+            </motion.div>
+            <motion.div
+              className="to_center"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 1.2, duration: 1 }}
+            >
               <img src={ucvLogo} alt="ucvLogo" className="degree_logo" />
               <p className="degree_titles">Architect</p>
               <p className="degree_place">Universidad Central de Vzla. - CCS</p>
               <br className="separation"></br>
-            </div>
+            </motion.div>
           </div>
         </div>
         <br></br>
@@ -272,27 +330,52 @@ export default function Main() {
           </svg>
           <div className="contact_set">
             <div className="contact_logos">
-              <Link
-                to="https://www.linkedin.com/in/daniel-rondon-garcia-"
-                target="_blank"
+              <motion.div
+                initial={{ opacity: 0, y: "-200%" }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ type: "spring", delay: 1, duration: 0.5 }}
               >
-                <TiSocialLinkedinCircular id="in_logo" />
-              </Link>
-              <Link to="https://github.com/Dani-RG" target="_blank">
-                <VscGithub />
-              </Link>
-              <Link to="mailto:daniel.deweb@gmail.com">
-                <LuAtSign />
-              </Link>
+                <Link
+                  to="https://www.linkedin.com/in/daniel-rondon-garcia-"
+                  target="_blank"
+                >
+                  <TiSocialLinkedinCircular id="in_logo" />
+                </Link>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: "-200%" }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ type: "spring", delay: 1.3, duration: 0.5 }}
+              >
+                <Link to="https://github.com/Dani-RG" target="_blank">
+                  <VscGithub />
+                </Link>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: "-200%" }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ type: "spring", delay: 1.6, duration: 0.5 }}
+              >
+                <Link to="mailto:daniel.deweb@gmail.com">
+                  <LuAtSign />
+                </Link>
+              </motion.div>
             </div>
             <ContactForm />
-            <a
+            <motion.a
               href="CV WebDev Daniel Rondon Garcia.pdf"
               download="CV WebDev Daniel Rondon Garcia.pdf"
               className="resume_btn"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 1, duration: 0.5 }}
             >
               Get Resume
-            </a>
+            </motion.a>
           </div>
         </div>
       </div>
