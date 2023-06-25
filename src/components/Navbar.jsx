@@ -20,16 +20,16 @@ export default function Navbar() {
     <>
       <NavContainer>
         <div>
-          <Link to="home" className="upArrow_icon">
+          <Link to="home" spy={true} smooth={true} offset={0} duration={1500} className="upArrow_icon">
             <SlArrowUp />
           </Link>
         </div>
         <div className={`links ${clicked ? "active" : ""}`}>
-          <Link to="home" onClick={closeLinks}>Home</Link>
-          <Link to="about" onClick={closeLinks}>About</Link>
-          <Link to="projects" onClick={closeLinks}>Projects</Link>
-          <Link to="techStack" onClick={closeLinks}>Tech Stack</Link>
-          <Link to="contact" onClick={closeLinks}>Contact</Link>
+          <Link to="home" spy={true} smooth={true} offset={0} duration={500} onClick={closeLinks}>Home</Link>
+          <Link to="about" spy={true} smooth={true} offset={0} duration={500} onClick={closeLinks}>About</Link>
+          <Link to="projects" spy={true} smooth={true} offset={0} duration={500} onClick={closeLinks}>Projects</Link>
+          <Link to="techStack" spy={true} smooth={true} offset={0} duration={500} onClick={closeLinks}>Tech Stack</Link>
+          <Link to="contact" spy={true} smooth={true} offset={0} duration={500} onClick={closeLinks}>Contact</Link>
         </div>
         <div className="burger_icon">
           <BurgerBtn clicked={clicked} handleClick={handleClick}/>
