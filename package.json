@@ -14,6 +14,7 @@
     "react-router-dom": "^6.11.2",
     "react-scripts": "^5.0.1",
     "react-scroll": "^1.8.9",
+    "react-toastify": "^9.1.3",
     "reset-css": "^5.0.1",
     "styled-components": "^6.0.0-rc.6",
     "tsparticles": "^2.10.1",

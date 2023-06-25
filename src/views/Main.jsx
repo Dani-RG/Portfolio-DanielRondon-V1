@@ -29,6 +29,7 @@ import { LuAtSign } from "react-icons/lu";
 import { ContactForm } from "../components/ContactForm";
 
 export default function Main() {
+
   return (
     <div className="main">
       <div className="home_view" id="home">

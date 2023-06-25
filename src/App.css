@@ -226,7 +226,7 @@ body {
 /* ----- ABOUT ----- */
 
 .about_view {
-  width: 100vw;
+  width: 100%;
   background-color: var(--dark-color);
 }
 
@@ -368,7 +368,7 @@ body {
 /* ----- TECH STACK ----- */
 
 .techStack_view {
-  width: 100vw;
+  width: 100%;
   background-color: var(--dark-color);
 }
 
@@ -495,7 +495,7 @@ body {
 /* ----- CONTACT ----- */
 
 .contact_view {
-  width: 100vw;
+  width: 70vw;
   height: 105vh;
 }
 
