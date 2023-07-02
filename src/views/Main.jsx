@@ -74,11 +74,13 @@ export default function Main() {
           <div className="about_set">
             <div className="about_text">
               <p className="texts_letters_02">
-                From a professional background in architecture and 3D
-                visualization, I have now become a web developer.
+              With a professional background in architecture and 3D visualization, I have now become a full-stack web developer.
               </p>
               <p className="texts_letters_02">
-                I possess valuable skills that can benefit your company.
+              Specialized in integrating the backend with the frontend and bringing to life designs that are both interesting and emotionally engaging.
+              </p>
+              <p className="texts_letters_02">
+              My goal is to create experiences that are not only enjoyable but also direct users towards the essential point of the journey.
               </p>
             </div>
             <div className="about_photo_phrase">
@@ -88,8 +90,7 @@ export default function Main() {
               <div className="quote_phrase">
                 <RiDoubleQuotesL className="quotes" />
                 <p className="texts_letters_01 to_light to_italic">
-                  Clean design and functionality are the driving forces behind
-                  my creative mind.
+                My creative mind is driven by organized processes and prioritizing effective functionality.
                 </p>
               </div>
             </div>
