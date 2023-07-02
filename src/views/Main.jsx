@@ -30,6 +30,7 @@ import { ContactForm } from "../components/ContactForm";
 import { motion } from "framer-motion";
 
 export default function Main() {
+
   return (
     <div className="main">
       <div className="home_view" id="home">
@@ -77,7 +78,7 @@ export default function Main() {
               With a professional background in architecture and 3D visualization, I have now become a full-stack web developer.
               </p>
               <p className="texts_letters_02">
-              Specialized in integrating the backend with the frontend and bringing to life designs that are both interesting and emotionally engaging.
+              Knowing how to integrate the frontend with the backend to bring to life designs and applications that are both interesting and emotionally engaging.
               </p>
               <p className="texts_letters_02">
               My goal is to create experiences that are not only enjoyable but also direct users towards the essential point of the journey.
