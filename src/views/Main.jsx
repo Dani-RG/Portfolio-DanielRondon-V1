@@ -29,6 +29,10 @@ import { LuAtSign } from "react-icons/lu";
 import { ContactForm } from "../components/ContactForm";
 import { motion } from "framer-motion";
 
+const NHmockupArr = [nhPic00, nhPic01, nhPic02, nhPic04];
+const MGmockupArr = [mgPic01, mgPic02];
+const ATmockupArr = [atPic00, atPic01];
+
 export default function Main() {
   return (
     <div className="main">
@@ -74,11 +78,17 @@ export default function Main() {
           <div className="about_set">
             <div className="about_text">
               <p className="texts_letters_02">
-                From a professional background in architecture and 3D
-                visualization, I have now become a web developer.
+                With a professional background in architecture and 3D
+                visualization, I have now become a full-stack web developer.
               </p>
               <p className="texts_letters_02">
-                I possess valuable skills that can benefit your company.
+                Knowing how to integrate the frontend with the backend to bring
+                to life designs and applications that are both interesting and
+                emotionally engaging.
+              </p>
+              <p className="texts_letters_02">
+                My goal is to create experiences that are not only enjoyable but
+                also direct users towards the essential point of the journey.
               </p>
             </div>
             <div className="about_photo_phrase">
@@ -88,8 +98,8 @@ export default function Main() {
               <div className="quote_phrase">
                 <RiDoubleQuotesL className="quotes" />
                 <p className="texts_letters_01 to_light to_italic">
-                  Clean design and functionality are the driving forces behind
-                  my creative mind.
+                  My creative mind is driven by organized processes and
+                  prioritizing effective functionality.
                 </p>
               </div>
             </div>
@@ -125,10 +135,16 @@ export default function Main() {
               awareness.
             </p>
             <div className="mockups_set">
-              <img src={nhPic00} alt="nhPic00" className="iphone_mockup" />
-              <img src={nhPic01} alt="nhPic01" className="iphone_mockup" />
-              <img src={nhPic02} alt="nhPic02" className="iphone_mockup" />
-              <img src={nhPic04} alt="nhPic04" className="iphone_mockup" />
+              {NHmockupArr.map((image, index) => {
+                return (
+                  <img
+                    src={image}
+                    alt={index}
+                    key={index}
+                    className="iphone_mockup"
+                  />
+                );
+              })}
             </div>
           </div>
 
@@ -150,8 +166,16 @@ export default function Main() {
               supermarket products.
             </p>
             <div className="mockups_set">
-              <img src={mgPic01} alt="mgPic01" className="iphone_mockup" />
-              <img src={mgPic02} alt="mgPic02" className="iphone_mockup" />
+              {MGmockupArr.map((image, index) => {
+                return (
+                  <img
+                    src={image}
+                    alt={index}
+                    key={index}
+                    className="iphone_mockup"
+                  />
+                );
+              })}
             </div>
           </div>
 
@@ -172,9 +196,21 @@ export default function Main() {
               A Javascript videogame with HTML Canvas.
             </p>
             <div className="mockups_set">
+              {ATmockupArr.map((image, index) => {
+                return (
+                  <img
+                    src={image}
+                    alt={index}
+                    key={index}
+                    className="ipad_mockup"
+                  />
+                );
+              })}
+            </div>
+            {/* <div className="mockups_set">
               <img src={atPic00} alt="atPic00" className="ipad_mockup" />
               <img src={atPic01} alt="atPic01" className="ipad_mockup" />
-            </div>
+            </div> */}
           </div>
         </div>
         <br></br>

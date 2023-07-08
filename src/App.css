@@ -299,6 +299,11 @@ body {
     width: 30vw;
   }
 
+  .about_set {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
   .about_photo_phrase {
     width: 30%;
   }
