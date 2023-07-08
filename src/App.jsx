@@ -1,5 +1,6 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
+import React from "react";
 import Navbar from "./components/Navbar";
 import SocialMedia from "./components/SocialMedia";
 import Main from "./views/Main";
