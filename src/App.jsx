@@ -6,12 +6,14 @@ import SocialMedia from "./components/SocialMedia";
 import Main from "./views/Main";
 import ErrorPage from "./views/ErrorPage";
 import NotFound from "./views/NotFound";
+import ThreeScene from "./components/ThreeScene";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
       <SocialMedia />
+      <ThreeScene />
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/error" element={<ErrorPage />} />

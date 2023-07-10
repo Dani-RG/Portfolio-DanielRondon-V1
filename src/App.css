@@ -60,6 +60,12 @@ body {
   height: max-content;
 }
 
+canvas {
+  z-index: 1;
+  height: 100vh;
+  width: 100vw;
+}
+
 /* ----- TITLES ----- */
 
 .big_title {
