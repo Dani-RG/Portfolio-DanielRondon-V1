@@ -16,20 +16,15 @@
 
 .App {
   color: grey;
-/*   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative; */
-  background-color: var(--light-transparent);
+  background-color: var(--light-color);
 }
 
 :root {
   --dark-color: #0D203F;
+  --dark-transparent: #0d203fed;
   --mid-color: #05AA8C;
   --bright-color: #D9A712;
   --light-color: #F6F6F6;
-  --light-transparent: #f6f6f682;
   --alt-color: #B22476;
   --box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
 
@@ -184,6 +179,7 @@ body {
 
 .home_view {
   height: 100vh;
+  z-index: 2;
 }
 
 .home_text {
@@ -234,7 +230,8 @@ body {
 
 .about_view {
   width: 100%;
-  background-color: var(--dark-color);
+  background-color: var(--dark-transparent);
+  z-index: 2;
 }
 
 .circle_container {
@@ -321,6 +318,7 @@ body {
   width: 70vw;
   display: flex;
   flex-direction: column;
+  z-index: 2;
 }
 
 .one_project {
@@ -381,7 +379,8 @@ body {
 
 .techStack_view {
   width: 100%;
-  background-color: var(--dark-color);
+  background-color: var(--dark-transparent);
+  z-index: 2;
 }
 
 .tech_cards {
@@ -509,6 +508,7 @@ body {
 .contact_view {
   width: 70vw;
   height: 105vh;
+  z-index: 2;
 }
 
 .contact_set {
