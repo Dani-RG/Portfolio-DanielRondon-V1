@@ -27,6 +27,11 @@ import { TiSocialLinkedinCircular } from "react-icons/ti";
 import { VscGithub } from "react-icons/vsc";
 import { LuAtSign } from "react-icons/lu";
 import { ContactForm } from "../components/ContactForm";
+import { motion } from "framer-motion";
+
+const NHmockupArr = [nhPic00, nhPic01, nhPic02, nhPic04];
+const MGmockupArr = [mgPic01, mgPic02];
+const ATmockupArr = [atPic00, atPic01];
 
 export default function Main() {
   return (
@@ -34,15 +39,33 @@ export default function Main() {
       <div className="home_view" id="home">
         <div className="home_text">
           <div className="danielrondon_text">
-            <p>DANIEL</p>
-            <p>RONDON</p>
+            <motion.p
+              initial={{ x: "-100vw", opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.9 }}
+            >
+              DANIEL
+            </motion.p>
+            <motion.p
+              initial={{ x: "100vw", opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.9 }}
+            >
+              RONDON
+            </motion.p>
           </div>
-          <div className="fullstack_webdev_text big_title">
-            Full Stack Web Developer
-          </div>
-          <svg className="underline_alt_color">
-            <line x1="0" y1="1" x2="100%" y2="1" />
-          </svg>
+          <motion.div
+            initial={{ scale: 0, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ delay: 1.2, duration: 0.5 }}
+          >
+            <div className="fullstack_webdev_text big_title">
+              Full Stack Web Developer
+            </div>
+            <svg className="underline_alt_color">
+              <line x1="0" y1="1" x2="100%" y2="1" />
+            </svg>
+          </motion.div>
         </div>
       </div>
 
@@ -55,22 +78,28 @@ export default function Main() {
           <div className="about_set">
             <div className="about_text">
               <p className="texts_letters_02">
-                From a professional background in architecture and 3D
-                visualization, I have now become a web developer.
+                With a professional background in architecture and 3D
+                visualization, I have now become a full-stack web developer.
               </p>
               <p className="texts_letters_02">
-                I possess valuable skills that can benefit your company.
+                Knowing how to integrate the frontend with the backend to bring
+                to life designs and applications that are both interesting and
+                emotionally engaging.
+              </p>
+              <p className="texts_letters_02">
+                My goal is to create experiences that are not only enjoyable but
+                also direct users towards the essential point of the journey.
               </p>
             </div>
             <div className="about_photo_phrase">
               <div className="circle_container">
-                <img src={danielPhoto} alt="danielPhoto" />
+                <img loading="lazy" src={danielPhoto} alt="danielPhoto" />
               </div>
               <div className="quote_phrase">
                 <RiDoubleQuotesL className="quotes" />
                 <p className="texts_letters_01 to_light to_italic">
-                  Clean design and functionality are the driving forces behind
-                  my creative mind.
+                  My creative mind is driven by organized processes and
+                  prioritizing effective functionality.
                 </p>
               </div>
             </div>
@@ -91,64 +120,92 @@ export default function Main() {
           <div className="one_project">
             <div className="project_header">
               <p className="medium_title">Nature Heroes</p>
-              <Link
-                to="https://nature-heroes.netlify.app/"
-                target="_blank"
-                className="launch_btn"
-              >
-                <MdOutlineLaunch />
-              </Link>
+              <motion.div whileHover={{ scale: 1.3 }}>
+                <Link
+                  to="https://nature-heroes.netlify.app/"
+                  target="_blank"
+                  className="launch_btn"
+                >
+                  <MdOutlineLaunch />
+                </Link>
+              </motion.div>
             </div>
             <p className="texts_letters_01">
               A React.js Full Stack Web App that promotes animal conservation
               awareness.
             </p>
             <div className="mockups_set">
-              <img src={nhPic00} alt="nhPic00" className="iphone_mockup" />
-              <img src={nhPic01} alt="nhPic01" className="iphone_mockup" />
-              <img src={nhPic02} alt="nhPic02" className="iphone_mockup" />
-              <img src={nhPic04} alt="nhPic04" className="iphone_mockup" />
+              {NHmockupArr.map((image, index) => {
+                return (
+                  <img loading="lazy"
+                    src={image}
+                    alt={index}
+                    key={index}
+                    className="iphone_mockup"
+                  />
+                );
+              })}
             </div>
           </div>
 
           <div className="one_project">
             <div className="project_header">
               <p className="medium_title">MarkGet</p>
-              <Link
-                to="https://markget.fly.dev/"
-                target="_blank"
-                className="launch_btn"
-              >
-                <MdOutlineLaunch />
-              </Link>
+              <motion.div whileHover={{ scale: 1.3 }}>
+                <Link
+                  to="https://markget.fly.dev/"
+                  target="_blank"
+                  className="launch_btn"
+                >
+                  <MdOutlineLaunch />
+                </Link>
+              </motion.div>
             </div>
             <p className="texts_letters_01">
               An Express.js Full Stack Web App that compares the prices of
               supermarket products.
             </p>
             <div className="mockups_set">
-              <img src={mgPic01} alt="mgPic01" className="iphone_mockup" />
-              <img src={mgPic02} alt="mgPic02" className="iphone_mockup" />
+              {MGmockupArr.map((image, index) => {
+                return (
+                  <img loading="lazy"
+                    src={image}
+                    alt={index}
+                    key={index}
+                    className="iphone_mockup"
+                  />
+                );
+              })}
             </div>
           </div>
 
           <div className="one_project">
             <div className="project_header">
               <p className="medium_title">At 18:36!</p>
-              <Link
-                to="https://dani-rg.github.io/Project-1_Game_At-18.34/"
-                target="_blank"
-                className="launch_btn"
-              >
-                <MdOutlineLaunch />
-              </Link>
+              <motion.div whileHover={{ scale: 1.3 }}>
+                <Link
+                  to="https://dani-rg.github.io/Project-1_Game_At-18.34/"
+                  target="_blank"
+                  className="launch_btn"
+                >
+                  <MdOutlineLaunch />
+                </Link>
+              </motion.div>
             </div>
             <p className="texts_letters_01">
               A Javascript videogame with HTML Canvas.
             </p>
             <div className="mockups_set">
-              <img src={atPic00} alt="atPic00" className="ipad_mockup" />
-              <img src={atPic01} alt="atPic01" className="ipad_mockup" />
+              {ATmockupArr.map((image, index) => {
+                return (
+                  <img loading="lazy"
+                    src={image}
+                    alt={index}
+                    key={index}
+                    className="ipad_mockup"
+                  />
+                );
+              })}
             </div>
           </div>
         </div>
@@ -165,7 +222,12 @@ export default function Main() {
             <line x1="0" y1="1" x2="100%" y2="1" />
           </svg>
           <div className="tech_cards">
-            <div>
+            <motion.div
+              initial={{ x: "-100%", opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ type: "spring", delay: 1, duration: 0.9 }}
+            >
               <p className="medium_title to_alt">Frontend</p>
               <div className="frontend_card">
                 <div className="frontend_horiz_align">
@@ -189,9 +251,14 @@ export default function Main() {
                   <p className="tools_letters">Node.js</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
-            <div>
+            <motion.div
+              initial={{ x: "100%", opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ type: "spring", delay: 1.5, duration: 0.9 }}
+            >
               <p className="medium_title to_right to_alt">Backend</p>
               <div className="backend_card ">
                 <div className="backend_horiz_align">
@@ -211,7 +278,7 @@ export default function Main() {
                   <FaNodeJs className="tools_letters" />
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
           <br></br>
           <br></br>
@@ -225,18 +292,36 @@ export default function Main() {
                 <line x1="0" y1="1" x2="100%" y2="1" />
               </svg>
             </div>
-            <div className="to_center">
-              <img src={ihLogo} alt="ihLogo" className="degree_logo" />
+            <motion.div
+              className="to_center"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3, duration: 1 }}
+            >
+              <img loading="lazy" src={ihLogo} alt="ihLogo" className="degree_logo" />
               <p className="degree_titles">Full Stack Web Developer</p>
               <p className="degree_place">Ironhack - BCN</p>
-            </div>
-            <div className="to_center">
-              <img src={EvolisLogo} alt="EvolisLogo" className="degree_logo" />
+            </motion.div>
+            <motion.div
+              className="to_center"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.6, duration: 1 }}
+            >
+              <img loading="lazy" src={EvolisLogo} alt="EvolisLogo" className="degree_logo" />
               <p className="degree_titles">3D ArchViz</p>
               <p className="degree_place">Evolis3D - BCN</p>
-            </div>
-            <div className="to_center">
-              <img
+            </motion.div>
+            <motion.div
+              className="to_center"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.9, duration: 1 }}
+            >
+              <img loading="lazy"
                 src={lasalleLogo}
                 alt="lasalleLogo"
                 className="laSalle_logo"
@@ -245,13 +330,19 @@ export default function Main() {
                 Int. Architecture Construction Manager
               </p>
               <p className="degree_place">La Salle - BCN</p>
-            </div>
-            <div className="to_center">
-              <img src={ucvLogo} alt="ucvLogo" className="degree_logo" />
+            </motion.div>
+            <motion.div
+              className="to_center"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 1.2, duration: 1 }}
+            >
+              <img loading="lazy" src={ucvLogo} alt="ucvLogo" className="degree_logo" />
               <p className="degree_titles">Architect</p>
               <p className="degree_place">Universidad Central de Vzla. - CCS</p>
               <br className="separation"></br>
-            </div>
+            </motion.div>
           </div>
         </div>
         <br></br>
@@ -271,27 +362,52 @@ export default function Main() {
           </svg>
           <div className="contact_set">
             <div className="contact_logos">
-              <Link
-                to="https://www.linkedin.com/in/daniel-rondon-garcia-"
-                target="_blank"
+              <motion.div
+                initial={{ opacity: 0, y: "-200%" }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ type: "spring", delay: 1, duration: 0.5 }}
               >
-                <TiSocialLinkedinCircular id="in_logo" />
-              </Link>
-              <Link to="https://github.com/Dani-RG" target="_blank">
-                <VscGithub />
-              </Link>
-              <Link to="mailto:daniel.deweb@gmail.com">
-                <LuAtSign />
-              </Link>
+                <Link
+                  to="https://www.linkedin.com/in/daniel-rondon-garcia-"
+                  target="_blank"
+                >
+                  <TiSocialLinkedinCircular id="in_logo" />
+                </Link>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: "-200%" }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ type: "spring", delay: 1.3, duration: 0.5 }}
+              >
+                <Link to="https://github.com/Dani-RG" target="_blank">
+                  <VscGithub />
+                </Link>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: "-200%" }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ type: "spring", delay: 1.6, duration: 0.5 }}
+              >
+                <Link to="mailto:daniel.deweb@gmail.com">
+                  <LuAtSign />
+                </Link>
+              </motion.div>
             </div>
             <ContactForm />
-            <a
+            <motion.a
               href="CV WebDev Daniel Rondon Garcia.pdf"
               download="CV WebDev Daniel Rondon Garcia.pdf"
               className="resume_btn"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 1, duration: 0.5 }}
             >
               Get Resume
-            </a>
+            </motion.a>
           </div>
         </div>
       </div>

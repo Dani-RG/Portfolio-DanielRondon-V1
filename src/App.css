@@ -16,31 +16,16 @@
 
 .App {
   color: grey;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
   background-color: var(--light-color);
 }
 
 :root {
-/*   --black-color: #12001d;
-  --greydark-color: #2f4550;
-  --greymedium-color: #586f7c;
-  --greylight-color: #b8dbd9;
-  --white-color: #f4f4f9;
-  --reddark-color: #a31621;
-  --redlight-color: #db222a;
-  --bluelight-color: #bfdbf7;
-  --bluedark-color: #053c5e;
-  --greenlight-color: #e7fbff;
-  --greenmedium-color: #1f7a8c; */
-
   --dark-color: #0D203F;
+  --dark-transparent: #0d203fed;
   --mid-color: #05AA8C;
   --bright-color: #D9A712;
   --light-color: #F6F6F6;
+  --bg-light-color: #0D203F;
   --alt-color: #B22476;
   --box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
 
@@ -53,6 +38,10 @@
 a {
   text-decoration: none;
   color: var(--bright-color);
+}
+
+a:hover {
+  color: var(--alt-color);
 }
 
 li {
@@ -105,15 +94,6 @@ body {
   width: 100%;
   height: 1rem;
   stroke: var(--bright-color);
-  stroke-width: 3px;
-  top: -3.7rem;
-}
-
-.underline_alt_color {
-  position: relative;
-  width: 100%;
-  height: 1rem;
-  stroke: var(--alt-color);
   stroke-width: 3px;
   top: -3.7rem;
 }
@@ -181,76 +161,10 @@ body {
   z-index: 5;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 5vh;
-  width: 90vw;
-  border-bottom: 0.1rem solid var(--bright-color);
-  z-index: 5;
-  position: fixed;
-  top: 5px;
-  color: var(--bright-color);
-  font-family: var(--montserrat-font-family);
-}
-
-.nav_links {
-  display: flex;
-  justify-content: flex-end;
-  width: 75%;
-}
-
-.nav_links li a {
-  margin: 0 1rem;
-  cursor: pointer;
-}
-
-.upArrow_icon {
-  font-size: 1.4rem;
-  cursor: pointer;
-}
-
-.menu_burger_icon {
-  display: none;
-  color: var(--bright-color);
-  font-size: 1.5rem;
-}
-
-/* ----- NAVBAR MEDIA QUERIES ----- */
-
-@media (max-width: 768px) {
-  .navbar {
-    font-size: 1.3rem;
-  }
-
-  .nav_links {
-    display: none;
-  }
-
-  .nav_links_mobile {
-    position: absolute;
-    display: block;
-    top: 5vh;
-    width: 100%;
-    z-index: 10;
-    text-align: center;
-    background-color: var(--light-color);
-  }
-
-  .nav_links_mobile li {
-    line-height: 4rem;
-  }
-
-  .menu_burger_icon {
-    position: absolute;
-    display: contents;
-  }
-}
-
 /* ----- MAIN ----- */
 
 .main {
+  overflow: hidden;
   z-index: 1;
   display: flex;
   flex-direction: column;
@@ -266,6 +180,7 @@ body {
 
 .home_view {
   height: 100vh;
+  z-index: 2;
 }
 
 .home_text {
@@ -282,32 +197,52 @@ body {
   font-family: var(--bigShoulders-font-family);
   font-size: 4rem;
   text-align: center;
+  -webkit-text-stroke: 1px var(--light-color);
 }
 
 .fullstack_webdev_text {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   position: relative;
   color: var(--mid-color);
+  text-align: center;
+}
+
+.underline_alt_color {
+  position: relative;
+  width: 100%;
+  height: 1rem;
+  stroke: var(--alt-color);
+  stroke-width: 3px;
+  top: -3.7rem;
 }
 
 /* ----- HOME MEDIA QUERIES ----- */
 
 @media (min-width: 768px) {
   .danielrondon_text {
+    position: relative;
     font-size: 10rem;
+    top: 5rem;
   }
 
   .fullstack_webdev_text {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    top: 5rem;
+  }
+
+  .underline_alt_color {
+    top: 1.5rem;
   }
 }
 
 /* ----- ABOUT ----- */
 
 .about_view {
-  height: 100vh;
-  width: 100vw;
-  background-color: var(--dark-color);
+  width: 100%;
+  height: 100%;
+  background-color: var(--dark-transparent);
+  z-index: 2;
+  text-align: justify;
 }
 
 .circle_container {
@@ -360,8 +295,9 @@ body {
 /* ----- ABOUT MEDIA QUERIES ----- */
 
 @media (min-width: 768px) {
-  .about_IPoss {
-    font-size: 2rem;
+
+  .about_view {
+    height: 100vh;
   }
 
   .circle_container {
@@ -371,6 +307,13 @@ body {
 
   .about_text {
     width: 30vw;
+  }
+
+  .about_set {
+    flex-direction: row;
+    justify-content: space-around;
+    position: relative;
+    top: 10rem;
   }
 
   .about_photo_phrase {
@@ -389,6 +332,7 @@ body {
   width: 70vw;
   display: flex;
   flex-direction: column;
+  z-index: 2;
 }
 
 .one_project {
@@ -448,8 +392,9 @@ body {
 /* ----- TECH STACK ----- */
 
 .techStack_view {
-  width: 100vw;
-  background-color: var(--dark-color);
+  width: 100%;
+  background-color: var(--dark-transparent);
+  z-index: 2;
 }
 
 .tech_cards {
@@ -575,8 +520,9 @@ body {
 /* ----- CONTACT ----- */
 
 .contact_view {
+  width: 70vw;
   height: 100vh;
-  width: 100vw;
+  z-index: 2;
 }
 
 .contact_set {
@@ -646,6 +592,10 @@ form label {
   width: 100%;
 }
 
+#in_logo {
+  font-size: 125%;
+}
+
 .send_btn {
   color: var(--light-color);
   background-color: var(--alt-color);
@@ -679,16 +629,18 @@ form label {
 /* ----- CONTACT MEDIA QUERIES ----- */
 
 @media (min-width: 768px) {
+
+  .contact_set {
+    position: relative;
+    top: 7rem;
+  }
+  
   .contact_logos {
     font-size: 3rem;
   }
 
   .contact_set {
     width: 30vw;
-  }
-
-  #in_logo {
-    font-size: 3.5rem;
   }
 
   #lets_get {
