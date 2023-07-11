@@ -93,7 +93,7 @@ export default function Main() {
             </div>
             <div className="about_photo_phrase">
               <div className="circle_container">
-                <img src={danielPhoto} alt="danielPhoto" />
+                <img loading="lazy" src={danielPhoto} alt="danielPhoto" />
               </div>
               <div className="quote_phrase">
                 <RiDoubleQuotesL className="quotes" />
@@ -137,7 +137,7 @@ export default function Main() {
             <div className="mockups_set">
               {NHmockupArr.map((image, index) => {
                 return (
-                  <img
+                  <img loading="lazy"
                     src={image}
                     alt={index}
                     key={index}
@@ -168,7 +168,7 @@ export default function Main() {
             <div className="mockups_set">
               {MGmockupArr.map((image, index) => {
                 return (
-                  <img
+                  <img loading="lazy"
                     src={image}
                     alt={index}
                     key={index}
@@ -198,7 +198,7 @@ export default function Main() {
             <div className="mockups_set">
               {ATmockupArr.map((image, index) => {
                 return (
-                  <img
+                  <img loading="lazy"
                     src={image}
                     alt={index}
                     key={index}
@@ -207,10 +207,6 @@ export default function Main() {
                 );
               })}
             </div>
-            {/* <div className="mockups_set">
-              <img src={atPic00} alt="atPic00" className="ipad_mockup" />
-              <img src={atPic01} alt="atPic01" className="ipad_mockup" />
-            </div> */}
           </div>
         </div>
         <br></br>
@@ -303,7 +299,7 @@ export default function Main() {
               viewport={{ once: true }}
               transition={{ delay: 0.3, duration: 1 }}
             >
-              <img src={ihLogo} alt="ihLogo" className="degree_logo" />
+              <img loading="lazy" src={ihLogo} alt="ihLogo" className="degree_logo" />
               <p className="degree_titles">Full Stack Web Developer</p>
               <p className="degree_place">Ironhack - BCN</p>
             </motion.div>
@@ -314,7 +310,7 @@ export default function Main() {
               viewport={{ once: true }}
               transition={{ delay: 0.6, duration: 1 }}
             >
-              <img src={EvolisLogo} alt="EvolisLogo" className="degree_logo" />
+              <img loading="lazy" src={EvolisLogo} alt="EvolisLogo" className="degree_logo" />
               <p className="degree_titles">3D ArchViz</p>
               <p className="degree_place">Evolis3D - BCN</p>
             </motion.div>
@@ -325,7 +321,7 @@ export default function Main() {
               viewport={{ once: true }}
               transition={{ delay: 0.9, duration: 1 }}
             >
-              <img
+              <img loading="lazy"
                 src={lasalleLogo}
                 alt="lasalleLogo"
                 className="laSalle_logo"
@@ -342,7 +338,7 @@ export default function Main() {
               viewport={{ once: true }}
               transition={{ delay: 1.2, duration: 1 }}
             >
-              <img src={ucvLogo} alt="ucvLogo" className="degree_logo" />
+              <img loading="lazy" src={ucvLogo} alt="ucvLogo" className="degree_logo" />
               <p className="degree_titles">Architect</p>
               <p className="degree_place">Universidad Central de Vzla. - CCS</p>
               <br className="separation"></br>

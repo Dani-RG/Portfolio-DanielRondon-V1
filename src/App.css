@@ -25,6 +25,7 @@
   --mid-color: #05AA8C;
   --bright-color: #D9A712;
   --light-color: #F6F6F6;
+  --bg-light-color: #0D203F;
   --alt-color: #B22476;
   --box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
 
@@ -196,6 +197,7 @@ body {
   font-family: var(--bigShoulders-font-family);
   font-size: 4rem;
   text-align: center;
+  -webkit-text-stroke: 1px var(--light-color);
 }
 
 .fullstack_webdev_text {
@@ -218,11 +220,18 @@ body {
 
 @media (min-width: 768px) {
   .danielrondon_text {
+    position: relative;
     font-size: 10rem;
+    top: 5rem;
   }
 
   .fullstack_webdev_text {
     font-size: 2.5rem;
+    top: 5rem;
+  }
+
+  .underline_alt_color {
+    top: 1.5rem;
   }
 }
 
@@ -230,8 +239,10 @@ body {
 
 .about_view {
   width: 100%;
+  height: 100%;
   background-color: var(--dark-transparent);
   z-index: 2;
+  text-align: justify;
 }
 
 .circle_container {
@@ -284,8 +295,9 @@ body {
 /* ----- ABOUT MEDIA QUERIES ----- */
 
 @media (min-width: 768px) {
-  .about_IPoss {
-    font-size: 2rem;
+
+  .about_view {
+    height: 100vh;
   }
 
   .circle_container {
@@ -300,6 +312,8 @@ body {
   .about_set {
     flex-direction: row;
     justify-content: space-around;
+    position: relative;
+    top: 10rem;
   }
 
   .about_photo_phrase {
@@ -507,7 +521,7 @@ body {
 
 .contact_view {
   width: 70vw;
-  height: 105vh;
+  height: 100vh;
   z-index: 2;
 }
 
@@ -615,6 +629,12 @@ form label {
 /* ----- CONTACT MEDIA QUERIES ----- */
 
 @media (min-width: 768px) {
+
+  .contact_set {
+    position: relative;
+    top: 7rem;
+  }
+  
   .contact_logos {
     font-size: 3rem;
   }

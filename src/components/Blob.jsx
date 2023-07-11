@@ -18,24 +18,24 @@ const Blob = () => {
     const { clock } = state;
     if (mesh.current) {
       mesh.current.material.uniforms.u_time.value =
-        0.4 * clock.getElapsedTime();
+        0.1 * clock.getElapsedTime();
 
       mesh.current.material.uniforms.u_intensity.value = MathUtils.lerp(
         mesh.current.material.uniforms.u_intensity.value,
-        hover.current ? 1 : 0.15,
-        0.02
+        hover.current ? 1 : 0.8,
+        0.01
       );
     }
   });
   return (
     <mesh
       ref={mesh}
-      scale={1.2}
+      scale={1.3}
       position={[0, 0, 0]}
       onPointerOver={() => (hover.current = true)}
       onPointerOut={() => (hover.current = false)}
     >
-      <icosahedronGeometry args={[2, 20]} />
+      <icosahedronGeometry args={[2, 60]} />
       <shaderMaterial
         vertexShader={vertexShader}
         fragmentShader={fragmentShader}
