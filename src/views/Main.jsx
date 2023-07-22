@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { RiDoubleQuotesL } from "react-icons/ri";
 import danielPhoto from "../images/danielRG_photo_noBG.png";
@@ -28,12 +28,15 @@ import { VscGithub } from "react-icons/vsc";
 import { LuAtSign } from "react-icons/lu";
 import { ContactForm } from "../components/ContactForm";
 import { motion } from "framer-motion";
+import TestimonialsModal from "../components/TestimonialsModal";
 
 const NHmockupArr = [nhPic00, nhPic01, nhPic02, nhPic04];
 const MGmockupArr = [mgPic01, mgPic02];
 const ATmockupArr = [atPic00, atPic01];
 
 export default function Main() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className="main">
       <div className="home_view" id="home">
@@ -105,11 +108,14 @@ export default function Main() {
             </div>
           </div>
         </div>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
+        <div className="testimonials_btn">
+          <button onClick={() => setIsOpen(true)}>
+            Testimonials
+          </button>
+          <TestimonialsModal open={isOpen} onClose={() => setIsOpen(false)}>
+            One testimonial
+          </TestimonialsModal>
+        </div>
       </div>
       <div className="projects_view" id="projects">
         <div className="section_container">
