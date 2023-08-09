@@ -8,7 +8,7 @@ export default function TestimonialsModal({ open, children, onClose }) {
     <>
       <div className="overlay"/>
       <div className="testimonials_modal">
-        <button onClick={onClose} className="close-btn">
+        <button onClick={onClose}>
           <IoMdClose  className="close-btn-icon"/>
         </button>
         {children}
