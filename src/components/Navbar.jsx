@@ -24,7 +24,7 @@ export default function Navbar() {
           smooth={true}
           offset={0}
           duration={1500}
-          className="upArrow_icon"
+          className="upArrow-icon"
         >
           <SlArrowUp />
         </Link>
@@ -80,7 +80,7 @@ export default function Navbar() {
             Contact
           </Link>
         </div>
-        <div className="burger_icon">
+        <div className="burger-icon">
           <BurgerBtn clicked={clicked} handleClick={handleClick} />
         </div>
         <BgDiv className={`initial ${clicked ? "active" : ""}`}></BgDiv>
@@ -106,13 +106,13 @@ const NavContainer = styled.nav`
     margin: 0 1rem;
   }
 
-  .upArrow_icon {
+  .upArrow-icon {
     cursor: pointer;
     z-index: 10;
     font-size: 1.2rem;
   }
 
-  .burger_icon {
+  .burger-icon {
     @media (min-width: 768px) {
       display: none;
     }

@@ -40,9 +40,9 @@ export default function Main() {
 
   return (
     <div className="main">
-      <div className="home_view" id="home">
-        <div className="home_text">
-          <div className="danielrondon_text">
+      <div className="home-view" id="home">
+        <div className="home-text">
+          <div className="danielrondon-text">
             <motion.p
               initial={{ x: "-100vw", opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
@@ -63,45 +63,45 @@ export default function Main() {
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 1.2, duration: 0.5 }}
           >
-            <div className="fullstack_webdev_text big_title">
+            <div className="fullstack-webdev-text big-title">
               Full Stack Web Developer
             </div>
-            <svg className="underline_alt_color">
+            <svg className="underline-alt-color">
               <line x1="0" y1="1" x2="100%" y2="1" />
             </svg>
           </motion.div>
         </div>
       </div>
 
-      <div className="about_view" id="about">
-        <div className="section_container">
-          <p className="big_title to_light">About</p>
+      <div className="about-view" id="about">
+        <div className="section-container">
+          <p className="big-title to-light">About</p>
           <svg className="underline">
             <line x1="0" y1="1" x2="100%" y2="1" />
           </svg>
-          <div className="about_set">
-            <div className="about_text">
-              <p className="texts_letters_02">
+          <div className="about-set">
+            <div className="about-text">
+              <p className="texts-letters-02">
                 With a professional background in architecture and 3D
                 visualization, I have now become a full-stack web developer.
               </p>
-              <p className="texts_letters_02">
+              <p className="texts-letters-02">
                 Knowing how to integrate the frontend with the backend to bring
                 to life designs and applications that are both interesting and
                 emotionally engaging.
               </p>
-              <p className="texts_letters_02">
+              <p className="texts-letters-02">
                 My goal is to create experiences that are not only enjoyable but
                 also direct users towards the essential point of the journey.
               </p>
             </div>
-            <div className="about_photo_phrase">
-              <div className="circle_container">
+            <div className="about-photo-phrase">
+              <div className="circle-container">
                 <img src={danielPhoto} alt="danielPhoto" />
               </div>
-              <div className="quote_phrase">
+              <div className="quote-phrase">
                 <RiDoubleQuotesL className="quotes" />
-                <p className="texts_letters_01 to_light to_italic">
+                <p className="texts-letters-01 to-light to-italic">
                   My creative mind is driven by organized processes and
                   prioritizing effective functionality.
                 </p>
@@ -109,7 +109,7 @@ export default function Main() {
             </div>
           </div>
         </div>
-        <div className="testimonials_btn">
+        <div className="testimonials-btn">
           <button onClick={() => setIsOpen(true)}>
             Testimonials
           </button>
@@ -118,98 +118,98 @@ export default function Main() {
           </TestimonialsModal>
         </div>
       </div>
-      <div className="projects_view" id="projects">
-        <div className="section_container">
-          <p className="big_title to_dark">Projects</p>
+      <div className="projects-view" id="projects">
+        <div className="section-container">
+          <p className="big-title to-dark">Projects</p>
           <svg className="underline">
             <line x1="0" y1="1" x2="100%" y2="1" />
           </svg>
-          <div className="one_project">
-            <div className="project_header">
-              <p className="medium_title">Nature Heroes</p>
+          <div className="one-project">
+            <div className="project-header">
+              <p className="medium-title">Nature Heroes</p>
               <motion.div whileHover={{ scale: 1.3 }}>
                 <Link
                   to="https://nature-heroes.netlify.app/"
                   target="_blank"
-                  className="launch_btn"
+                  className="launch-btn"
                 >
                   <MdOutlineLaunch />
                 </Link>
               </motion.div>
             </div>
-            <p className="texts_letters_01">
+            <p className="texts-letters-01">
               A React.js Full Stack Web App that promotes animal conservation
               awareness.
             </p>
-            <div className="mockups_set">
+            <div className="mockups-set">
               {NHmockupArr.map((image, index) => {
                 return (
                   <img
                     src={image}
                     alt={index}
                     key={index}
-                    className="iphone_mockup"
+                    className="iphone-mockup"
                   />
                 );
               })}
             </div>
           </div>
 
-          <div className="one_project">
-            <div className="project_header">
-              <p className="medium_title">MarkGet</p>
+          <div className="one-project">
+            <div className="project-header">
+              <p className="medium-title">MarkGet</p>
               <motion.div whileHover={{ scale: 1.3 }}>
                 <Link
                   to="https://markget.fly.dev/"
                   target="_blank"
-                  className="launch_btn"
+                  className="launch-btn"
                 >
                   <MdOutlineLaunch />
                 </Link>
               </motion.div>
             </div>
-            <p className="texts_letters_01">
+            <p className="texts-letters-01">
               An Express.js Full Stack Web App that compares the prices of
               supermarket products.
             </p>
-            <div className="mockups_set">
+            <div className="mockups-set">
               {MGmockupArr.map((image, index) => {
                 return (
                   <img
                     src={image}
                     alt={index}
                     key={index}
-                    className="iphone_mockup"
+                    className="iphone-mockup"
                   />
                 );
               })}
             </div>
           </div>
 
-          <div className="one_project">
-            <div className="project_header">
-              <p className="medium_title">At 18:36!</p>
+          <div className="one-project">
+            <div className="project-header">
+              <p className="medium-title">At 18:36!</p>
               <motion.div whileHover={{ scale: 1.3 }}>
                 <Link
-                  to="https://dani-rg.github.io/Project-1_Game_At-18.34/"
+                  to="https://dani-rg.github.io/Project-1-Game-At-18.34/"
                   target="_blank"
-                  className="launch_btn"
+                  className="launch-btn"
                 >
                   <MdOutlineLaunch />
                 </Link>
               </motion.div>
             </div>
-            <p className="texts_letters_01">
+            <p className="texts-letters-01">
               A Javascript videogame with HTML Canvas.
             </p>
-            <div className="mockups_set">
+            <div className="mockups-set">
               {ATmockupArr.map((image, index) => {
                 return (
                   <img
                     src={image}
                     alt={index}
                     key={index}
-                    className="ipad_mockup"
+                    className="ipad-mockup"
                   />
                 );
               })}
@@ -222,40 +222,40 @@ export default function Main() {
         <br></br>
         <br></br>
       </div>
-      <div className="techStack_view" id="techStack">
-        <div className="section_container">
-          <p className="big_title to_light">Tech Stack</p>
+      <div className="techStack-view" id="techStack">
+        <div className="section-container">
+          <p className="big-title to-light">Tech Stack</p>
           <svg className="underline">
             <line x1="0" y1="1" x2="100%" y2="1" />
           </svg>
-          <div className="tech_cards">
+          <div className="tech-cards">
             <motion.div
               initial={{ x: "-100%", opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ type: "spring", delay: 1, duration: 0.9 }}
             >
-              <p className="medium_title to_alt">Frontend</p>
-              <div className="frontend_card">
-                <div className="frontend_horiz_align">
-                  <FaReact className="tools_letters" />
-                  <p className="tools_letters">React</p>
+              <p className="medium-title to-alt">Frontend</p>
+              <div className="frontend-card">
+                <div className="frontend-horiz-align">
+                  <FaReact className="tools-letters" />
+                  <p className="tools-letters">React</p>
                 </div>
-                <div className="frontend_horiz_align">
-                  <IoLogoJavascript className="tools_letters" />
-                  <p className="tools_letters">Javascript (ES6)</p>
+                <div className="frontend-horiz-align">
+                  <IoLogoJavascript className="tools-letters" />
+                  <p className="tools-letters">Javascript (ES6)</p>
                 </div>
-                <div className="frontend_horiz_align">
-                  <FaHtml5 className="tools_letters" />
-                  <p className="tools_letters">HTML 5</p>
+                <div className="frontend-horiz-align">
+                  <FaHtml5 className="tools-letters" />
+                  <p className="tools-letters">HTML 5</p>
                 </div>
-                <div className="frontend_horiz_align">
-                  <FaCss3Alt className="tools_letters" />
-                  <p className="tools_letters">CSS 3</p>
+                <div className="frontend-horiz-align">
+                  <FaCss3Alt className="tools-letters" />
+                  <p className="tools-letters">CSS 3</p>
                 </div>
-                <div className="frontend_horiz_align">
-                  <FaNodeJs className="tools_letters" />
-                  <p className="tools_letters">Node.js</p>
+                <div className="frontend-horiz-align">
+                  <FaNodeJs className="tools-letters" />
+                  <p className="tools-letters">Node.js</p>
                 </div>
               </div>
             </motion.div>
@@ -266,23 +266,23 @@ export default function Main() {
               viewport={{ once: true }}
               transition={{ type: "spring", delay: 1.5, duration: 0.9 }}
             >
-              <p className="medium_title to_right to_alt">Backend</p>
-              <div className="backend_card ">
-                <div className="backend_horiz_align">
-                  <p className="tools_letters">Express.js</p>
-                  <SiExpress className="tools_letters" />
+              <p className="medium-title to-right to-alt">Backend</p>
+              <div className="backend-card ">
+                <div className="backend-horiz-align">
+                  <p className="tools-letters">Express.js</p>
+                  <SiExpress className="tools-letters" />
                 </div>
-                <div className="backend_horiz_align">
-                  <p className="tools_letters">MongoDB</p>
-                  <SiMongodb className="tools_letters" />
+                <div className="backend-horiz-align">
+                  <p className="tools-letters">MongoDB</p>
+                  <SiMongodb className="tools-letters" />
                 </div>
-                <div className="backend_horiz_align">
-                  <p className="tools_letters">Postman</p>
-                  <SiPostman className="tools_letters" />
+                <div className="backend-horiz-align">
+                  <p className="tools-letters">Postman</p>
+                  <SiPostman className="tools-letters" />
                 </div>
-                <div className="backend_horiz_align">
-                  <p className="tools_letters">Node.js</p>
-                  <FaNodeJs className="tools_letters" />
+                <div className="backend-horiz-align">
+                  <p className="tools-letters">Node.js</p>
+                  <FaNodeJs className="tools-letters" />
                 </div>
               </div>
             </motion.div>
@@ -294,35 +294,35 @@ export default function Main() {
           <br></br>
           <div>
             <div>
-              <p className="big_title to_light">Degrees</p>
+              <p className="big-title to-light">Degrees</p>
               <svg className="underline">
                 <line x1="0" y1="1" x2="100%" y2="1" />
               </svg>
             </div>
             <motion.div
-              className="to_center"
+              className="to-center"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3, duration: 1 }}
             >
-              <img src={ihLogo} alt="ihLogo" className="degree_logo" />
-              <p className="degree_titles">Full Stack Web Developer</p>
-              <p className="degree_place">Ironhack - BCN</p>
+              <img src={ihLogo} alt="ihLogo" className="degree-logo" />
+              <p className="degree-titles">Full Stack Web Developer</p>
+              <p className="degree-place">Ironhack - BCN</p>
             </motion.div>
             <motion.div
-              className="to_center"
+              className="to-center"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.6, duration: 1 }}
             >
-              <img src={EvolisLogo} alt="EvolisLogo" className="degree_logo" />
-              <p className="degree_titles">3D ArchViz</p>
-              <p className="degree_place">Evolis3D - BCN</p>
+              <img src={EvolisLogo} alt="EvolisLogo" className="degree-logo" />
+              <p className="degree-titles">3D ArchViz</p>
+              <p className="degree-place">Evolis3D - BCN</p>
             </motion.div>
             <motion.div
-              className="to_center"
+              className="to-center"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -331,23 +331,23 @@ export default function Main() {
               <img
                 src={lasalleLogo}
                 alt="lasalleLogo"
-                className="laSalle_logo"
+                className="laSalle-logo"
               />
-              <p className="degree_titles">
+              <p className="degree-titles">
                 Int. Architecture Construction Manager
               </p>
-              <p className="degree_place">La Salle - BCN</p>
+              <p className="degree-place">La Salle - BCN</p>
             </motion.div>
             <motion.div
-              className="to_center"
+              className="to-center"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 1.2, duration: 1 }}
             >
-              <img src={ucvLogo} alt="ucvLogo" className="degree_logo" />
-              <p className="degree_titles">Architect</p>
-              <p className="degree_place">Universidad Central de Vzla. - CCS</p>
+              <img src={ucvLogo} alt="ucvLogo" className="degree-logo" />
+              <p className="degree-titles">Architect</p>
+              <p className="degree-place">Universidad Central de Vzla. - CCS</p>
               <br className="separation"></br>
             </motion.div>
           </div>
@@ -359,16 +359,16 @@ export default function Main() {
         <br></br>
       </div>
 
-      <div className="contact_view" id="contact">
-        <div className="section_container">
-          <p className="big_title to_left to_dark" id="lets_get">
+      <div className="contact-view" id="contact">
+        <div className="section-container">
+          <p className="big-title to-left to-dark" id="lets-get">
             Let’s get in touch!
           </p>
           <svg className="underline">
             <line x1="0" y1="1" x2="100%" y2="1" />
           </svg>
-          <div className="contact_set">
-            <div className="contact_logos">
+          <div className="contact-set">
+            <div className="contact-logos">
               <motion.div
                 initial={{ opacity: 0, y: "-200%" }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -379,7 +379,7 @@ export default function Main() {
                   to="https://www.linkedin.com/in/daniel-rondon-garcia-"
                   target="_blank"
                 >
-                  <TiSocialLinkedinCircular id="in_logo" />
+                  <TiSocialLinkedinCircular id="in-logo" />
                 </Link>
               </motion.div>
               <motion.div
@@ -407,7 +407,7 @@ export default function Main() {
             <motion.a
               href="CV WebDev Daniel Rondon Garcia.pdf"
               download="CV WebDev Daniel Rondon Garcia.pdf"
-              className="resume_btn"
+              className="resume-btn"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}

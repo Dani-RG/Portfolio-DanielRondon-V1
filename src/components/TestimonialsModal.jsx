@@ -7,7 +7,7 @@ export default function TestimonialsModal({ open, children, onClose }) {
   return ReactDOM.createPortal(
     <>
       <div className="overlay"/>
-      <div className="testimonials_modal">
+      <div className="testimonials-modal">
         <button onClick={onClose}>
           <IoMdClose  className="close-btn-icon"/>
         </button>

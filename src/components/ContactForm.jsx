@@ -42,7 +42,7 @@ export const ContactForm = () => {
 
   return (
     <>
-      <form ref={form} onSubmit={sendEmail} className="contact_form">
+      <form ref={form} onSubmit={sendEmail} className="contact-form">
         <label>Name:</label>
         <input type="text" name="user_name" />
         <label>Email:</label>
@@ -51,7 +51,7 @@ export const ContactForm = () => {
         <textarea name="message" />
         <motion.button
           type="submit"
-          className="send_btn"
+          className="send-btn"
           whileHover={{ scale: 1.1 }}
         >
           SEND

@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function SocialMedia() {
   return (
-    <div className="social_media_bar">
+    <div className="social-media-bar">
       <motion.div
         whileHover={{ scale: 1.3 }}
       >

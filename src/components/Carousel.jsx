@@ -68,7 +68,7 @@ export default function Carousel() {
         );
       })}
       <IoIosArrowForward className="arrow arrow-right" onClick={nextSlide} />
-      <span className="allIndicators">
+      <span className="indicators">
         {slides.map((_, idx) => {
           return (
             <button

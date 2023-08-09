@@ -21,7 +21,7 @@
 
 :root {
   --dark-color: #0d203f;
-  --dark-transparent: #0d203fed;
+  --dark-transparent: #0d203ff4;
   --mid-color: #05aa8c;
   --bright-color: #d9a712;
   --light-color: #f6f6f6;
@@ -58,21 +58,21 @@ body {
 
 /* ----- TITLES ----- */
 
-.big_title {
+.big-title {
   font-family: var(--jost-font-family);
   font-weight: bolder;
   font-size: 2rem;
   margin: 4rem 0;
 }
 
-.medium_title {
+.medium-title {
   font-family: var(--montserrat-font-family);
   font-weight: bold;
   font-size: 1.4rem;
   color: var(--mid-color);
 }
 
-.texts_letters_01 {
+.texts-letters-01 {
   color: var(--mid-color);
   font-family: var(--josefin-font-family);
   font-size: 1.2rem;
@@ -80,7 +80,7 @@ body {
   margin: 1.5rem 0;
 }
 
-.texts_letters_02 {
+.texts-letters-02 {
   color: var(--mid-color);
   font-family: var(--montserrat-font-family);
   font-size: 1.1rem;
@@ -97,57 +97,57 @@ body {
   top: -3.7rem;
 }
 
-.to_center {
+.to-center {
   text-align: center;
 }
 
-.to_right {
+.to-right {
   text-align: end;
 }
 
-.to_left {
+.to-left {
   text-align: start;
 }
 
-.to_light {
+.to-light {
   color: var(--light-color);
 }
 
-.to_dark {
+.to-dark {
   color: var(--dark-color);
 }
 
-.to_alt {
+.to-alt {
   color: var(--alt-color);
 }
 
-.to_italic {
+.to-italic {
   font-style: italic;
 }
 
 /* ----- TITLES MEDIA QUERIES ----- */
 
 @media (min-width: 768px) {
-  .big_title {
+  .big-title {
     font-size: 3rem;
   }
 
-  .medium_title {
+  .medium-title {
     font-size: 1.8rem;
   }
 
-  .texts_letters_01 {
+  .texts-letters-01 {
     font-size: 1.5rem;
   }
 
-  .texts_letters_02 {
+  .texts-letters-02 {
     font-size: 1.5rem;
   }
 }
 
 /* ----- COMPONENTS ----- */
 
-.social_media_bar {
+.social-media-bar {
   font-size: 1.3rem;
   position: fixed;
   display: flex;
@@ -170,19 +170,19 @@ body {
   align-items: center;
 }
 
-.section_container {
+.section-container {
   width: 70vw;
   margin: 0 auto;
 }
 
 /* ----- HOME ----- */
 
-.home_view {
+.home-view {
   height: 100vh;
   z-index: 2;
 }
 
-.home_text {
+.home-text {
   top: 25vh;
   position: relative;
   display: flex;
@@ -191,7 +191,7 @@ body {
   position: relative;
 }
 
-.danielrondon_text {
+.danielrondon-text {
   color: var(--dark-color);
   font-family: var(--bigShoulders-font-family);
   font-size: 4rem;
@@ -199,14 +199,14 @@ body {
   -webkit-text-stroke: 1px var(--light-color);
 }
 
-.fullstack_webdev_text {
+.fullstack-webdev-text {
   font-size: 1.3rem;
   position: relative;
   color: var(--mid-color);
   text-align: center;
 }
 
-.underline_alt_color {
+.underline-alt-color {
   position: relative;
   width: 100%;
   height: 1rem;
@@ -218,13 +218,13 @@ body {
 /* ----- HOME MEDIA QUERIES ----- */
 
 @media (min-width: 768px) {
-  .danielrondon_text {
+  .danielrondon-text {
     position: relative;
     font-size: 10rem;
     top: 5%;
   }
 
-  .fullstack_webdev_text {
+  .fullstack-webdev-text {
     font-size: 2.5rem;
     top: 5%;
   }
@@ -232,7 +232,7 @@ body {
 
 /* ----- ABOUT ----- */
 
-.about_view {
+.about-view {
   width: 100%;
   height: 100%;
   background-color: var(--dark-transparent);
@@ -240,7 +240,7 @@ body {
   text-align: justify;
 }
 
-.circle_container {
+.circle-container {
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -249,7 +249,7 @@ body {
   margin: 0 auto;
 }
 
-.circle_container img {
+.circle-container img {
   width: 100%;
   object-fit: cover;
   position: absolute;
@@ -258,7 +258,7 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.about_photo_phrase {
+.about-photo-phrase {
   margin-top: 3rem;
   text-align: center;
   z-index: 1;
@@ -273,12 +273,12 @@ body {
   z-index: -1;
 }
 
-.quote_phrase {
+.quote-phrase {
   position: relative;
   margin-top: 3rem;
 }
 
-.about_set {
+.about-set {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -287,27 +287,27 @@ body {
 /* ----- ABOUT MEDIA QUERIES ----- */
 
 @media (min-width: 768px) {
-  .about_view {
+  .about-view {
     height: 110vh;
   }
 
-  .circle_container {
+  .circle-container {
     width: 300px;
     height: 300px;
   }
 
-  .about_text {
+  .about-text {
     width: 30vw;
   }
 
-  .about_set {
+  .about-set {
     flex-direction: row;
     justify-content: space-around;
     position: relative;
     top: 5%;
   }
 
-  .about_photo_phrase {
+  .about-photo-phrase {
     width: 30%;
   }
 
@@ -319,7 +319,7 @@ body {
 
 /* ----- TESTIMONIALS ----- */
 
-.testimonials_btn {
+.testimonials-btn {
   width: max-content;
   margin: 0 auto;
   color: var(--light-color);
@@ -333,7 +333,7 @@ body {
   margin-bottom: 2rem;
 }
 
-.testimonials_modal {
+.testimonials-modal {
   position: fixed;
   top: 48%;
   left: 50%;
@@ -436,7 +436,7 @@ body {
   right: 1rem;
 }
 
-.allIndicators {
+.indicators {
   position: absolute;
   display: flex;
   bottom: 1rem;
@@ -461,7 +461,7 @@ body {
 /* ----- TESTIMONIALS MEDIA QUERIES ----- */
 
 @media (min-width: 768px) {
-  .testimonials_modal {
+  .testimonials-modal {
     top: 48%;
     left: 50%;
     translate: -50% -50%;
@@ -483,39 +483,39 @@ body {
 }
 /* ----- PROJECTS ----- */
 
-.projects_view {
+.projects-view {
   width: 70vw;
   display: flex;
   flex-direction: column;
   z-index: 2;
 }
 
-.one_project {
+.one-project {
   margin-bottom: 10rem;
 }
 
-.mockups_set {
+.mockups-set {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(60vw, auto));
   gap: 2rem;
   justify-items: center;
 }
 
-.iphone_mockup {
+.iphone-mockup {
   width: 50vw;
 }
 
-.ipad_mockup {
+.ipad-mockup {
   width: 60vw;
 }
 
-.project_header {
+.project-header {
   display: flex;
   align-items: center;
   gap: 2rem;
 }
 
-.launch_btn {
+.launch-btn {
   color: var(--alt-color);
   font-size: 1.5rem;
 }
@@ -523,22 +523,22 @@ body {
 /* ----- PROJECTS MEDIA QUERIES ----- */
 
 @media (min-width: 768px) {
-  .projects_view {
+  .projects-view {
     display: flex;
   }
 
-  .mockups_set {
+  .mockups-set {
     position: relative;
     display: flex;
     max-width: 100%;
   }
 
-  .iphone_mockup {
+  .iphone-mockup {
     width: 23%;
     height: auto;
   }
 
-  .ipad_mockup {
+  .ipad-mockup {
     width: 48%;
     height: auto;
   }
@@ -546,20 +546,20 @@ body {
 
 /* ----- TECH STACK ----- */
 
-.techStack_view {
+.techStack-view {
   width: 100%;
   background-color: var(--dark-transparent);
   z-index: 2;
 }
 
-.tech_cards {
+.tech-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(60vw, auto));
   gap: 2rem;
   justify-items: center;
 }
 
-.tools_letters {
+.tools-letters {
   font-family: var(--josefin-font-family);
   font-size: 1.1rem;
   color: var(--mid-color);
@@ -567,7 +567,7 @@ body {
   margin: 0 1rem;
 }
 
-.frontend_card {
+.frontend-card {
   text-align: start;
   margin-top: 1.5rem;
   margin-bottom: 3rem;
@@ -580,7 +580,7 @@ body {
   box-shadow: 0 0 10px var(--mid-color);
 }
 
-.backend_card {
+.backend-card {
   text-align: end;
   margin-top: 1.5rem;
   margin-bottom: 3rem;
@@ -593,18 +593,18 @@ body {
   box-shadow: 0 0 10px var(--mid-color);
 }
 
-.degree_logo {
+.degree-logo {
   width: 4rem;
   margin-bottom: 1.5rem;
 }
 
-.degree_titles {
+.degree-titles {
   font-family: var(--montserrat-font-family);
   color: var(--light-color);
   font-size: 1.2rem;
 }
 
-.degree_place {
+.degree-place {
   font-family: var(--josefin-font-family);
   color: var(--mid-color);
   font-size: 1.2rem;
@@ -612,16 +612,16 @@ body {
   margin-bottom: 3rem;
 }
 
-.frontend_horiz_align {
+.frontend-horiz-align {
   display: flex;
 }
 
-.backend_horiz_align {
+.backend-horiz-align {
   display: flex;
   justify-content: flex-end;
 }
 
-.laSalle_logo {
+.laSalle-logo {
   width: 10rem;
   margin-bottom: 0.5rem;
 }
@@ -629,16 +629,16 @@ body {
 /* ----- TECH STACK MEDIA QUERIES ----- */
 
 @media (min-width: 768px) {
-  .tools_letters {
+  .tools-letters {
     font-size: 1.5rem;
   }
 
-  .tech_cards {
+  .tech-cards {
     display: flex;
     justify-content: space-evenly;
   }
 
-  .frontend_card {
+  .frontend-card {
     width: 300px;
     height: 300px;
     display: flex;
@@ -646,7 +646,7 @@ body {
     justify-content: space-evenly;
   }
 
-  .backend_card {
+  .backend-card {
     width: 300px;
     height: 300px;
     display: flex;
@@ -654,40 +654,40 @@ body {
     justify-content: space-evenly;
   }
 
-  .degree_logo {
+  .degree-logo {
     width: 6rem;
   }
 
-  .degree_titles {
+  .degree-titles {
     font-size: 1.5rem;
   }
 
-  .degree_place {
+  .degree-place {
     font-size: 1.4rem;
     margin-top: 1rem;
   }
 
-  .laSalle_logo {
+  .laSalle-logo {
     width: 12rem;
   }
 }
 
 /* ----- CONTACT ----- */
 
-.contact_view {
+.contact-view {
   width: 70vw;
   height: 100vh;
   z-index: 2;
 }
 
-.contact_set {
+.contact-set {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
 }
 
-.contact_logos {
+.contact-logos {
   width: 100%;
   font-size: 2rem;
   display: flex;
@@ -696,7 +696,7 @@ body {
   margin: 0 0 2rem;
 }
 
-.contact_form {
+.contact-form {
   background-color: var(--dark-color);
   border-radius: 10px;
   box-shadow: var(--box-shadow);
@@ -747,11 +747,11 @@ form label {
   width: 100%;
 }
 
-#in_logo {
+#in-logo {
   font-size: 125%;
 }
 
-.send_btn {
+.send-btn {
   color: var(--light-color);
   background-color: var(--alt-color);
   border-radius: 25px;
@@ -766,7 +766,7 @@ form label {
   cursor: pointer;
 }
 
-.resume_btn {
+.resume-btn {
   color: var(--light-color);
   background-color: var(--mid-color);
   border-radius: 5px;
@@ -784,16 +784,16 @@ form label {
 /* ----- CONTACT MEDIA QUERIES ----- */
 
 @media (min-width: 768px) {
-  .contact_set {
+  .contact-set {
     position: relative;
     top: 5%;
   }
 
-  .contact_logos {
+  .contact-logos {
     font-size: 3rem;
   }
 
-  .contact_set {
+  .contact-set {
     width: 30vw;
   }
 
@@ -801,11 +801,11 @@ form label {
     font-size: 1.2rem;
   }
 
-  .send_btn {
+  .send-btn {
     font-size: 1.2rem;
   }
 
-  .resume_btn {
+  .resume-btn {
     margin-top: 5rem;
   }
 }
