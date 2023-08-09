@@ -342,9 +342,21 @@ body {
   top: 50%;
   left: 50%;
   translate: -50% -50%;
-  background-color: #fff;
-  padding: 50px;
   z-index: 10;
+  width: 50%;
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 11;
+}
+
+.close-btn-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--mid-color);
 }
 
 .overlay {
@@ -355,6 +367,74 @@ body {
   bottom: 0;
   background-color: rgba(0,0,0,0.7);
   z-index: 10;
+}
+
+.carousel {
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.slide {
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background: rgba( 255, 255, 255, 0.15 );
+  backdrop-filter: blur( 18px );
+}
+
+.slide-hidden {
+  display: none;
+}
+
+.testimonial-picture {
+  width: 20%;
+}
+
+.arrow {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  color: var(--mid-color);
+  filter: drop-shadow(var(--box-shadow));
+  z-index: 11;
+}
+
+.arrow:hover {
+  cursor: pointer;
+}
+
+.arrow-left {
+  left: 1rem;
+}
+
+.arrow-right {
+  right: 1rem;
+}
+
+.allIndicators {
+  position: absolute;
+  display: flex;
+  bottom: 1rem;
+}
+
+.indicator {
+  background-color: var(--mid-color);
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 100%;
+  border: none;
+  outline: none;
+  box-shadow: var(--box-shadow);
+  margin: 0 0.2rem;
+  cursor: pointer;
+}
+
+.indicator-inactive {
+  background-color: var(--alt-color);
 }
 
 /* ----- PROJECTS ----- */

@@ -29,6 +29,7 @@ import { LuAtSign } from "react-icons/lu";
 import { ContactForm } from "../components/ContactForm";
 import { motion } from "framer-motion";
 import TestimonialsModal from "../components/TestimonialsModal";
+import Carousel from "../components/Carousel";
 
 const NHmockupArr = [nhPic00, nhPic01, nhPic02, nhPic04];
 const MGmockupArr = [mgPic01, mgPic02];
@@ -113,7 +114,7 @@ export default function Main() {
             Testimonials
           </button>
           <TestimonialsModal open={isOpen} onClose={() => setIsOpen(false)}>
-            One testimonial
+            <Carousel />
           </TestimonialsModal>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { IoMdClose } from "react-icons/io";
 
 export default function TestimonialsModal({ open, children, onClose }) {
   if (!open) return null;
@@ -7,7 +8,9 @@ export default function TestimonialsModal({ open, children, onClose }) {
     <>
       <div className="overlay"/>
       <div className="testimonials_modal">
-        <button onClick={onClose}>X</button>
+        <button onClick={onClose} className="close-btn">
+          <IoMdClose  className="close-btn-icon"/>
+        </button>
         {children}
       </div>
     </>,
