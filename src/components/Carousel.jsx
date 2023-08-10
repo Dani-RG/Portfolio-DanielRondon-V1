@@ -10,8 +10,10 @@ const slides = [
     alt: "simonPic",
     name: "Simón Tribiño",
     profession: "Associate Technical Director at Electronic Arts (EA)",
-    comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque, elit a condimentum dapibus, dolor nibh sagittis purus, ac elementum dolor diam at nulla. In massa enim, volutpat quis mi id, euismod commodo risus. Nunc volutpat dignissim sodales. Donec semper ligula arcu, nec fermentum mi tempus et. Nam et mi turpis. Fusce vitae tortor diam. Nullam imperdiet nunc at nulla pretium, non egestas sem cursus. Vivamus volutpat porttitor est, at sollicitudin enim facilisis sit amet. Nulla vehicula quam id odio accumsan, accumsan fermentum elit pharetra. Sed quis pharetra elit. Nam tristique sapien ac sapien auctor volutpat. Sed congue arcu non purus fringilla tempus. Aenean lectus mi, rhoncus at hendrerit eget, tristique eu enim.",
+    commentOne:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque, elit a condimentum dapibus, dolor nibh sagittis purus, ac elementum dolor diam at nulla. In massa enim, volutpat quis mi id, euismod commodo risus. Nunc volutpat dignissim sodales. Donec semper ligula arcu, nec fermentum mi tempus et. Nam et mi turpis.",
+    commentTwo:
+      "Fusce vitae tortor diam. Nullam imperdiet nunc at nulla pretium, non egestas sem cursus. Vivamus volutpat porttitor est, at sollicitudin enim facilisis sit amet. Nulla vehicula quam id odio accumsan, accumsan fermentum elit pharetra. Sed quis pharetra elit. Nam tristique sapien ac sapien auctor volutpat. Sed congue arcu non purus fringilla tempus. Aenean lectus mi, rhoncus at hendrerit eget, tristique eu enim.",
   },
   {
     image: guilleImage,
