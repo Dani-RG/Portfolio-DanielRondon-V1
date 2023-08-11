@@ -1,18 +1,21 @@
-import React from "react";
-import Home from "./Home";
-import About from "./About";
-import Projects from "./Projects";
-import TechStack from "./TechStack";
-import Contact from "./Contact";
+import React, { lazy, Suspense } from "react";
+
+const Home = React.lazy(() => import("./Home"));
+const About = React.lazy(() => import("./About"));
+const Projects = React.lazy(() => import("./Projects"));
+const TechStack = React.lazy(() => import("./TechStack"));
+const Contact = React.lazy(() => import("./Contact"));
 
 export default function Main() {
   return (
     <div className="main">
-      <Home />
-      <About />
-      <Projects />
-      <TechStack />
-      <Contact />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Home />
+        <About />
+        <Projects />
+        <TechStack />
+        <Contact />
+      </Suspense>
     </div>
   );
 }
