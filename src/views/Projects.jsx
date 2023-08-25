@@ -118,7 +118,7 @@ export default function Projects() {
 
           <div className="one-project">
             <div className="project-header">
-              <p className="medium-title">At 18:36!</p>
+              <p className="medium-title">At 18:34!</p>
               <motion.div whileHover={{ scale: 1.3 }}>
                 <Link
                   to="https://dani-rg.github.io/Project-1_Game_At-18.34/"
