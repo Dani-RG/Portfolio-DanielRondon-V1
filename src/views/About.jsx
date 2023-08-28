@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { RiDoubleQuotesL } from "react-icons/ri";
-import danielPhoto from "../images/danielRG_photo_noBG.png";
+import danielPhoto from "../images/danielRG_photo_blueBG.png";
 import TestimonialsModal from "../components/TestimonialsModal";
 import Carousel from "../components/Carousel";
 

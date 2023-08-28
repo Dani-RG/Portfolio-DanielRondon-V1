@@ -250,7 +250,7 @@ body {
 }
 
 .circle-container img {
-  width: 100%;
+  width: 110%;
   object-fit: cover;
   position: absolute;
   top: 50%;
