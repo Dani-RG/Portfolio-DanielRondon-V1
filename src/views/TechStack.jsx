@@ -8,6 +8,8 @@ import { FaNodeJs } from "react-icons/fa";
 import { SiExpress } from "react-icons/si";
 import { SiMongodb } from "react-icons/si";
 import { SiPostman } from "react-icons/si";
+import { SiTypescript } from "react-icons/si";
+import { CgTranscript } from "react-icons/cg";
 import ihLogo from "../images/ironhack.png";
 import EvolisLogo from "../images/evolis3d.png";
 import lasalleLogo from "../images/LaSalleBCN222.png";
@@ -58,7 +60,11 @@ export default function TechStack() {
                 </div>
                 <div className="frontend-horiz-align">
                   <IoLogoJavascript className="tools-letters" />
-                  <p className="tools-letters">Javascript (ES6)</p>
+                  <p className="tools-letters">JavaScript (ES6)</p>
+                </div>
+                <div className="frontend-horiz-align">
+                  <SiTypescript className="tools-letters" />
+                  <p className="tools-letters">TypeScript</p>
                 </div>
                 <div className="frontend-horiz-align">
                   <FaHtml5 className="tools-letters" />
@@ -67,10 +73,6 @@ export default function TechStack() {
                 <div className="frontend-horiz-align">
                   <FaCss3Alt className="tools-letters" />
                   <p className="tools-letters">CSS 3</p>
-                </div>
-                <div className="frontend-horiz-align">
-                  <FaNodeJs className="tools-letters" />
-                  <p className="tools-letters">Node.js</p>
                 </div>
               </div>
             </motion.div>
@@ -98,6 +100,10 @@ export default function TechStack() {
                 <div className="backend-horiz-align">
                   <p className="tools-letters">Node.js</p>
                   <FaNodeJs className="tools-letters" />
+                </div>
+                <div className="backend-horiz-align">
+                  <p className="tools-letters">JS + TS</p>
+                  <CgTranscript className="tools-letters" />
                 </div>
               </div>
             </motion.div>
