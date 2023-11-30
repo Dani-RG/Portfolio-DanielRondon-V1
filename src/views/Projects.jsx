@@ -10,10 +10,15 @@ import mgPic01 from "../images/mockups/MG_iphone_mockup_01.png";
 import mgPic02 from "../images/mockups/MG_iphone_mockup_02.png";
 import atPic00 from "../images/mockups/AT_ipad_mockup_00.png";
 import atPic01 from "../images/mockups/AT_ipad_mockup_01.png";
+import jerry02 from "../images/mockups/jerry_mockup_02.png";
+import jerry03 from "../images/mockups/jerry_mockup_03.png";
+import jerry04 from "../images/mockups/jerry_mockup_04.png";
+import jerry05 from "../images/mockups/jerry_mockup_05.png";
 
 const NHmockupArr = [nhPic00, nhPic01, nhPic02, nhPic04];
 const MGmockupArr = [mgPic01, mgPic02];
 const ATmockupArr = [atPic00, atPic01];
+const JerryMockupArr = [jerry02, jerry03, jerry04, jerry05];
 
 const allImages = [
   nhPic00,
@@ -24,6 +29,10 @@ const allImages = [
   mgPic02,
   atPic00,
   atPic01,
+  jerry02,
+  jerry03,
+  jerry04,
+  jerry05
 ];
 
 export default function Projects() {
@@ -54,6 +63,35 @@ export default function Projects() {
           <svg className="underline">
             <line x1="0" y1="1" x2="100%" y2="1" />
           </svg>
+          <div className="one-project">
+            <div className="project-header">
+              <p className="medium-title">Jerry</p>
+              <motion.div whileHover={{ scale: 1.3 }}>
+                <Link
+                  to="https://jerry-personal-finance-assistant.netlify.app/"
+                  target="_blank"
+                  className="launch-btn"
+                >
+                  <MdOutlineLaunch />
+                </Link>
+              </motion.div>
+            </div>
+            <p className="texts-letters-01">
+            A Full Stack web application on TypeScript and React.js, about a Personal Finance Assistant, which helps to correctly record all the user's money movements. Powered by artificial intelligence by integrating OpenAI's Whisper.
+            </p>
+            <div className="mockups-set">
+              {JerryMockupArr.map((image, index) => {
+                return (
+                  <img
+                    src={image}
+                    alt={index}
+                    key={index}
+                    className="iphone-mockup"
+                  />
+                );
+              })}
+            </div>
+          </div>
           <div className="one-project">
             <div className="project-header">
               <p className="medium-title">Nature Heroes</p>
