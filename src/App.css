@@ -497,6 +497,7 @@ body {
 
 .mockups-container {
   max-width: 80%;
+  margin: 0 auto;
 }
 
 .mockups-set {
