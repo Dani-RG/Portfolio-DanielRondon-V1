@@ -93,17 +93,19 @@ export default function Projects() {
               integrating OpenAI's Whisper converting the user's voice into text
               to record the messages.
             </p>
-            <div className="mockups-set">
-              {JerryMockupArr.map((image, index) => {
-                return (
-                  <img
-                    src={image}
-                    alt={index}
-                    key={index}
-                    className="iphone-mockup"
-                  />
-                );
-              })}
+            <div className="mockups-container">
+              <div className="mockups-set">
+                {JerryMockupArr.map((image, index) => {
+                  return (
+                    <img
+                      src={image}
+                      alt={index}
+                      key={index}
+                      className="iphone-mockup"
+                    />
+                  );
+                })}
+              </div>
             </div>
           </div>
           <div className="one-project">
@@ -126,17 +128,19 @@ export default function Projects() {
               users a direct Stripe payment gateway to make donations to their
               preferred foundation.
             </p>
-            <div className="mockups-set">
-              {NHmockupArr.map((image, index) => {
-                return (
-                  <img
-                    src={image}
-                    alt={index}
-                    key={index}
-                    className="iphone-mockup"
-                  />
-                );
-              })}
+            <div className="mockups-container">
+              <div className="mockups-set">
+                {NHmockupArr.map((image, index) => {
+                  return (
+                    <img
+                      src={image}
+                      alt={index}
+                      key={index}
+                      className="iphone-mockup"
+                    />
+                  );
+                })}
+              </div>
             </div>
           </div>
 
@@ -160,17 +164,19 @@ export default function Projects() {
               Styled Components and featuring responsive design. Implementation
               of tests with RTL React Testing Library and Jest.
             </p>
-            <div className="mockups-set">
-              {R6MockupArr.map((image, index) => {
-                return (
-                  <img
-                    src={image}
-                    alt={index}
-                    key={index}
-                    className="iphone-mockup"
-                  />
-                );
-              })}
+            <div className="mockups-container">
+              <div className="mockups-set">
+                {R6MockupArr.map((image, index) => {
+                  return (
+                    <img
+                      src={image}
+                      alt={index}
+                      key={index}
+                      className="iphone-mockup"
+                    />
+                  );
+                })}
+              </div>
             </div>
           </div>
 
@@ -191,17 +197,19 @@ export default function Projects() {
               An Express.js Full Stack Web App that compares the prices of
               supermarket products.
             </p>
-            <div className="mockups-set">
-              {MGmockupArr.map((image, index) => {
-                return (
-                  <img
-                    src={image}
-                    alt={index}
-                    key={index}
-                    className="iphone-mockup"
-                  />
-                );
-              })}
+            <div className="mockups-container">
+              <div className="mockups-set">
+                {MGmockupArr.map((image, index) => {
+                  return (
+                    <img
+                      src={image}
+                      alt={index}
+                      key={index}
+                      className="iphone-mockup"
+                    />
+                  );
+                })}
+              </div>
             </div>
           </div>
 
@@ -221,17 +229,19 @@ export default function Projects() {
             <p className="texts-letters-01">
               A Javascript videogame with HTML Canvas.
             </p>
-            <div className="mockups-set">
-              {ATmockupArr.map((image, index) => {
-                return (
-                  <img
-                    src={image}
-                    alt={index}
-                    key={index}
-                    className="ipad-mockup"
-                  />
-                );
-              })}
+            <div className="mockups-container">
+              <div className="mockups-set">
+                {ATmockupArr.map((image, index) => {
+                  return (
+                    <img
+                      src={image}
+                      alt={index}
+                      key={index}
+                      className="ipad-mockup"
+                    />
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>

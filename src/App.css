@@ -492,21 +492,26 @@ body {
 
 .one-project {
   margin-bottom: 10rem;
+  max-width: 100vw;
+}
+
+.mockups-container {
+  max-width: 80%;
 }
 
 .mockups-set {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(60vw, auto));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 2rem;
-  justify-items: center;
+  margin: 0 auto;
 }
 
 .iphone-mockup {
-  width: 50vw;
+  width: 100%;
 }
 
 .ipad-mockup {
-  width: 60vw;
+  width: 100%;
 }
 
 .project-header {
@@ -522,7 +527,7 @@ body {
 
 /* ----- PROJECTS MEDIA QUERIES ----- */
 
-@media (min-width: 768px) {
+@media (min-width: 1500px) {
   .projects-view {
     display: flex;
   }
@@ -530,7 +535,6 @@ body {
   .mockups-set {
     position: relative;
     display: flex;
-    max-width: 100%;
   }
 
   .iphone-mockup {
