@@ -28,8 +28,10 @@ export default function About() {
           <div className="about-set">
             <div className="about-text">
               <p className="texts-letters-02">
-                With a professional background in architecture and 3D
-                visualization, I have now become a full-stack web developer.
+                With a commitment to continuous improvement and professional
+                growth, I've transitioned from a civil architect to a Full-Stack
+                Web Developer proficient in the technologies of greatest impact
+                within the IT field.
               </p>
               <p className="texts-letters-02">
                 Knowing how to integrate the frontend with the backend to bring
