@@ -34,7 +34,7 @@ export default function About() {
                 greatest impact within the IT field.
               </p>
               <p className="texts-letters-02">
-                Knowing how t develop and integrate the frontend with the
+                Knowing how to develop and integrate the frontend with the
                 backend to bring to life designs and applications that are both
                 interesting and emotionally engaging.
               </p>
