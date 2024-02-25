@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { RiDoubleQuotesL } from "react-icons/ri";
-import danielPhoto from "../images/danielRG_photo_blueBG.png";
+import danielPhoto from "../images/danielRG_photo_blackBG.png";
 import TestimonialsModal from "../components/TestimonialsModal";
 import Carousel from "../components/Carousel";
 
@@ -29,14 +29,14 @@ export default function About() {
             <div className="about-text">
               <p className="texts-letters-02">
                 With a commitment to continuous improvement and professional
-                growth, I've transitioned from a civil architect to a Full-Stack
-                Web Developer proficient in the technologies of greatest impact
-                within the IT field.
+                growth, I've transitioned from a buildings architect to a
+                Full-Stack Web Developer proficient in the technologies of
+                greatest impact within the IT field.
               </p>
               <p className="texts-letters-02">
-                Knowing how to integrate the frontend with the backend to bring
-                to life designs and applications that are both interesting and
-                emotionally engaging.
+                Knowing how to develop and integrate the frontend with the
+                backend to bring to life designs and applications that are both
+                interesting and emotionally engaging.
               </p>
               <p className="texts-letters-02">
                 My goal is to create experiences that are not only enjoyable but
