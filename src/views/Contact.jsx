@@ -54,8 +54,8 @@ export default function Contact() {
           </div>
           <ContactForm />
           <motion.a
-            href="CV WebDev Daniel Rondon Garcia.pdf"
-            download="CV WebDev Daniel Rondon Garcia.pdf"
+            href="CV Daniel Rondon (EN).pdf"
+            download="CV Daniel Rondon (EN).pdf"
             className="resume-btn"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
